@@ -23,7 +23,7 @@ const courseData: { [key: string]: any } = {
     level: 'Başlangıç',
     duration: '26dk 40sn',
     thumbnail: '/course_content/thumbnails/FLL Logo.png',
-    youtubeId: null, // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
+    youtubeId: 'hNPqvuX7SS0', // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
   },
   '3': {
     id: 3,
@@ -32,7 +32,7 @@ const courseData: { [key: string]: any } = {
     level: 'Başlangıç',
     duration: '25dk 31sn',
     thumbnail: '/course_content/thumbnails/FTC Logo.png',
-    youtubeId: null, // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
+    youtubeId: 'FkdzYANYdzQ', // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
   },
   '4': {
     id: 4,
@@ -41,7 +41,7 @@ const courseData: { [key: string]: any } = {
     level: 'Başlangıç',
     duration: '12dk 8sn',
     thumbnail: '/course_content/thumbnails/FIRST Logo.png',
-    youtubeId: null, // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
+    youtubeId: 'A3TEmHAzog8', // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
   },
   '5': {
     id: 5,
@@ -50,7 +50,7 @@ const courseData: { [key: string]: any } = {
     level: 'Başlangıç',
     duration: '',
     thumbnail: '/course_content/thumbnails/FRC Logo.png',
-    youtubeId: null, // Video henüz eklenmedi
+    youtubeId: 'Er7A3VhBTRk', // Video henüz eklenmedi
   },
   '6': {
     id: 6,
@@ -59,7 +59,7 @@ const courseData: { [key: string]: any } = {
     level: 'Başlangıç',
     duration: '3dk 57sn',
     thumbnail: '/course_content/thumbnails/FRC Logo.png',
-    youtubeId: null, // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
+    youtubeId: 'WvVXO31bdII', // YouTube'a yükledikten sonra video ID'sini buraya ekleyin
   },
 };
 
