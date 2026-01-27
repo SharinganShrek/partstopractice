@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FIRST Parts to Practice",
-  description: "Khan Academy İşbirliğinde Türkçe FRC ve FIRST Giriş Dersleri",
+  description: "IMC#4191 x Khan Academy İşbirliğinde Türkçe FRC ve FIRST Giriş Dersleri",
 };
 
 export default function RootLayout({
