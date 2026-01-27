@@ -79,14 +79,26 @@ export default function Home() {
   return (
     <div className="bg-[#fafaf5] min-h-screen">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#800020] to-[#a01e2b] text-white py-16">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            FIRST Parts to Practice
-          </h1>
-          <p className="text-xl md:text-2xl text-[#f5f5dc] max-w-3xl">
-            IMC#4191 x Khan Academy İşbirliğinde Türkçe FRC ve FIRST başlangıç dersleri.
-          </p>
+      <div className="bg-gradient-to-r from-[#800020] to-[#a01e2b] text-white py-16 relative">
+        <div className="max-w-7xl mx-auto px-4 flex items-start justify-between">
+          <div className="flex-1">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              FIRST Parts to Practice
+            </h1>
+            <p className="text-xl md:text-2xl text-[#f5f5dc] max-w-3xl">
+              IMC#4191 x Khan Academy Türkiye İşbirliğinde Türkçe FRC ve FIRST başlangıç dersleri.
+            </p>
+          </div>
+          {/* Khan Academy Logo - Header altında, sağa yaslı */}
+          <div className="ml-8 mt-12 flex-shrink-0">
+            <Image
+              src="/62a63a8403a870b920cbfd4a.png"
+              alt="Khan Academy Logo"
+              width={200}
+              height={200}
+              className="h-auto w-auto max-w-[200px] max-h-[200px]"
+            />
+          </div>
         </div>
       </div>
 
