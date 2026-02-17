@@ -9,6 +9,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><a href="/" className="hover:text-[#f5f5dc] transition-colors">Ana Sayfa</a></li>
               <li><a href="/courses" className="hover:text-[#f5f5dc] transition-colors">Tüm Kurslar</a></li>
+              <li><a href="/tests" className="hover:text-[#f5f5dc] transition-colors">Testler</a></li>
             </ul>
           </div>
           <div>

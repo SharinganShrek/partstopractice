@@ -24,6 +24,9 @@ export default function Header() {
           <Link href="/courses" className="hover:text-[#f5f5dc] transition-colors">
             Kurslar
           </Link>
+          <Link href="/tests" className="hover:text-[#f5f5dc] transition-colors">
+            Testler
+          </Link>
         </nav>
       </div>
     </header>
