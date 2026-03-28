@@ -1,29 +1,35 @@
-const stats = [
-  {
-    value: '10+',
-    label: 'Languages',
-    sub: 'FIRST and FRC introductory materials available in many languages',
-  },
-  {
-    value: '10,000+',
-    label: 'People reached',
-    sub: 'Resources shared with students and the wider community',
-  },
-  {
-    value: '6',
-    label: 'Video lessons',
-    sub: '60+ interactive quiz questions to reinforce what you learn',
-  },
-] as const;
+'use client';
+
+import { useLanguage } from './LanguageContext';
 
 export default function StatsStrip() {
+  const { t } = useLanguage();
+
+  const stats = [
+    {
+      value: t('stats.languages.value'),
+      label: t('stats.languages.label'),
+      sub: t('stats.languages.sub'),
+    },
+    {
+      value: t('stats.reached.value'),
+      label: t('stats.reached.label'),
+      sub: t('stats.reached.sub'),
+    },
+    {
+      value: t('stats.lessons.value'),
+      label: t('stats.lessons.label'),
+      sub: t('stats.lessons.sub'),
+    },
+  ];
+
   return (
     <section
       className="bg-[#fafaf5] border-b border-[#e9ecef] py-12 md:py-14"
       aria-labelledby="stats-heading"
     >
       <h2 id="stats-heading" className="sr-only">
-        Program impact at a glance
+        {t('stats.languages.label')}
       </h2>
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

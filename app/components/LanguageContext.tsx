@@ -1,0 +1,85 @@
+'use client';
+
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  useCallback,
+  type ReactNode,
+} from 'react';
+import type { SupportedLanguage } from '@/lib/i18n/config';
+import { DEFAULT_LANGUAGE, countryToLanguage } from '@/lib/i18n/config';
+import translations from '@/lib/i18n/translations';
+
+interface LanguageContextValue {
+  language: SupportedLanguage;
+  setLanguage: (lang: SupportedLanguage) => void;
+  /** Translate a UI key. Returns the key itself if missing. */
+  t: (key: string) => string;
+}
+
+const LanguageContext = createContext<LanguageContextValue>({
+  language: DEFAULT_LANGUAGE,
+  setLanguage: () => {},
+  t: (key) => key,
+});
+
+const STORAGE_KEY = 'ptp-language';
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+  const [language, setLanguageState] = useState<SupportedLanguage>(DEFAULT_LANGUAGE);
+  const [ready, setReady] = useState(false);
+
+  // On mount: check localStorage, then geolocation
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY) as SupportedLanguage | null;
+    if (stored && translations[stored]) {
+      setLanguageState(stored);
+      setReady(true);
+      return;
+    }
+
+    // Detect via geolocation
+    fetch('https://ipapi.co/json/')
+      .then((res) => res.json())
+      .then((data) => {
+        const detected = countryToLanguage(data.country_code ?? '');
+        setLanguageState(detected);
+        localStorage.setItem(STORAGE_KEY, detected);
+      })
+      .catch(() => {
+        // Fallback to English
+        setLanguageState(DEFAULT_LANGUAGE);
+        localStorage.setItem(STORAGE_KEY, DEFAULT_LANGUAGE);
+      })
+      .finally(() => setReady(true));
+  }, []);
+
+  const setLanguage = useCallback((lang: SupportedLanguage) => {
+    setLanguageState(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
+  }, []);
+
+  const t = useCallback(
+    (key: string): string => {
+      return translations[language]?.[key] ?? translations.en[key] ?? key;
+    },
+    [language]
+  );
+
+  // Prevent flash of default language
+  if (!ready) {
+    return null;
+  }
+
+  return (
+    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  return useContext(LanguageContext);
+}

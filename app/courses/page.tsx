@@ -1,20 +1,23 @@
 'use client';
 
 import Link from 'next/link';
-import { courses } from '@/lib/courses';
-import TurkishContentBadge from '../components/TurkishContentBadge';
+import { getCourses } from '@/lib/courses';
+import ContentLanguageBadge from '../components/ContentLanguageBadge';
+import { useLanguage } from '../components/LanguageContext';
 
 export default function CoursesPage() {
+  const { language, t } = useLanguage();
+  const courses = getCourses(language);
+
   return (
     <div className="bg-[#fafaf5] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-wrap items-center gap-3 mb-8">
-          <h1 className="text-3xl font-bold text-[#212529]">Courses</h1>
-          <TurkishContentBadge variant="onLight" />
+          <h1 className="text-3xl font-bold text-[#212529]">{t('courses.title')}</h1>
+          <ContentLanguageBadge variant="onLight" />
         </div>
         <p className="text-[#495057] mb-8 max-w-2xl">
-          Course names and videos are in Turkish. Use <strong>Practice quiz</strong> for the
-          multiple-choice review for each lesson.
+          {t('courses.description')}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
@@ -49,7 +52,7 @@ export default function CoursesPage() {
                     onClick={(e) => e.stopPropagation()}
                     className="text-[#800020] hover:text-[#a01e2b] font-medium hover:underline"
                   >
-                    Practice quiz
+                    {t('courses.practiceQuiz')}
                   </Link>
                 </div>
                 {course.duration && (

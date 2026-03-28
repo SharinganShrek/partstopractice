@@ -1,13 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { courses } from '@/lib/courses';
+import { getCourses } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
-import TurkishContentBadge from '../components/TurkishContentBadge';
+import ContentLanguageBadge from '../components/ContentLanguageBadge';
+import { useLanguage } from '../components/LanguageContext';
 
 export default function TestsPage() {
+  const { language, t } = useLanguage();
+  const courses = getCourses(language);
+
   const coursesWithTests = courses.filter((course) => {
-    const questions = getTestByCourseId(course.id);
+    const questions = getTestByCourseId(course.id, language);
     return questions && questions.length > 0;
   });
 
@@ -15,12 +19,11 @@ export default function TestsPage() {
     <div className="bg-[#fafaf5] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex flex-wrap items-center gap-3 mb-4">
-          <h1 className="text-3xl font-bold text-[#212529]">Quizzes</h1>
-          <TurkishContentBadge variant="onLight" />
+          <h1 className="text-3xl font-bold text-[#212529]">{t('quizzes.title')}</h1>
+          <ContentLanguageBadge variant="onLight" />
         </div>
         <p className="text-[#495057] mb-8 max-w-2xl">
-          Select a course to start its practice quiz. All questions and answers are in{' '}
-          <strong>Turkish</strong>.
+          {t('quizzes.description')}
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {coursesWithTests.map((course) => (
@@ -47,7 +50,7 @@ export default function TestsPage() {
                   <span className="bg-[#f5f5dc] text-[#800020] px-3 py-1 rounded-full font-medium">
                     {course.level}
                   </span>
-                  <span className="text-[#495057]">10 questions</span>
+                  <span className="text-[#495057]">{t('quizzes.questions')}</span>
                 </div>
               </div>
             </Link>

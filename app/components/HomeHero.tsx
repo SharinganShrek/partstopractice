@@ -1,23 +1,27 @@
+'use client';
+
 import Image from 'next/image';
-import TurkishContentBadge from './TurkishContentBadge';
+import ContentLanguageBadge from './ContentLanguageBadge';
+import { useLanguage } from './LanguageContext';
 
 export default function HomeHero() {
+  const { t } = useLanguage();
+
   return (
     <header className="bg-gradient-to-r from-[#800020] to-[#a01e2b] text-white py-14 md:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(255,255,255,0.12),transparent)] pointer-events-none" />
       <div className="max-w-4xl mx-auto px-4 relative text-center">
         <div className="flex flex-col items-center gap-3 mb-4">
           <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#f5f5dc]/90">
-            IMC#4191 × Khan Academy Türkiye
+            {t('hero.subtitle')}
           </p>
-          <TurkishContentBadge variant="onDark" />
+          <ContentLanguageBadge variant="onDark" />
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-balance leading-tight">
-          FIRST Parts to Practice
+          {t('hero.title')}
         </h1>
         <p className="text-lg md:text-xl text-[#f5f5dc] max-w-2xl mx-auto leading-relaxed text-balance mb-10">
-          Introductory FRC and FIRST coursework in Turkish—video lessons and interactive
-          quizzes to support learning.
+          {t('hero.description')}
         </p>
 
         <div
