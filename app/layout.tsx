@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FIRST Parts to Practice",
-  description: "IMC#4191 x Khan Academy  Türkiye İşbirliğinde Türkçe FRC ve FIRST Giriş Dersleri",
+  description:
+    "IMC#4191 and Khan Academy Türkiye: introductory FRC and FIRST lessons in Turkish—videos and interactive quizzes.",
 };
 
 export default function RootLayout({
@@ -25,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >

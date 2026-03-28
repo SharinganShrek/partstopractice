@@ -616,7 +616,42 @@ export const courseTests: CourseTest[] = [
   },
 ];
 
+const OPTION_KEYS = ['A', 'B', 'C', 'D'] as const;
+
+/** Döngüsel kaydırma ile doğru şıkkı dengeli A/B/C/D konumlarına yerleştirir (ham verideki B ağırlığını kırar). */
+export function applyBalancedOptionRotation(
+  question: Question,
+  courseId: number,
+  questionIndex: number
+): Question {
+  const texts = question.options.map((o) => o.text);
+  const correctIdx = OPTION_KEYS.indexOf(
+    question.correctAnswer as (typeof OPTION_KEYS)[number]
+  );
+  if (correctIdx < 0 || texts.length !== 4) {
+    return question;
+  }
+
+  const targetIdx = (courseId * 11 + questionIndex) % 4;
+  const k = (correctIdx - targetIdx + 4) % 4;
+  const newTexts = OPTION_KEYS.map((_, i) => texts[(i + k) % 4]);
+
+  return {
+    ...question,
+    options: OPTION_KEYS.map((key, i) => ({
+      key,
+      text: newTexts[i],
+    })),
+    correctAnswer: OPTION_KEYS[targetIdx],
+  };
+}
+
 export function getTestByCourseId(courseId: number): Question[] | undefined {
   const test = courseTests.find((t) => t.courseId === courseId);
-  return test?.questions;
+  if (!test) {
+    return undefined;
+  }
+  return test.questions.map((q, index) =>
+    applyBalancedOptionRotation(q, courseId, index)
+  );
 }

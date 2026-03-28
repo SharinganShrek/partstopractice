@@ -1,39 +1,30 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { courses } from '@/lib/courses';
+import HomeHero from './components/HomeHero';
+import StatsStrip from './components/StatsStrip';
+import TurkishContentBadge from './components/TurkishContentBadge';
 
 export default function Home() {
   return (
     <div className="bg-[#fafaf5] min-h-screen">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#800020] to-[#a01e2b] text-white py-16 relative">
-        <div className="max-w-7xl mx-auto px-4 flex items-start justify-between">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              FIRST Parts to Practice
-            </h1>
-            <p className="text-xl md:text-2xl text-[#f5f5dc] max-w-3xl">
-              IMC#4191 x Khan Academy Türkiye İşbirliğinde Türkçe FRC ve FIRST başlangıç dersleri.
-            </p>
-          </div>
-          {/* Khan Academy Logo - Header altında, sağa yaslı */}
-          <div className="ml-8 mt-12 flex-shrink-0">
-            <Image
-              src="/62a63a8403a870b920cbfd4a.png"
-              alt="Khan Academy Logo"
-              width={200}
-              height={200}
-              className="h-auto w-auto max-w-[200px] max-h-[200px]"
-            />
-          </div>
-        </div>
-      </div>
+      <HomeHero />
+      <StatsStrip />
 
-      {/* Kurs Listesi */}
-      <div className="max-w-7xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8 text-[#212529]">Kurslar</h2>
+      <div className="max-w-7xl mx-auto px-4 py-14 md:py-16">
+        <div className="max-w-3xl mb-10 flex flex-col gap-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#212529] tracking-tight">
+              Courses
+            </h2>
+            <TurkishContentBadge variant="onLight" />
+          </div>
+          <p className="text-[#495057] text-lg leading-relaxed">
+            Titles, videos, and quizzes below are in <strong>Turkish</strong>. Open a lesson
+            for the video or jump straight to the practice quiz.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {courses.map((course) => (
@@ -70,7 +61,7 @@ export default function Home() {
                     onClick={(e) => e.stopPropagation()}
                     className="text-[#800020] hover:text-[#a01e2b] font-medium hover:underline"
                   >
-                    Test Çöz
+                    Practice quiz
                   </Link>
                 </div>
                 {course.duration && (

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { getCourseById } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
 import CourseTest from '../../components/CourseTest';
+import TurkishContentBadge from '../../components/TurkishContentBadge';
 
 export default function CourseDetailPage() {
   const params = useParams();
@@ -27,22 +28,22 @@ export default function CourseDetailPage() {
   return (
     <div className="bg-[#fafaf5] min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        {/* Header */}
-        <div className="mb-6 flex items-center justify-between">
+        <div className="mb-6">
           <Link
             href="/courses"
-            className="text-[#800020] hover:text-[#a01e2b] font-medium flex items-center gap-2"
+            className="text-[#800020] hover:text-[#a01e2b] font-medium inline-flex items-center gap-2 mb-4"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Kurslara Dön
+            Back to courses
           </Link>
-          <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
-          <div className="w-24" />
+          <div className="flex flex-wrap items-center gap-3">
+            <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
+            <TurkishContentBadge variant="onLight" />
+          </div>
         </div>
 
-        {/* Video Section */}
         <div className="bg-white rounded-lg shadow-md border border-[#e9ecef] overflow-hidden mb-8">
           <div className="p-4 border-b border-[#e9ecef]">
             <h2 className="text-lg font-semibold text-[#212529]">Video</h2>
@@ -72,20 +73,19 @@ export default function CourseDetailPage() {
                       d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
                     />
                   </svg>
-                  <p className="text-xl mb-2">Video henüz eklenmedi</p>
-                  <p className="text-gray-400">Bu video yakında eklenecektir.</p>
+                  <p className="text-xl mb-2">Video not available yet</p>
+                  <p className="text-gray-400">This lesson will be updated soon.</p>
                 </div>
               </div>
             )}
           </div>
         </div>
 
-        {/* Test Section */}
         {questions && questions.length > 0 ? (
           <CourseTest questions={questions} courseTitle={course.title} />
         ) : (
           <div className="bg-white rounded-lg shadow-md border border-[#e9ecef] p-8 text-center text-[#495057]">
-            Bu kurs için henüz test eklenmemiş.
+            No quiz is available for this course yet.
           </div>
         )}
       </div>
