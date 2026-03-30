@@ -11,6 +11,7 @@ const coursesHe: Course[] = [
   { id: 4, title: 'קרן FIRST והערכים שלה', description: '', level: 'מתחיל', duration: '12:08', thumbnail: '/course_content/thumbnails/FIRST Logo.png', youtubeId: 'A3TEmHAzog8' },
   { id: 5, title: 'התנדבות ופרסים ב-FRC', description: '', level: 'מתחיל', duration: '', thumbnail: '/course_content/thumbnails/FRC Logo.png', youtubeId: 'Er7A3VhBTRk' },
   { id: 6, title: 'חלוקת תפקידים בקבוצת FRC', description: '', level: 'מתחיל', duration: '3:57', thumbnail: '/course_content/thumbnails/FRC Logo.png', youtubeId: 'WvVXO31bdII' },
+  { id: 7, title: 'IMC x Khan Academy: Introduction to FIRST Competitions - מבוא לתחרויות FIRST (Hebrew)', description: '', level: 'מתחיל', duration: '7:31', thumbnail: '/course_content/thumbnails/FIRST Logo.png', youtubeId: 'P8g4jW8i2dM' },
 ];
 
 export default coursesHe;

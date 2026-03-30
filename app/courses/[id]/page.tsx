@@ -1,21 +1,26 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { getCourseById } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
 import CourseTest from '../../components/CourseTest';
 import ContentLanguageBadge from '../../components/ContentLanguageBadge';
 import { useLanguage } from '../../components/LanguageContext';
+import type { SupportedLanguage } from '@/lib/i18n/config';
 
 export default function CourseDetailPage() {
   const params = useParams();
   const router = useRouter();
+  const searchParams = useSearchParams();
   const { language, t } = useLanguage();
   const courseId = params.id as string;
-  const course = getCourseById(courseId, language);
-  const questions = course ? getTestByCourseId(course.id, language) : undefined;
+  const contentLangParam = searchParams.get('contentLang');
+  const contentLanguage = (contentLangParam as SupportedLanguage | null) ?? language;
+
+  const course = getCourseById(courseId, contentLanguage);
+  const questions = course ? getTestByCourseId(course.id, contentLanguage) : undefined;
 
   useEffect(() => {
     if (!course) {

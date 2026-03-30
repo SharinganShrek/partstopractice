@@ -38,6 +38,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'Quiz',
     'courses.backToCourses': 'Derslere dön',
 
+    'videos.videosLabel': 'Videolar',
+    'videos.otherVideosLabel': 'Diğer Videolar',
+
     // Course detail
     'course.video': 'Video',
     'course.noVideo': 'Video henüz eklenmedi',
@@ -101,6 +104,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'Practice quiz',
     'courses.backToCourses': 'Back to courses',
 
+    'videos.videosLabel': 'Videos',
+    'videos.otherVideosLabel': 'Other Videos',
+
     'course.video': 'Video',
     'course.noVideo': 'Video not available yet',
     'course.noVideoSub': 'This lesson will be updated soon.',
@@ -156,6 +162,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': '练习测验',
     'courses.backToCourses': '返回课程',
 
+    'videos.videosLabel': '视频',
+    'videos.otherVideosLabel': '其他视频',
+
     'course.video': '视频',
     'course.noVideo': '视频尚未上传',
     'course.noVideoSub': '本课程即将更新。',
@@ -208,6 +217,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.description': 'עיינו בשיעורי וידאו או קפצו ישירות לחידון של כל קורס.',
     'courses.practiceQuiz': 'חידון תרגול',
     'courses.backToCourses': 'חזרה לקורסים',
+
+    'videos.videosLabel': 'סרטונים',
+    'videos.otherVideosLabel': 'סרטונים אחרים',
 
     'course.video': 'וידאו',
     'course.noVideo': 'הוידאו עדיין לא זמין',
@@ -263,6 +275,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
       'Durchstöbern Sie Videolektionen oder springen Sie direkt zum Übungsquiz jedes Kurses.',
     'courses.practiceQuiz': 'Übungsquiz',
     'courses.backToCourses': 'Zurück zu Kursen',
+
+    'videos.videosLabel': 'Videos',
+    'videos.otherVideosLabel': 'Andere Videos',
 
     'course.video': 'Video',
     'course.noVideo': 'Video noch nicht verfügbar',
@@ -320,6 +335,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'Quiz praktyczny',
     'courses.backToCourses': 'Powrót do kursów',
 
+    'videos.videosLabel': 'Filmy',
+    'videos.otherVideosLabel': 'Pozostałe filmy',
+
     'course.video': 'Wideo',
     'course.noVideo': 'Wideo jeszcze niedostępne',
     'course.noVideoSub': 'Ta lekcja zostanie wkrótce zaktualizowana.',
@@ -375,6 +393,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'اختبار تدريبي',
     'courses.backToCourses': 'العودة للدورات',
 
+    'videos.videosLabel': 'فيديوهات',
+    'videos.otherVideosLabel': 'فيديوهات أخرى',
+
     'course.video': 'فيديو',
     'course.noVideo': 'الفيديو غير متوفر بعد',
     'course.noVideoSub': 'سيتم تحديث هذا الدرس قريباً.',
@@ -428,6 +449,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.description': 'वीडियो पाठ ब्राउज़ करें या सीधे प्रत्येक पाठ्यक्रम की क्विज़ पर जाएँ।',
     'courses.practiceQuiz': 'अभ्यास क्विज़',
     'courses.backToCourses': 'पाठ्यक्रमों पर वापस',
+
+    'videos.videosLabel': 'वीडियो',
+    'videos.otherVideosLabel': 'अन्य वीडियो',
 
     'course.video': 'वीडियो',
     'course.noVideo': 'वीडियो अभी उपलब्ध नहीं है',
@@ -483,6 +507,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
       'Explore lecciones en video o salte directamente al cuestionario de cada curso.',
     'courses.practiceQuiz': 'Cuestionario',
     'courses.backToCourses': 'Volver a cursos',
+
+    'videos.videosLabel': 'Videos',
+    'videos.otherVideosLabel': 'Otros videos',
 
     'course.video': 'Video',
     'course.noVideo': 'Video aún no disponible',
@@ -540,6 +567,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'Quiz di pratica',
     'courses.backToCourses': 'Torna ai corsi',
 
+    'videos.videosLabel': 'Video',
+    'videos.otherVideosLabel': 'Altri video',
+
     'course.video': 'Video',
     'course.noVideo': 'Video non ancora disponibile',
     'course.noVideoSub': 'Questa lezione verrà aggiornata presto.',
@@ -596,6 +626,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'courses.practiceQuiz': 'Jaribio la mazoezi',
     'courses.backToCourses': 'Rudi kwenye kozi',
 
+    'videos.videosLabel': 'Video',
+    'videos.otherVideosLabel': 'Video zingine',
+
     'course.video': 'Video',
     'course.noVideo': 'Video bado haijapatikana',
     'course.noVideoSub': 'Somo hili litasasishwa hivi karibuni.',
@@ -650,6 +683,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
       'Просматривайте видеоуроки или переходите прямо к тесту каждого курса.',
     'courses.practiceQuiz': 'Практический тест',
     'courses.backToCourses': 'Назад к курсам',
+
+    'videos.videosLabel': 'Видео',
+    'videos.otherVideosLabel': 'Другие видео',
 
     'course.video': 'Видео',
     'course.noVideo': 'Видео пока недоступно',
@@ -706,6 +742,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
       'Parcourez les leçons vidéo ou accédez directement au quiz de chaque cours.',
     'courses.practiceQuiz': 'Quiz de pratique',
     'courses.backToCourses': 'Retour aux cours',
+
+    'videos.videosLabel': 'Vidéos',
+    'videos.otherVideosLabel': 'Autres vidéos',
 
     'course.video': 'Vidéo',
     'course.noVideo': 'Vidéo pas encore disponible',

@@ -59,6 +59,42 @@ const coursesTr: Course[] = [
     thumbnail: '/course_content/thumbnails/FRC Logo.png',
     youtubeId: 'WvVXO31bdII',
   },
+  {
+    id: 7,
+    title: "IMC 2021-2022 Eğitim Videoları | Autodesk Inventor'da Yaygın Kullanılan Tool'lar",
+    description: '',
+    level: 'Başlangıç',
+    duration: '12dk 49sn',
+    thumbnail: '/course_content/thumbnails/FRC Logo.png',
+    youtubeId: '6vMlm16KJnU',
+  },
+  {
+    id: 8,
+    title: "IMC 2021-2022 Eğitim Videoları | Autodesk Inventor ile Basit Anahtarlık Yapımı",
+    description: '',
+    level: 'Başlangıç',
+    duration: '10dk 30sn',
+    thumbnail: '/course_content/thumbnails/FRC Logo.png',
+    youtubeId: 'VxrZD3hbnY4',
+  },
+  {
+    id: 9,
+    title: 'IMC Uzaktan Eğitimleri: Bölüm 2 - Dişliler ve Dişli Kutuları',
+    description: '',
+    level: 'Başlangıç',
+    duration: '15dk 17sn',
+    thumbnail: '/course_content/thumbnails/FRC Logo.png',
+    youtubeId: '3mmLMeVJAIk',
+  },
+  {
+    id: 10,
+    title: 'IMC Uzaktan Eğitimleri: Bölüm 1 - Şase ve Tekerlekler',
+    description: '',
+    level: 'Başlangıç',
+    duration: '26dk 48sn',
+    thumbnail: '/course_content/thumbnails/FRC Logo.png',
+    youtubeId: 'dfR4FL4NtEk',
+  },
 ];
 
 export default coursesTr;

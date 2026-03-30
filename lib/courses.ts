@@ -45,6 +45,14 @@ export function getCourses(lang: SupportedLanguage = 'en'): Course[] {
   return coursesByLang[lang] ?? coursesByLang.en;
 }
 
+/**
+ * Get courses for all supported languages.
+ * Useful for rendering "selected language first" + "other languages later".
+ */
+export function getCoursesByAllLanguages(): Record<SupportedLanguage, Course[]> {
+  return coursesByLang;
+}
+
 /** Legacy default export kept for backward compatibility — returns Turkish. */
 export const courses = coursesTr;
 

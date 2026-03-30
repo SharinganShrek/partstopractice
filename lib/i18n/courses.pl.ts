@@ -11,6 +11,7 @@ const coursesPl: Course[] = [
   { id: 4, title: 'Fundacja FIRST i jej wartości', description: '', level: 'Początkujący', duration: '12min 8s', thumbnail: '/course_content/thumbnails/FIRST Logo.png', youtubeId: 'A3TEmHAzog8' },
   { id: 5, title: 'Wolontariat i nagrody FRC', description: '', level: 'Początkujący', duration: '', thumbnail: '/course_content/thumbnails/FRC Logo.png', youtubeId: 'Er7A3VhBTRk' },
   { id: 6, title: 'Podział ról w zespole FRC', description: '', level: 'Początkujący', duration: '3min 57s', thumbnail: '/course_content/thumbnails/FRC Logo.png', youtubeId: 'WvVXO31bdII' },
+  { id: 7, title: 'IMC x Khan Academy: FIRST Volunteering - Wolontariat FIRST (Polish)', description: '', level: 'Początkujący', duration: '4min 48s', thumbnail: '/course_content/thumbnails/FIRST Logo.png', youtubeId: 'FxX5j8U1PC4' },
 ];
 
 export default coursesPl;
