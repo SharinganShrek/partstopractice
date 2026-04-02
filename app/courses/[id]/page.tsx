@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { getCourseById } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
 import CourseTest from '../../components/CourseTest';
-import ContentLanguageBadge from '../../components/ContentLanguageBadge';
 import { useLanguage } from '../../components/LanguageContext';
 import type { SupportedLanguage } from '@/lib/i18n/config';
 
@@ -45,10 +44,7 @@ export default function CourseDetailPage() {
             </svg>
             {t('courses.backToCourses')}
           </Link>
-          <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
-            <ContentLanguageBadge variant="onLight" />
-          </div>
+          <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
         </div>
 
         <div className="bg-white rounded-lg shadow-md border border-[#e9ecef] overflow-hidden mb-8">

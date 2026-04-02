@@ -1,4 +1,4 @@
-import type { SupportedLanguage } from './i18n/config';
+import { LANGUAGES, type SupportedLanguage } from './i18n/config';
 
 import coursesTr from './i18n/courses.tr';
 import coursesEn from './i18n/courses.en';
@@ -24,6 +24,10 @@ export interface Course {
   youtubeId: string | null;
 }
 
+export type CourseWithContentLang = Course & { contentLang: SupportedLanguage };
+
+export type VideoContentFilter = SupportedLanguage | 'all';
+
 const coursesByLang: Record<SupportedLanguage, Course[]> = {
   tr: coursesTr,
   en: coursesEn,
@@ -39,6 +43,25 @@ const coursesByLang: Record<SupportedLanguage, Course[]> = {
   ru: coursesRu,
   fr: coursesFr,
 };
+
+/** Flat list of courses for the video grid, optionally tagged with content language. */
+export function getCoursesForVideoFilter(
+  filter: VideoContentFilter,
+  byLang: Record<SupportedLanguage, Course[]> = coursesByLang
+): CourseWithContentLang[] {
+  if (filter === 'all') {
+    return LANGUAGES.flatMap((l) =>
+      (byLang[l.code] ?? []).map((course) => ({
+        ...course,
+        contentLang: l.code,
+      }))
+    );
+  }
+  return (byLang[filter] ?? []).map((course) => ({
+    ...course,
+    contentLang: filter,
+  }));
+}
 
 /** Get all courses for a given language. Falls back to English. */
 export function getCourses(lang: SupportedLanguage = 'en'): Course[] {

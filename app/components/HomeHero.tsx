@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import ContentLanguageBadge from './ContentLanguageBadge';
 import { useLanguage } from './LanguageContext';
 
 export default function HomeHero() {
@@ -15,7 +14,6 @@ export default function HomeHero() {
           <p className="text-xs md:text-sm font-semibold uppercase tracking-[0.2em] text-[#f5f5dc]/90">
             {t('hero.subtitle')}
           </p>
-          <ContentLanguageBadge variant="onDark" />
         </div>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-balance leading-tight">
           {t('hero.title')}

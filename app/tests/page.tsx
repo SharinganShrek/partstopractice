@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { getCourses } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
-import ContentLanguageBadge from '../components/ContentLanguageBadge';
 import { useLanguage } from '../components/LanguageContext';
 
 export default function TestsPage() {
@@ -18,10 +17,7 @@ export default function TestsPage() {
   return (
     <div className="bg-[#fafaf5] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex flex-wrap items-center gap-3 mb-4">
-          <h1 className="text-3xl font-bold text-[#212529]">{t('quizzes.title')}</h1>
-          <ContentLanguageBadge variant="onLight" />
-        </div>
+        <h1 className="text-3xl font-bold text-[#212529] mb-4">{t('quizzes.title')}</h1>
         <p className="text-[#495057] mb-8 max-w-2xl">
           {t('quizzes.description')}
         </p>

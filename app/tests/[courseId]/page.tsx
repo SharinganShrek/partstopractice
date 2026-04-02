@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { getCourseById } from '@/lib/courses';
 import { getTestByCourseId } from '@/lib/tests';
 import TestQuestionCard from '../../components/TestQuestionCard';
-import ContentLanguageBadge from '../../components/ContentLanguageBadge';
 import { useLanguage } from '../../components/LanguageContext';
 import type { SupportedLanguage } from '@/lib/i18n/config';
 
@@ -45,10 +44,7 @@ export default function CourseTestPage() {
             </svg>
             {t('quizzes.backToQuizzes')}
           </Link>
-          <div className="flex flex-wrap items-center gap-3">
-            <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
-            <ContentLanguageBadge variant="onLight" />
-          </div>
+          <h1 className="text-2xl font-bold text-[#212529]">{course.title}</h1>
           <p className="text-sm text-[#495057] mt-1">{t('quizzes.practiceQuiz')}</p>
         </div>
 

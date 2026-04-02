@@ -18,7 +18,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Türkçe hazırlanmış FRC ve FIRST tanıtım dersleri—video dersler ve interaktif quizlerle öğrenmeyi destekleyin.',
+      'FRC ve FIRST için tanıtım içerikleri—birçok dilde video dersler ve interaktif quizler.',
 
     // Stats
     'stats.languages.value': '10+',
@@ -34,12 +34,15 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     // Courses
     'courses.title': 'Dersler',
     'courses.description':
-      'Ders başlıkları, videolar ve quizler aşağıdadır. Bir derse tıklayarak videoyu izleyebilir veya doğrudan quiz\'e geçebilirsiniz.',
+      'Video derslere göz atın; dil filtresiyle içerik seçin veya doğrudan alıştırma quize geçin.',
     'courses.practiceQuiz': 'Quiz',
     'courses.backToCourses': 'Derslere dön',
 
     'videos.videosLabel': 'Videolar',
     'videos.otherVideosLabel': 'Diğer Videolar',
+    'videos.filterLabel': 'Video dili',
+    'videos.filterAll': 'Tüm diller',
+    'videos.listHeadingAll': 'Tüm dillerdeki videolar',
 
     // Course detail
     'course.video': 'Video',
@@ -61,9 +64,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Doğru',
     'question.incorrect': 'Yanlış',
     'question.correctAnswer': 'Doğru cevap',
-
-    // Badge
-    'badge.contentIn': 'Dersler ve quizler Türkçe',
 
     // Footer
     'footer.quickLinks': 'Hızlı bağlantılar',
@@ -100,12 +100,15 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'courses.title': 'Courses',
     'courses.description':
-      'Browse video lessons and jump straight to the practice quiz for each course.',
+      'Browse video lessons, filter by language for the list below, or jump straight to the practice quiz for each course.',
     'courses.practiceQuiz': 'Practice quiz',
     'courses.backToCourses': 'Back to courses',
 
     'videos.videosLabel': 'Videos',
     'videos.otherVideosLabel': 'Other Videos',
+    'videos.filterLabel': 'Video language',
+    'videos.filterAll': 'All languages',
+    'videos.listHeadingAll': 'Videos (all languages)',
 
     'course.video': 'Video',
     'course.noVideo': 'Video not available yet',
@@ -124,8 +127,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Correct',
     'question.incorrect': 'Incorrect',
     'question.correctAnswer': 'Correct answer',
-
-    'badge.contentIn': 'Lessons & quizzes in English',
 
     'footer.quickLinks': 'Quick links',
     'footer.home': 'Home',
@@ -164,6 +165,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': '视频',
     'videos.otherVideosLabel': '其他视频',
+    'videos.filterLabel': '视频语言',
+    'videos.filterAll': '所有语言',
+    'videos.listHeadingAll': '视频（所有语言）',
 
     'course.video': '视频',
     'course.noVideo': '视频尚未上传',
@@ -180,8 +184,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': '正确',
     'question.incorrect': '错误',
     'question.correctAnswer': '正确答案',
-
-    'badge.contentIn': '课程和测验为中文',
 
     'footer.quickLinks': '快速链接',
     'footer.home': '首页',
@@ -220,6 +222,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'סרטונים',
     'videos.otherVideosLabel': 'סרטונים אחרים',
+    'videos.filterLabel': 'שפת הסרטונים',
+    'videos.filterAll': 'כל השפות',
+    'videos.listHeadingAll': 'סרטונים (כל השפות)',
 
     'course.video': 'וידאו',
     'course.noVideo': 'הוידאו עדיין לא זמין',
@@ -236,8 +241,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'נכון',
     'question.incorrect': 'לא נכון',
     'question.correctAnswer': 'תשובה נכונה',
-
-    'badge.contentIn': 'שיעורים וחידונים בעברית',
 
     'footer.quickLinks': 'קישורים מהירים',
     'footer.home': 'דף הבית',
@@ -278,6 +281,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Videos',
     'videos.otherVideosLabel': 'Andere Videos',
+    'videos.filterLabel': 'Videosprache',
+    'videos.filterAll': 'Alle Sprachen',
+    'videos.listHeadingAll': 'Videos (alle Sprachen)',
 
     'course.video': 'Video',
     'course.noVideo': 'Video noch nicht verfügbar',
@@ -295,8 +301,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Richtig',
     'question.incorrect': 'Falsch',
     'question.correctAnswer': 'Richtige Antwort',
-
-    'badge.contentIn': 'Lektionen & Quizze auf Deutsch',
 
     'footer.quickLinks': 'Schnellzugriff',
     'footer.home': 'Startseite',
@@ -337,6 +341,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Filmy',
     'videos.otherVideosLabel': 'Pozostałe filmy',
+    'videos.filterLabel': 'Język wideo',
+    'videos.filterAll': 'Wszystkie języki',
+    'videos.listHeadingAll': 'Filmy (wszystkie języki)',
 
     'course.video': 'Wideo',
     'course.noVideo': 'Wideo jeszcze niedostępne',
@@ -354,8 +361,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Poprawnie',
     'question.incorrect': 'Niepoprawnie',
     'question.correctAnswer': 'Poprawna odpowiedź',
-
-    'badge.contentIn': 'Lekcje i quizy po polsku',
 
     'footer.quickLinks': 'Szybkie linki',
     'footer.home': 'Strona główna',
@@ -395,6 +400,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'فيديوهات',
     'videos.otherVideosLabel': 'فيديوهات أخرى',
+    'videos.filterLabel': 'لغة الفيديو',
+    'videos.filterAll': 'كل اللغات',
+    'videos.listHeadingAll': 'مقاطع الفيديو (كل اللغات)',
 
     'course.video': 'فيديو',
     'course.noVideo': 'الفيديو غير متوفر بعد',
@@ -411,8 +419,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'صحيح',
     'question.incorrect': 'خطأ',
     'question.correctAnswer': 'الإجابة الصحيحة',
-
-    'badge.contentIn': 'الدروس والاختبارات بالعربية',
 
     'footer.quickLinks': 'روابط سريعة',
     'footer.home': 'الرئيسية',
@@ -452,6 +458,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'वीडियो',
     'videos.otherVideosLabel': 'अन्य वीडियो',
+    'videos.filterLabel': 'वीडियो भाषा',
+    'videos.filterAll': 'सभी भाषाएँ',
+    'videos.listHeadingAll': 'वीडियो (सभी भाषाएँ)',
 
     'course.video': 'वीडियो',
     'course.noVideo': 'वीडियो अभी उपलब्ध नहीं है',
@@ -468,8 +477,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'सही',
     'question.incorrect': 'गलत',
     'question.correctAnswer': 'सही उत्तर',
-
-    'badge.contentIn': 'पाठ और क्विज़ हिंदी में',
 
     'footer.quickLinks': 'त्वरित लिंक',
     'footer.home': 'होम',
@@ -510,6 +517,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Videos',
     'videos.otherVideosLabel': 'Otros videos',
+    'videos.filterLabel': 'Idioma del video',
+    'videos.filterAll': 'Todos los idiomas',
+    'videos.listHeadingAll': 'Videos (todos los idiomas)',
 
     'course.video': 'Video',
     'course.noVideo': 'Video aún no disponible',
@@ -527,8 +537,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Correcto',
     'question.incorrect': 'Incorrecto',
     'question.correctAnswer': 'Respuesta correcta',
-
-    'badge.contentIn': 'Lecciones y cuestionarios en español',
 
     'footer.quickLinks': 'Enlaces rápidos',
     'footer.home': 'Inicio',
@@ -569,6 +577,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Video',
     'videos.otherVideosLabel': 'Altri video',
+    'videos.filterLabel': 'Lingua dei video',
+    'videos.filterAll': 'Tutte le lingue',
+    'videos.listHeadingAll': 'Video (tutte le lingue)',
 
     'course.video': 'Video',
     'course.noVideo': 'Video non ancora disponibile',
@@ -586,8 +597,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Corretto',
     'question.incorrect': 'Sbagliato',
     'question.correctAnswer': 'Risposta corretta',
-
-    'badge.contentIn': 'Lezioni e quiz in italiano',
 
     'footer.quickLinks': 'Link rapidi',
     'footer.home': 'Home',
@@ -628,6 +637,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Video',
     'videos.otherVideosLabel': 'Video zingine',
+    'videos.filterLabel': 'Lugha ya video',
+    'videos.filterAll': 'Lugha zote',
+    'videos.listHeadingAll': 'Video (lugha zote)',
 
     'course.video': 'Video',
     'course.noVideo': 'Video bado haijapatikana',
@@ -644,8 +656,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Sahihi',
     'question.incorrect': 'Si sahihi',
     'question.correctAnswer': 'Jibu sahihi',
-
-    'badge.contentIn': 'Masomo na majaribio kwa Kiswahili',
 
     'footer.quickLinks': 'Viungo vya haraka',
     'footer.home': 'Nyumbani',
@@ -686,6 +696,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Видео',
     'videos.otherVideosLabel': 'Другие видео',
+    'videos.filterLabel': 'Язык видео',
+    'videos.filterAll': 'Все языки',
+    'videos.listHeadingAll': 'Видео (на всех языках)',
 
     'course.video': 'Видео',
     'course.noVideo': 'Видео пока недоступно',
@@ -703,8 +716,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Правильно',
     'question.incorrect': 'Неправильно',
     'question.correctAnswer': 'Правильный ответ',
-
-    'badge.contentIn': 'Уроки и тесты на русском',
 
     'footer.quickLinks': 'Быстрые ссылки',
     'footer.home': 'Главная',
@@ -745,6 +756,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'videos.videosLabel': 'Vidéos',
     'videos.otherVideosLabel': 'Autres vidéos',
+    'videos.filterLabel': 'Langue des vidéos',
+    'videos.filterAll': 'Toutes les langues',
+    'videos.listHeadingAll': 'Vidéos (toutes les langues)',
 
     'course.video': 'Vidéo',
     'course.noVideo': 'Vidéo pas encore disponible',
@@ -762,8 +776,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'question.correct': 'Correct',
     'question.incorrect': 'Incorrect',
     'question.correctAnswer': 'Bonne réponse',
-
-    'badge.contentIn': 'Leçons et quiz en français',
 
     'footer.quickLinks': 'Liens rapides',
     'footer.home': 'Accueil',
