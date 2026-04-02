@@ -9,8 +9,9 @@ import {
   type ReactNode,
 } from 'react';
 import type { SupportedLanguage } from '@/lib/i18n/config';
-import { DEFAULT_LANGUAGE, countryToLanguage } from '@/lib/i18n/config';
+import { DEFAULT_LANGUAGE } from '@/lib/i18n/config';
 import translations from '@/lib/i18n/translations';
+import InitialLanguagePicker from './InitialLanguagePicker';
 
 interface LanguageContextValue {
   language: SupportedLanguage;
@@ -30,36 +31,28 @@ const STORAGE_KEY = 'ptp-language';
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<SupportedLanguage>(DEFAULT_LANGUAGE);
   const [ready, setReady] = useState(false);
+  const [showOnboarding, setShowOnboarding] = useState(false);
 
-  // On mount: check localStorage, then geolocation
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as SupportedLanguage | null;
     if (stored && translations[stored]) {
       setLanguageState(stored);
-      setReady(true);
-      return;
+      setShowOnboarding(false);
+    } else {
+      setShowOnboarding(true);
     }
-
-    // Detect via geolocation
-    fetch('https://ipapi.co/json/')
-      .then((res) => res.json())
-      .then((data) => {
-        const detected = countryToLanguage(data.country_code ?? '');
-        setLanguageState(detected);
-        localStorage.setItem(STORAGE_KEY, detected);
-      })
-      .catch(() => {
-        // Fallback to English
-        setLanguageState(DEFAULT_LANGUAGE);
-        localStorage.setItem(STORAGE_KEY, DEFAULT_LANGUAGE);
-      })
-      .finally(() => setReady(true));
+    setReady(true);
   }, []);
 
   const setLanguage = useCallback((lang: SupportedLanguage) => {
     setLanguageState(lang);
     localStorage.setItem(STORAGE_KEY, lang);
+    setShowOnboarding(false);
   }, []);
+
+  const completeOnboarding = useCallback((lang: SupportedLanguage) => {
+    setLanguage(lang);
+  }, [setLanguage]);
 
   const t = useCallback(
     (key: string): string => {
@@ -68,14 +61,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     [language]
   );
 
-  // Prevent flash of default language
   if (!ready) {
     return null;
   }
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      {children}
+      {showOnboarding ? (
+        <InitialLanguagePicker onSelect={completeOnboarding} />
+      ) : (
+        children
+      )}
     </LanguageContext.Provider>
   );
 }

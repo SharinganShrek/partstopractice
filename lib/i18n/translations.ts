@@ -75,6 +75,9 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     // Language selector
     'language.select': 'Dil seçin',
+    'language.onboardingTitle': 'Site dilini seçin',
+    'language.onboardingHint':
+      'İstediğiniz zaman üst menüden dil değiştirebilirsiniz.',
   },
 
   // ─── ENGLISH ──────────────────────────────────────────────
@@ -136,6 +139,8 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.copyright': '© 2026 FIRST Parts to Practice. All rights reserved.',
 
     'language.select': 'Select language',
+    'language.onboardingTitle': 'Choose site language',
+    'language.onboardingHint': 'You can change this anytime from the top bar.',
   },
 
   // ─── CHINESE ──────────────────────────────────────────────
