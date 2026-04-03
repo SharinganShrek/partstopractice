@@ -1,75 +1,29 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
 import { getTotalVideoCountAcrossLanguages } from '@/lib/courses';
-import { intlLocaleForLanguage, type SupportedLanguage } from '@/lib/i18n/config';
 import { useLanguage } from './LanguageContext';
 
-function formatAggregatedViews(views: number, lang: SupportedLanguage): string {
-  const formatted = new Intl.NumberFormat(intlLocaleForLanguage(lang), {
-    maximumFractionDigits: 0,
-  }).format(views);
-  return `${formatted}+`;
-}
-
 export default function StatsStrip() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const totalVideos = getTotalVideoCountAcrossLanguages();
 
-  const [viewsTotal, setViewsTotal] = useState<number | null>(null);
-  const [fromYoutube, setFromYoutube] = useState(false);
-
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const res = await fetch('/api/youtube-views');
-        const data = (await res.json()) as { ok?: boolean; total?: number | null };
-        if (cancelled) return;
-        if (data.ok && typeof data.total === 'number') {
-          setViewsTotal(data.total);
-          setFromYoutube(true);
-        } else {
-          setViewsTotal(null);
-          setFromYoutube(false);
-        }
-      } catch {
-        if (!cancelled) {
-          setViewsTotal(null);
-          setFromYoutube(false);
-        }
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  const reachedDisplay =
-    fromYoutube && viewsTotal != null
-      ? formatAggregatedViews(viewsTotal, language)
-      : t('stats.reached.value');
-
-  const stats = useMemo(
-    () => [
-      {
-        value: t('stats.languages.value'),
-        label: t('stats.languages.label'),
-        sub: t('stats.languages.sub'),
-      },
-      {
-        value: reachedDisplay,
-        label: t('stats.reached.label'),
-        sub: t('stats.reached.sub'),
-      },
-      {
-        value: String(totalVideos),
-        label: t('stats.lessons.label'),
-        sub: t('stats.lessons.sub'),
-      },
-    ],
-    [reachedDisplay, t, totalVideos]
-  );
+  const stats = [
+    {
+      value: t('stats.languages.value'),
+      label: t('stats.languages.label'),
+      sub: t('stats.languages.sub'),
+    },
+    {
+      value: t('stats.reached.value'),
+      label: t('stats.reached.label'),
+      sub: t('stats.reached.sub'),
+    },
+    {
+      value: String(totalVideos),
+      label: t('stats.lessons.label'),
+      sub: t('stats.lessons.sub'),
+    },
+  ];
 
   return (
     <section
