@@ -81,3 +81,23 @@ export function countryToLanguage(countryCode: string): SupportedLanguage {
 export function getLanguageInfo(code: SupportedLanguage): LanguageInfo {
   return LANGUAGES.find((l) => l.code === code) ?? LANGUAGES[1]; // fallback to English
 }
+
+/** BCP 47 locale for number/date formatting. */
+export function intlLocaleForLanguage(code: SupportedLanguage): string {
+  const map: Record<SupportedLanguage, string> = {
+    tr: 'tr-TR',
+    en: 'en-US',
+    zh: 'zh-CN',
+    he: 'he-IL',
+    de: 'de-DE',
+    pl: 'pl-PL',
+    ar: 'ar-SA',
+    hi: 'hi-IN',
+    es: 'es-ES',
+    it: 'it-IT',
+    sw: 'sw-TZ',
+    ru: 'ru-RU',
+    fr: 'fr-FR',
+  };
+  return map[code];
+}

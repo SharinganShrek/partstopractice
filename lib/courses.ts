@@ -72,6 +72,18 @@ export function getTotalVideoCountAcrossLanguages(
   ).length;
 }
 
+/** Unique YouTube video IDs across all localized course lists (deduped; skips null/empty). */
+export function getAllUniqueYoutubeVideoIds(
+  byLang: Record<SupportedLanguage, Course[]> = coursesByLang
+): string[] {
+  const ids = new Set<string>();
+  for (const c of getCoursesForVideoFilter('all', byLang)) {
+    const id = c.youtubeId?.trim();
+    if (id) ids.add(id);
+  }
+  return [...ids];
+}
+
 /** Get all courses for a given language. Falls back to English. */
 export function getCourses(lang: SupportedLanguage = 'en'): Course[] {
   return coursesByLang[lang] ?? coursesByLang.en;
