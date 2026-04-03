@@ -27,7 +27,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10.000+',
     'stats.reached.label': 'Ulaşılan kişi',
     'stats.reached.sub': 'Öğrenciler ve toplulukla paylaşılan kaynaklar',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Video ders',
     'stats.lessons.sub': 'Öğrendiklerinizi pekiştirmek için 60+ interaktif quiz sorusu',
 
@@ -97,7 +96,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': 'People reached',
     'stats.reached.sub': 'Resources shared with students and the wider community',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Video lessons',
     'stats.lessons.sub': '60+ interactive quiz questions to reinforce what you learn',
 
@@ -159,7 +157,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': '触达人数',
     'stats.reached.sub': '与学生和社区共享的资源',
-    'stats.lessons.value': '6',
     'stats.lessons.label': '视频课程',
     'stats.lessons.sub': '60+ 互动测验题巩固所学知识',
 
@@ -216,7 +213,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': 'אנשים שהושגו',
     'stats.reached.sub': 'משאבים ששותפו עם תלמידים והקהילה',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'שיעורי וידאו',
     'stats.lessons.sub': '60+ שאלות חידון אינטראקטיביות לחיזוק הלמידה',
 
@@ -274,7 +270,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10.000+',
     'stats.reached.label': 'Erreichte Personen',
     'stats.reached.sub': 'Ressourcen mit Schülern und der Gemeinschaft geteilt',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Videolektionen',
     'stats.lessons.sub': '60+ interaktive Quizfragen zum Festigen des Gelernten',
 
@@ -334,7 +329,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10 000+',
     'stats.reached.label': 'Dotartych osób',
     'stats.reached.sub': 'Zasoby udostępnione uczniom i społeczności',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Lekcji wideo',
     'stats.lessons.sub': '60+ interaktywnych pytań quizowych do utrwalania wiedzy',
 
@@ -394,7 +388,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': 'شخص تم الوصول إليه',
     'stats.reached.sub': 'موارد تمت مشاركتها مع الطلاب والمجتمع',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'دروس فيديو',
     'stats.lessons.sub': '60+ سؤال اختبار تفاعلي لتعزيز ما تتعلمه',
 
@@ -452,7 +445,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': 'लोगों तक पहुँच',
     'stats.reached.sub': 'छात्रों और समुदाय के साथ साझा किए गए संसाधन',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'वीडियो पाठ',
     'stats.lessons.sub': '60+ इंटरैक्टिव क्विज़ प्रश्न सीखे हुए को मजबूत करने के लिए',
 
@@ -510,7 +502,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10.000+',
     'stats.reached.label': 'Personas alcanzadas',
     'stats.reached.sub': 'Recursos compartidos con estudiantes y la comunidad',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Lecciones en video',
     'stats.lessons.sub': '60+ preguntas interactivas para reforzar lo aprendido',
 
@@ -570,7 +561,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10.000+',
     'stats.reached.label': 'Persone raggiunte',
     'stats.reached.sub': 'Risorse condivise con studenti e comunità',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Lezioni video',
     'stats.lessons.sub': '60+ domande quiz interattive per rafforzare l\'apprendimento',
 
@@ -630,7 +620,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10,000+',
     'stats.reached.label': 'Watu waliofikiwa',
     'stats.reached.sub': 'Rasilimali zilizoshirikiwa na wanafunzi na jamii',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Masomo ya video',
     'stats.lessons.sub': '60+ maswali ya majaribio ya maingiliano kuimarisha unachojifunza',
 
@@ -689,7 +678,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10 000+',
     'stats.reached.label': 'Охват',
     'stats.reached.sub': 'Ресурсы, разделённые со студентами и сообществом',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Видеоуроков',
     'stats.lessons.sub': '60+ интерактивных вопросов для закрепления знаний',
 
@@ -749,7 +737,6 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.reached.value': '10 000+',
     'stats.reached.label': 'Personnes atteintes',
     'stats.reached.sub': 'Ressources partagées avec les étudiants et la communauté',
-    'stats.lessons.value': '6',
     'stats.lessons.label': 'Leçons vidéo',
     'stats.lessons.sub': '60+ questions de quiz interactives pour renforcer vos acquis',
 

@@ -1,9 +1,11 @@
 'use client';
 
+import { getTotalVideoCountAcrossLanguages } from '@/lib/courses';
 import { useLanguage } from './LanguageContext';
 
 export default function StatsStrip() {
   const { t } = useLanguage();
+  const totalVideos = getTotalVideoCountAcrossLanguages();
 
   const stats = [
     {
@@ -17,7 +19,7 @@ export default function StatsStrip() {
       sub: t('stats.reached.sub'),
     },
     {
-      value: t('stats.lessons.value'),
+      value: String(totalVideos),
       label: t('stats.lessons.label'),
       sub: t('stats.lessons.sub'),
     },

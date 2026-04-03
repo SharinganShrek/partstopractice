@@ -63,6 +63,15 @@ export function getCoursesForVideoFilter(
   }));
 }
 
+/** Count of video rows across all content languages (matches “all languages” grid); excludes missing YouTube IDs. */
+export function getTotalVideoCountAcrossLanguages(
+  byLang: Record<SupportedLanguage, Course[]> = coursesByLang
+): number {
+  return getCoursesForVideoFilter('all', byLang).filter(
+    (c) => c.youtubeId != null && c.youtubeId !== ''
+  ).length;
+}
+
 /** Get all courses for a given language. Falls back to English. */
 export function getCourses(lang: SupportedLanguage = 'en'): Course[] {
   return coursesByLang[lang] ?? coursesByLang.en;
