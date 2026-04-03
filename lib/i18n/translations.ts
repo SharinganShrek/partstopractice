@@ -24,7 +24,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.languages.value': '10+',
     'stats.languages.label': 'Dil',
     'stats.languages.sub': 'FIRST ve FRC giriş materyalleri birçok dilde mevcut',
-    'stats.reached.value': '10.000+',
+    'stats.reached.value': '15.000+',
     'stats.reached.label': 'Ulaşılan kişi',
     'stats.reached.sub': 'Öğrenciler ve toplulukla paylaşılan kaynaklar',
     'stats.lessons.label': 'Video ders',
@@ -33,7 +33,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     // Courses
     'courses.title': 'Dersler',
     'courses.description':
-      'Video derslere göz atın; dil filtresiyle içerik seçin veya doğrudan alıştırma quize geçin.',
+      'Önce seçtiğiniz site dilindeki videolar, ardından diğer diller sırayla listelenir. Doğrudan alıştırma quize geçebilirsiniz; tek dilde listelemek için Dersler sayfasındaki filtreyi kullanın.',
     'courses.practiceQuiz': 'Quiz',
     'courses.backToCourses': 'Derslere dön',
 
@@ -101,7 +101,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'courses.title': 'Courses',
     'courses.description':
-      'Browse video lessons, filter by language for the list below, or jump straight to the practice quiz for each course.',
+      'Videos in your selected site language are listed first, then each other language in order. Jump to a practice quiz from any card; use the Courses page filter to show a single language.',
     'courses.practiceQuiz': 'Practice quiz',
     'courses.backToCourses': 'Back to courses',
 
@@ -267,7 +267,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.languages.value': '10+',
     'stats.languages.label': 'Sprachen',
     'stats.languages.sub': 'FIRST- und FRC-Einführungsmaterialien in vielen Sprachen verfügbar',
-    'stats.reached.value': '10.000+',
+    'stats.reached.value': '15.000+',
     'stats.reached.label': 'Erreichte Personen',
     'stats.reached.sub': 'Ressourcen mit Schülern und der Gemeinschaft geteilt',
     'stats.lessons.label': 'Videolektionen',
@@ -499,7 +499,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.languages.value': '10+',
     'stats.languages.label': 'Idiomas',
     'stats.languages.sub': 'Materiales introductorios de FIRST y FRC en muchos idiomas',
-    'stats.reached.value': '10.000+',
+    'stats.reached.value': '15.000+',
     'stats.reached.label': 'Personas alcanzadas',
     'stats.reached.sub': 'Recursos compartidos con estudiantes y la comunidad',
     'stats.lessons.label': 'Lecciones en video',
@@ -558,7 +558,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'stats.languages.value': '10+',
     'stats.languages.label': 'Lingue',
     'stats.languages.sub': 'Materiali introduttivi FIRST e FRC disponibili in molte lingue',
-    'stats.reached.value': '10.000+',
+    'stats.reached.value': '15.000+',
     'stats.reached.label': 'Persone raggiunte',
     'stats.reached.sub': 'Risorse condivise con studenti e comunità',
     'stats.lessons.label': 'Lezioni video',

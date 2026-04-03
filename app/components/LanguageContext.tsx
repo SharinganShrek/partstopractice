@@ -11,7 +11,6 @@ import {
 import type { SupportedLanguage } from '@/lib/i18n/config';
 import { DEFAULT_LANGUAGE } from '@/lib/i18n/config';
 import translations from '@/lib/i18n/translations';
-import InitialLanguagePicker from './InitialLanguagePicker';
 
 interface LanguageContextValue {
   language: SupportedLanguage;
@@ -31,15 +30,11 @@ const STORAGE_KEY = 'ptp-language';
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<SupportedLanguage>(DEFAULT_LANGUAGE);
   const [ready, setReady] = useState(false);
-  const [showOnboarding, setShowOnboarding] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY) as SupportedLanguage | null;
     if (stored && translations[stored]) {
       setLanguageState(stored);
-      setShowOnboarding(false);
-    } else {
-      setShowOnboarding(true);
     }
     setReady(true);
   }, []);
@@ -47,12 +42,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const setLanguage = useCallback((lang: SupportedLanguage) => {
     setLanguageState(lang);
     localStorage.setItem(STORAGE_KEY, lang);
-    setShowOnboarding(false);
   }, []);
-
-  const completeOnboarding = useCallback((lang: SupportedLanguage) => {
-    setLanguage(lang);
-  }, [setLanguage]);
 
   const t = useCallback(
     (key: string): string => {
@@ -67,11 +57,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage, t }}>
-      {showOnboarding ? (
-        <InitialLanguagePicker onSelect={completeOnboarding} />
-      ) : (
-        children
-      )}
+      {children}
     </LanguageContext.Provider>
   );
 }
