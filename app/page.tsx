@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
+import { useState } from 'react';
 import type { CourseWithContentLang } from '@/lib/courses';
 import { getCoursesByAllLanguages, getCoursesForVideoFilter } from '@/lib/courses';
 import HomeHero from './components/HomeHero';
 import StatsStrip from './components/StatsStrip';
 import { useLanguage } from './components/LanguageContext';
-import { getLanguageInfo, LANGUAGES } from '@/lib/i18n/config';
+import { getLanguageInfo } from '@/lib/i18n/config';
+import VideoTagFilter, { type VideoTag } from './components/VideoTagFilter';
 
 function CourseCard({ course }: { course: CourseWithContentLang }) {
   const { t } = useLanguage();
@@ -26,6 +28,18 @@ function CourseCard({ course }: { course: CourseWithContentLang }) {
           />
         </div>
         <div className="p-6">
+          {course.tags && course.tags.length > 0 && (
+            <div className="flex flex-wrap gap-2 mb-3">
+              {course.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-[#e9ecef] text-[#495057] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
           <h3 className="text-xl font-bold mb-2 text-[#212529] group-hover:text-[#800020] transition-colors">
             {course.title}
           </h3>
@@ -64,11 +78,15 @@ function CourseGrid({ courses }: { courses: CourseWithContentLang[] }) {
 export default function Home() {
   const { language, t } = useLanguage();
   const coursesByLang = getCoursesByAllLanguages();
+  const [tagFilter, setTagFilter] = useState<VideoTag>('all');
 
   const primaryHeading = `${getLanguageInfo(language).name} — ${t('videos.videosLabel')}`;
-  const primaryCourses = getCoursesForVideoFilter(language, coursesByLang);
+  const langCourses = getCoursesForVideoFilter(language, coursesByLang);
 
-  const otherLangsOrdered = LANGUAGES.filter((l) => l.code !== language);
+  const primaryCourses = langCourses.filter((course) => {
+    if (tagFilter === 'all') return true;
+    return course.tags?.includes(tagFilter);
+  });
 
   return (
     <div className="bg-[#fafaf5] min-h-screen">
@@ -83,29 +101,11 @@ export default function Home() {
           <p className="text-[#495057] text-lg leading-relaxed">{t('courses.description')}</p>
         </div>
 
-        <section className="space-y-12">
-          <div>
-            <h3 className="text-2xl font-bold text-[#212529] mb-6">{primaryHeading}</h3>
-            <CourseGrid courses={primaryCourses} />
-          </div>
+        <VideoTagFilter value={tagFilter} onChange={setTagFilter} className="mb-8" />
 
-          <div>
-            <h3 className="text-2xl font-bold text-[#212529] mb-8">{t('videos.otherVideosLabel')}</h3>
-            <div className="space-y-10">
-              {otherLangsOrdered.map((lang) => {
-                const sectionCourses = getCoursesForVideoFilter(lang.code, coursesByLang);
-                if (sectionCourses.length === 0) return null;
-                return (
-                  <div key={lang.code}>
-                    <h4 className="text-xl font-semibold text-[#212529] mb-4">
-                      {lang.flag} {lang.name}
-                    </h4>
-                    <CourseGrid courses={sectionCourses} />
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+        <section>
+          <h3 className="text-2xl font-bold text-[#212529] mb-6">{primaryHeading}</h3>
+          <CourseGrid courses={primaryCourses} />
         </section>
       </div>
     </div>

@@ -22,6 +22,7 @@ export interface Course {
   duration: string;
   thumbnail: string;
   youtubeId: string | null;
+  tags?: string[];
 }
 
 export type CourseWithContentLang = Course & { contentLang: SupportedLanguage };
@@ -43,6 +44,22 @@ const coursesByLang: Record<SupportedLanguage, Course[]> = {
   ru: coursesRu,
   fr: coursesFr,
 };
+
+const COURSE_TAGS: Record<number, string[]> = {
+  1: ['first'],
+  2: ['first', 'fll'],
+  3: ['first', 'ftc'],
+  4: ['first'],
+  5: ['first', 'frc'],
+  6: ['first', 'frc'],
+};
+
+// Inject tags into all courses dynamically
+Object.values(coursesByLang).forEach(courseList => {
+  courseList.forEach(course => {
+    course.tags = COURSE_TAGS[course.id] || [];
+  });
+});
 
 /** Flat list of courses for the video grid, optionally tagged with content language. */
 export function getCoursesForVideoFilter(

@@ -1,38 +1,36 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
-import type { CourseWithContentLang, VideoContentFilter } from '@/lib/courses';
+import { useState } from 'react';
+import type { CourseWithContentLang } from '@/lib/courses';
 import { getCoursesByAllLanguages, getCoursesForVideoFilter } from '@/lib/courses';
-import VideoLanguageFilter from '../components/VideoLanguageFilter';
+import VideoTagFilter, { type VideoTag } from '../components/VideoTagFilter';
 import { useLanguage } from '../components/LanguageContext';
 import { getLanguageInfo } from '@/lib/i18n/config';
 
 export default function CoursesPage() {
   const { language, t } = useLanguage();
   const coursesByLang = getCoursesByAllLanguages();
-  const [videoFilter, setVideoFilter] = useState<VideoContentFilter>(language);
+  const [tagFilter, setTagFilter] = useState<VideoTag>('all');
 
-  useEffect(() => {
-    setVideoFilter(language);
-  }, [language]);
-
-  const filteredCourses: CourseWithContentLang[] = getCoursesForVideoFilter(
-    videoFilter,
+  const langCourses: CourseWithContentLang[] = getCoursesForVideoFilter(
+    language,
     coursesByLang
   );
 
-  const listHeading =
-    videoFilter === 'all'
-      ? t('videos.listHeadingAll')
-      : `${getLanguageInfo(videoFilter).name} — ${t('videos.videosLabel')}`;
+  const filteredCourses = langCourses.filter((course) => {
+    if (tagFilter === 'all') return true;
+    return course.tags?.includes(tagFilter);
+  });
+
+  const listHeading = `${getLanguageInfo(language).name} — ${t('videos.videosLabel')}`;
 
   return (
     <div className="bg-[#fafaf5] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold text-[#212529] mb-4">{t('courses.title')}</h1>
         <p className="text-[#495057] mb-6 max-w-2xl">{t('courses.description')}</p>
-        <VideoLanguageFilter value={videoFilter} onChange={setVideoFilter} className="mb-8" />
+        <VideoTagFilter value={tagFilter} onChange={setTagFilter} className="mb-8" />
 
         <section>
           <h3 className="text-2xl font-bold text-[#212529] mb-6">{listHeading}</h3>
@@ -47,14 +45,6 @@ export default function CoursesPage() {
                   className="block"
                 >
                   <div className="h-48 relative bg-gray-100">
-                    {videoFilter === 'all' && (
-                      <span
-                        className="absolute top-2 right-2 z-10 rounded-full bg-white/90 px-2 py-0.5 text-sm shadow border border-[#e9ecef]"
-                        title={getLanguageInfo(course.contentLang).englishName}
-                      >
-                        {getLanguageInfo(course.contentLang).flag}
-                      </span>
-                    )}
                     <img
                       src={course.thumbnail}
                       alt={course.title}
@@ -62,6 +52,18 @@ export default function CoursesPage() {
                     />
                   </div>
                   <div className="p-6">
+                    {course.tags && course.tags.length > 0 && (
+                      <div className="flex flex-wrap gap-2 mb-3">
+                        {course.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="bg-[#e9ecef] text-[#495057] px-2 py-0.5 rounded text-xs font-bold uppercase tracking-wide"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <h3 className="text-xl font-bold mb-2 text-[#212529] group-hover:text-[#800020] transition-colors">
                       {course.title}
                     </h3>
