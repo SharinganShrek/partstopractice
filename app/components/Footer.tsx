@@ -27,6 +27,11 @@ export default function Footer() {
                   {t('footer.quizzes')}
                 </a>
               </li>
+              <li>
+                <a href="/submit" className="hover:text-[#f5f5dc] transition-colors">
+                  {t('footer.submitVideo')}
+                </a>
+              </li>
             </ul>
           </div>
           <div>

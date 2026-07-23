@@ -35,6 +35,9 @@ export default function Header() {
             <Link href="/tests" className="hover:text-[#f5f5dc] transition-colors">
               {t('nav.quizzes')}
             </Link>
+            <Link href="/submit" className="hover:text-[#f5f5dc] transition-colors">
+              {t('nav.submit')}
+            </Link>
           </nav>
         </div>
       </div>

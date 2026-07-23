@@ -13,6 +13,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Ana Sayfa',
     'nav.courses': 'Dersler',
     'nav.quizzes': 'Quizler',
+    'nav.submit': 'Video Gönder',
 
     // Hero
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
@@ -69,6 +70,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Ana Sayfa',
     'footer.allCourses': 'Tüm dersler',
     'footer.quizzes': 'Quizler',
+    'footer.submitVideo': 'Video gönder',
     'footer.contact': 'İletişim',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Tüm hakları saklıdır.',
 
@@ -77,6 +79,27 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'language.onboardingTitle': 'Site dilini seçin',
     'language.onboardingHint':
       'İstediğiniz zaman üst menüden dil değiştirebilirsiniz.',
+
+    // Submit video
+    'submit.title': 'Video Gönder',
+    'submit.description':
+      'FIRST/FRC eğitim videonuzu bizimle paylaşın. Formu doldurun, moderatörlerimiz talebinizi inceleyecek.',
+    'submit.videoType': 'Video türü',
+    'submit.titleLabel': 'Başlık',
+    'submit.titlePlaceholder': 'Video başlığını girin',
+    'submit.language': 'Video dili',
+    'submit.driveLink': 'Google Drive linki',
+    'submit.driveLinkHint':
+      'Linkin herkese açık veya en azından görüntüleme izniyle paylaşıldığından emin olun.',
+    'submit.submitterName': 'Adınız (isteğe bağlı)',
+    'submit.submitterEmail': 'E-posta adresiniz (isteğe bağlı)',
+    'submit.send': 'Gönder',
+    'submit.sending': 'Gönderiliyor...',
+    'submit.success': 'Başarıyla gönderildi!',
+    'submit.successMessage': 'Video talebiniz moderatörlerimize iletildi.',
+    'submit.sendAnother': 'Başka video gönder',
+    'submit.error': 'Bir hata oluştu. Lütfen tekrar deneyin.',
+    'submit.selectOption': 'Seçin...',
   },
 
   // ─── ENGLISH ──────────────────────────────────────────────
@@ -84,6 +107,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Home',
     'nav.courses': 'Courses',
     'nav.quizzes': 'Quizzes',
+    'nav.submit': 'Submit Video',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -133,12 +157,33 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Home',
     'footer.allCourses': 'All courses',
     'footer.quizzes': 'Quizzes',
+    'footer.submitVideo': 'Submit a video',
     'footer.contact': 'Contact',
     'footer.copyright': '© 2026 FIRST Parts to Practice. All rights reserved.',
 
     'language.select': 'Select language',
     'language.onboardingTitle': 'Choose site language',
     'language.onboardingHint': 'You can change this anytime from the top bar.',
+
+    'submit.title': 'Submit a Video',
+    'submit.description':
+      'Share your FIRST/FRC educational video with us. Fill out the form and our moderators will review your submission.',
+    'submit.videoType': 'Video type',
+    'submit.titleLabel': 'Title',
+    'submit.titlePlaceholder': 'Enter video title',
+    'submit.language': 'Video language',
+    'submit.driveLink': 'Google Drive link',
+    'submit.driveLinkHint':
+      'Make sure the link is publicly accessible or shared with view permission.',
+    'submit.submitterName': 'Your name (optional)',
+    'submit.submitterEmail': 'Your email (optional)',
+    'submit.send': 'Submit',
+    'submit.sending': 'Submitting...',
+    'submit.success': 'Submitted successfully!',
+    'submit.successMessage': 'Your video request has been sent to our moderators for review.',
+    'submit.sendAnother': 'Submit another video',
+    'submit.error': 'Something went wrong. Please try again.',
+    'submit.selectOption': 'Select...',
   },
 
   // ─── CHINESE ──────────────────────────────────────────────
@@ -146,6 +191,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': '首页',
     'nav.courses': '课程',
     'nav.quizzes': '测验',
+    'nav.submit': '提交视频',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -191,10 +237,29 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': '首页',
     'footer.allCourses': '所有课程',
     'footer.quizzes': '测验',
+    'footer.submitVideo': '提交视频',
     'footer.contact': '联系我们',
     'footer.copyright': '© 2026 FIRST Parts to Practice. 保留所有权利。',
 
     'language.select': '选择语言',
+
+    'submit.title': '提交视频',
+    'submit.description': '与我们分享您的 FIRST/FRC 教育视频。填写表单后，我们的审核员将进行审核。',
+    'submit.videoType': '视频类型',
+    'submit.titleLabel': '标题',
+    'submit.titlePlaceholder': '输入视频标题',
+    'submit.language': '视频语言',
+    'submit.driveLink': 'Google Drive 链接',
+    'submit.driveLinkHint': '请确保链接可公开访问或已授予查看权限。',
+    'submit.submitterName': '您的姓名（可选）',
+    'submit.submitterEmail': '您的邮箱（可选）',
+    'submit.send': '提交',
+    'submit.sending': '提交中...',
+    'submit.success': '提交成功！',
+    'submit.successMessage': '您的视频请求已发送给审核员。',
+    'submit.sendAnother': '提交另一个视频',
+    'submit.error': '出现错误，请重试。',
+    'submit.selectOption': '请选择...',
   },
 
   // ─── HEBREW ───────────────────────────────────────────────
@@ -202,6 +267,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'דף הבית',
     'nav.courses': 'קורסים',
     'nav.quizzes': 'חידונים',
+    'nav.submit': 'שליחת וידאו',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -247,10 +313,29 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'דף הבית',
     'footer.allCourses': 'כל הקורסים',
     'footer.quizzes': 'חידונים',
+    'footer.submitVideo': 'שליחת וידאו',
     'footer.contact': 'צור קשר',
     'footer.copyright': '© 2026 FIRST Parts to Practice. כל הזכויות שמורות.',
 
     'language.select': 'בחר שפה',
+
+    'submit.title': 'שליחת וידאו',
+    'submit.description': 'שתפו איתנו את סרטון ההדרכה של FIRST/FRC. מלאו את הטופס ומנהלים יבדקו את הבקשה.',
+    'submit.videoType': 'סוג וידאו',
+    'submit.titleLabel': 'כותרת',
+    'submit.titlePlaceholder': 'הזינו כותרת',
+    'submit.language': 'שפת הווידאו',
+    'submit.driveLink': 'קישור Google Drive',
+    'submit.driveLinkHint': 'ודאו שהקישור נגיש לצפייה.',
+    'submit.submitterName': 'שמכם (אופציונלי)',
+    'submit.submitterEmail': 'דוא"ל (אופציונלי)',
+    'submit.send': 'שליחה',
+    'submit.sending': 'שולח...',
+    'submit.success': 'נשלח בהצלחה!',
+    'submit.successMessage': 'בקשת הווידאו נשלחה למנהלים.',
+    'submit.sendAnother': 'שליחת וידאו נוסף',
+    'submit.error': 'אירעה שגיאה. נסו שוב.',
+    'submit.selectOption': 'בחרו...',
   },
 
   // ─── GERMAN ───────────────────────────────────────────────
@@ -258,6 +343,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Startseite',
     'nav.courses': 'Kurse',
     'nav.quizzes': 'Quizze',
+    'nav.submit': 'Video einreichen',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -306,10 +392,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Startseite',
     'footer.allCourses': 'Alle Kurse',
     'footer.quizzes': 'Quizze',
+    'footer.submitVideo': 'Video einreichen',
     'footer.contact': 'Kontakt',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Alle Rechte vorbehalten.',
 
     'language.select': 'Sprache wählen',
+
+    'submit.title': 'Video einreichen',
+    'submit.description':
+      'Teilen Sie Ihr FIRST/FRC-Lernvideo mit uns. Füllen Sie das Formular aus — unsere Moderatoren prüfen Ihre Anfrage.',
+    'submit.videoType': 'Videotyp',
+    'submit.titleLabel': 'Titel',
+    'submit.titlePlaceholder': 'Videotitel eingeben',
+    'submit.language': 'Videosprache',
+    'submit.driveLink': 'Google-Drive-Link',
+    'submit.driveLinkHint': 'Stellen Sie sicher, dass der Link öffentlich oder mit Ansichtsberechtigung geteilt ist.',
+    'submit.submitterName': 'Ihr Name (optional)',
+    'submit.submitterEmail': 'Ihre E-Mail (optional)',
+    'submit.send': 'Absenden',
+    'submit.sending': 'Wird gesendet...',
+    'submit.success': 'Erfolgreich gesendet!',
+    'submit.successMessage': 'Ihre Videoanfrage wurde an unsere Moderatoren gesendet.',
+    'submit.sendAnother': 'Weiteres Video einreichen',
+    'submit.error': 'Ein Fehler ist aufgetreten. Bitte erneut versuchen.',
+    'submit.selectOption': 'Auswählen...',
   },
 
   // ─── POLISH ───────────────────────────────────────────────
@@ -317,6 +423,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Strona główna',
     'nav.courses': 'Kursy',
     'nav.quizzes': 'Quizy',
+    'nav.submit': 'Wyślij wideo',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -365,10 +472,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Strona główna',
     'footer.allCourses': 'Wszystkie kursy',
     'footer.quizzes': 'Quizy',
+    'footer.submitVideo': 'Wyślij wideo',
     'footer.contact': 'Kontakt',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Wszelkie prawa zastrzeżone.',
 
     'language.select': 'Wybierz język',
+
+    'submit.title': 'Wyślij wideo',
+    'submit.description':
+      'Podziel się z nami swoim materiałem FIRST/FRC. Wypełnij formularz — moderatorzy sprawdzą zgłoszenie.',
+    'submit.videoType': 'Typ wideo',
+    'submit.titleLabel': 'Tytuł',
+    'submit.titlePlaceholder': 'Wpisz tytuł wideo',
+    'submit.language': 'Język wideo',
+    'submit.driveLink': 'Link Google Drive',
+    'submit.driveLinkHint': 'Upewnij się, że link jest publiczny lub ma uprawnienia do podglądu.',
+    'submit.submitterName': 'Twoje imię (opcjonalnie)',
+    'submit.submitterEmail': 'Twój e-mail (opcjonalnie)',
+    'submit.send': 'Wyślij',
+    'submit.sending': 'Wysyłanie...',
+    'submit.success': 'Wysłano pomyślnie!',
+    'submit.successMessage': 'Twoje zgłoszenie wideo zostało przekazane moderatorom.',
+    'submit.sendAnother': 'Wyślij kolejne wideo',
+    'submit.error': 'Coś poszło nie tak. Spróbuj ponownie.',
+    'submit.selectOption': 'Wybierz...',
   },
 
   // ─── ARABIC ───────────────────────────────────────────────
@@ -376,6 +503,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'الرئيسية',
     'nav.courses': 'الدورات',
     'nav.quizzes': 'الاختبارات',
+    'nav.submit': 'إرسال فيديو',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -422,10 +550,29 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'الرئيسية',
     'footer.allCourses': 'جميع الدورات',
     'footer.quizzes': 'الاختبارات',
+    'footer.submitVideo': 'إرسال فيديو',
     'footer.contact': 'اتصل بنا',
     'footer.copyright': '© 2026 FIRST Parts to Practice. جميع الحقوق محفوظة.',
 
     'language.select': 'اختر اللغة',
+
+    'submit.title': 'إرسال فيديو',
+    'submit.description': 'شاركنا فيديو FIRST/FRC التعليمي. املأ النموذج وسيراجعه المشرفون.',
+    'submit.videoType': 'نوع الفيديو',
+    'submit.titleLabel': 'العنوان',
+    'submit.titlePlaceholder': 'أدخل عنوان الفيديو',
+    'submit.language': 'لغة الفيديو',
+    'submit.driveLink': 'رابط Google Drive',
+    'submit.driveLinkHint': 'تأكد من أن الرابط متاح للعرض أو مشترك بإذن المشاهدة.',
+    'submit.submitterName': 'اسمك (اختياري)',
+    'submit.submitterEmail': 'بريدك الإلكتروني (اختياري)',
+    'submit.send': 'إرسال',
+    'submit.sending': 'جارٍ الإرسال...',
+    'submit.success': 'تم الإرسال بنجاح!',
+    'submit.successMessage': 'تم إرسال طلب الفيديو إلى المشرفين.',
+    'submit.sendAnother': 'إرسال فيديو آخر',
+    'submit.error': 'حدث خطأ. يرجى المحاولة مرة أخرى.',
+    'submit.selectOption': 'اختر...',
   },
 
   // ─── HINDI ────────────────────────────────────────────────
@@ -433,6 +580,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'होम',
     'nav.courses': 'पाठ्यक्रम',
     'nav.quizzes': 'क्विज़',
+    'nav.submit': 'वीडियो भेजें',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -479,10 +627,29 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'होम',
     'footer.allCourses': 'सभी पाठ्यक्रम',
     'footer.quizzes': 'क्विज़',
+    'footer.submitVideo': 'वीडियो भेजें',
     'footer.contact': 'संपर्क',
     'footer.copyright': '© 2026 FIRST Parts to Practice. सर्वाधिकार सुरक्षित।',
 
     'language.select': 'भाषा चुनें',
+
+    'submit.title': 'वीडियो भेजें',
+    'submit.description': 'अपना FIRST/FRC शैक्षिक वीडियो हमारे साथ साझा करें। फ़ॉर्म भरें, मॉडरेटर समीक्षा करेंगे।',
+    'submit.videoType': 'वीडियो प्रकार',
+    'submit.titleLabel': 'शीर्षक',
+    'submit.titlePlaceholder': 'वीडियो शीर्षक दर्ज करें',
+    'submit.language': 'वीडियो भाषा',
+    'submit.driveLink': 'Google Drive लिंक',
+    'submit.driveLinkHint': 'सुनिश्चित करें कि लिंक सार्वजनिक या देखने की अनुमति के साथ साझा है।',
+    'submit.submitterName': 'आपका नाम (वैकल्पिक)',
+    'submit.submitterEmail': 'आपका ईमेल (वैकल्पिक)',
+    'submit.send': 'भेजें',
+    'submit.sending': 'भेजा जा रहा है...',
+    'submit.success': 'सफलतापूर्वक भेजा गया!',
+    'submit.successMessage': 'आपका वीडियो अनुरोध मॉडरेटरों को भेज दिया गया है।',
+    'submit.sendAnother': 'एक और वीडियो भेजें',
+    'submit.error': 'कुछ गलत हुआ। कृपया पुनः प्रयास करें।',
+    'submit.selectOption': 'चुनें...',
   },
 
   // ─── SPANISH ──────────────────────────────────────────────
@@ -490,6 +657,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Inicio',
     'nav.courses': 'Cursos',
     'nav.quizzes': 'Cuestionarios',
+    'nav.submit': 'Enviar video',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -538,10 +706,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Inicio',
     'footer.allCourses': 'Todos los cursos',
     'footer.quizzes': 'Cuestionarios',
+    'footer.submitVideo': 'Enviar video',
     'footer.contact': 'Contacto',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Todos los derechos reservados.',
 
     'language.select': 'Seleccionar idioma',
+
+    'submit.title': 'Enviar video',
+    'submit.description':
+      'Comparte tu video educativo de FIRST/FRC. Completa el formulario y nuestros moderadores lo revisarán.',
+    'submit.videoType': 'Tipo de video',
+    'submit.titleLabel': 'Título',
+    'submit.titlePlaceholder': 'Introduce el título del video',
+    'submit.language': 'Idioma del video',
+    'submit.driveLink': 'Enlace de Google Drive',
+    'submit.driveLinkHint': 'Asegúrate de que el enlace sea público o tenga permiso de visualización.',
+    'submit.submitterName': 'Tu nombre (opcional)',
+    'submit.submitterEmail': 'Tu correo (opcional)',
+    'submit.send': 'Enviar',
+    'submit.sending': 'Enviando...',
+    'submit.success': '¡Enviado con éxito!',
+    'submit.successMessage': 'Tu solicitud de video ha sido enviada a los moderadores.',
+    'submit.sendAnother': 'Enviar otro video',
+    'submit.error': 'Algo salió mal. Inténtalo de nuevo.',
+    'submit.selectOption': 'Seleccionar...',
   },
 
   // ─── ITALIAN ──────────────────────────────────────────────
@@ -549,6 +737,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Home',
     'nav.courses': 'Corsi',
     'nav.quizzes': 'Quiz',
+    'nav.submit': 'Invia video',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -597,10 +786,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Home',
     'footer.allCourses': 'Tutti i corsi',
     'footer.quizzes': 'Quiz',
+    'footer.submitVideo': 'Invia video',
     'footer.contact': 'Contatti',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Tutti i diritti riservati.',
 
     'language.select': 'Seleziona lingua',
+
+    'submit.title': 'Invia video',
+    'submit.description':
+      'Condividi il tuo video educativo FIRST/FRC. Compila il modulo e i nostri moderatori lo esamineranno.',
+    'submit.videoType': 'Tipo di video',
+    'submit.titleLabel': 'Titolo',
+    'submit.titlePlaceholder': 'Inserisci il titolo del video',
+    'submit.language': 'Lingua del video',
+    'submit.driveLink': 'Link Google Drive',
+    'submit.driveLinkHint': 'Assicurati che il link sia pubblico o condiviso con permesso di visualizzazione.',
+    'submit.submitterName': 'Il tuo nome (opzionale)',
+    'submit.submitterEmail': 'La tua email (opzionale)',
+    'submit.send': 'Invia',
+    'submit.sending': 'Invio in corso...',
+    'submit.success': 'Inviato con successo!',
+    'submit.successMessage': 'La tua richiesta video è stata inviata ai moderatori.',
+    'submit.sendAnother': 'Invia un altro video',
+    'submit.error': 'Qualcosa è andato storto. Riprova.',
+    'submit.selectOption': 'Seleziona...',
   },
 
   // ─── SWAHILI ──────────────────────────────────────────────
@@ -608,6 +817,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Nyumbani',
     'nav.courses': 'Kozi',
     'nav.quizzes': 'Majaribio',
+    'nav.submit': 'Tuma video',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -655,10 +865,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Nyumbani',
     'footer.allCourses': 'Kozi zote',
     'footer.quizzes': 'Majaribio',
+    'footer.submitVideo': 'Tuma video',
     'footer.contact': 'Wasiliana',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Haki zote zimehifadhiwa.',
 
     'language.select': 'Chagua lugha',
+
+    'submit.title': 'Tuma video',
+    'submit.description':
+      'Shiriki video yako ya FIRST/FRC. Jaza fomu na wasimamizi wataikagua.',
+    'submit.videoType': 'Aina ya video',
+    'submit.titleLabel': 'Kichwa',
+    'submit.titlePlaceholder': 'Weka kichwa cha video',
+    'submit.language': 'Lugha ya video',
+    'submit.driveLink': 'Kiungo cha Google Drive',
+    'submit.driveLinkHint': 'Hakikisha kiungo kinaweza kutazamwa na umeweka ruhusa ya kuona.',
+    'submit.submitterName': 'Jina lako (hiari)',
+    'submit.submitterEmail': 'Barua pepe yako (hiari)',
+    'submit.send': 'Tuma',
+    'submit.sending': 'Inatuma...',
+    'submit.success': 'Imetumwa kwa mafanikio!',
+    'submit.successMessage': 'Ombi lako la video limetumwa kwa wasimamizi.',
+    'submit.sendAnother': 'Tuma video nyingine',
+    'submit.error': 'Kuna hitilafu. Jaribu tena.',
+    'submit.selectOption': 'Chagua...',
   },
 
   // ─── RUSSIAN ──────────────────────────────────────────────
@@ -666,6 +896,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Главная',
     'nav.courses': 'Курсы',
     'nav.quizzes': 'Тесты',
+    'nav.submit': 'Отправить видео',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -714,10 +945,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Главная',
     'footer.allCourses': 'Все курсы',
     'footer.quizzes': 'Тесты',
+    'footer.submitVideo': 'Отправить видео',
     'footer.contact': 'Контакты',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Все права защищены.',
 
     'language.select': 'Выберите язык',
+
+    'submit.title': 'Отправить видео',
+    'submit.description':
+      'Поделитесь своим обучающим видео FIRST/FRC. Заполните форму — модераторы проверят заявку.',
+    'submit.videoType': 'Тип видео',
+    'submit.titleLabel': 'Название',
+    'submit.titlePlaceholder': 'Введите название видео',
+    'submit.language': 'Язык видео',
+    'submit.driveLink': 'Ссылка Google Drive',
+    'submit.driveLinkHint': 'Убедитесь, что ссылка доступна для просмотра.',
+    'submit.submitterName': 'Ваше имя (необязательно)',
+    'submit.submitterEmail': 'Ваш email (необязательно)',
+    'submit.send': 'Отправить',
+    'submit.sending': 'Отправка...',
+    'submit.success': 'Успешно отправлено!',
+    'submit.successMessage': 'Ваша заявка отправлена модераторам.',
+    'submit.sendAnother': 'Отправить ещё одно видео',
+    'submit.error': 'Что-то пошло не так. Попробуйте снова.',
+    'submit.selectOption': 'Выберите...',
   },
 
   // ─── FRENCH ───────────────────────────────────────────────
@@ -725,6 +976,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'nav.home': 'Accueil',
     'nav.courses': 'Cours',
     'nav.quizzes': 'Quiz',
+    'nav.submit': 'Envoyer une vidéo',
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
@@ -773,10 +1025,30 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'footer.home': 'Accueil',
     'footer.allCourses': 'Tous les cours',
     'footer.quizzes': 'Quiz',
+    'footer.submitVideo': 'Envoyer une vidéo',
     'footer.contact': 'Contact',
     'footer.copyright': '© 2026 FIRST Parts to Practice. Tous droits réservés.',
 
     'language.select': 'Choisir la langue',
+
+    'submit.title': 'Envoyer une vidéo',
+    'submit.description':
+      'Partagez votre vidéo éducative FIRST/FRC. Remplissez le formulaire — nos modérateurs l\'examineront.',
+    'submit.videoType': 'Type de vidéo',
+    'submit.titleLabel': 'Titre',
+    'submit.titlePlaceholder': 'Entrez le titre de la vidéo',
+    'submit.language': 'Langue de la vidéo',
+    'submit.driveLink': 'Lien Google Drive',
+    'submit.driveLinkHint': 'Assurez-vous que le lien est public ou partagé avec permission de lecture.',
+    'submit.submitterName': 'Votre nom (facultatif)',
+    'submit.submitterEmail': 'Votre e-mail (facultatif)',
+    'submit.send': 'Envoyer',
+    'submit.sending': 'Envoi en cours...',
+    'submit.success': 'Envoyé avec succès !',
+    'submit.successMessage': 'Votre demande de vidéo a été envoyée aux modérateurs.',
+    'submit.sendAnother': 'Envoyer une autre vidéo',
+    'submit.error': 'Une erreur s\'est produite. Veuillez réessayer.',
+    'submit.selectOption': 'Sélectionner...',
   },
 };
 
