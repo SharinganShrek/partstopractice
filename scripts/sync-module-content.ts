@@ -127,6 +127,7 @@ async function main() {
       drive_url: driveUrl,
       quiz_id: quizId,
       estimated_duration_minutes: item.estimatedDurationMinutes ?? null,
+      duration_seconds: item.durationSeconds ?? null,
       unit_label: item.unitLabel ?? null,
       unit_order: item.unitOrder ?? null,
     });

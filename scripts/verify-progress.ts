@@ -5,6 +5,14 @@
 import { config } from 'dotenv';
 import { createClient } from '@supabase/supabase-js';
 import { calculateCourseStats, calculateMediaCompletion } from '../lib/lms/progress';
+import {
+  formatVideoTimestamp,
+  getRequiredWatchSeconds,
+  getVideoDurationSeconds,
+  getWatchProgressPercent,
+  resolveVideoDurationSeconds,
+  VIDEO_WATCH_THRESHOLD,
+} from '../lib/lms/video-watch';
 import type { ContentItem, QuizAttempt, StudentProgress } from '../lib/lms/types';
 
 config({ path: '.env.local' });
@@ -72,6 +80,24 @@ async function main() {
 
 function runUnitTests(contentItems: ContentItem[]) {
   console.log('\n=== Unit tests ===');
+
+  assert(getVideoDurationSeconds(407) === 407, '407 sec video → 407 sec total');
+  assert(getRequiredWatchSeconds(407) === 284, '407 sec video → 284 sec threshold (70%)');
+  assert(formatVideoTimestamp(407) === '6:47', '407 sec → 6:47 display');
+  assert(formatVideoTimestamp(404) === '6:44', '404 sec → 6:44 display');
+  assert(
+    getWatchProgressPercent(142, 407) === 50,
+    'half of required watch → 50% progress bar'
+  );
+  assert(
+    getWatchProgressPercent(284, 407) === 100,
+    'threshold reached → 100% progress bar'
+  );
+  assert(
+    resolveVideoDurationSeconds({ durationSeconds: 407, estimatedMinutes: 15 }) === 407,
+    'duration_seconds preferred over estimated minutes'
+  );
+  assert(VIDEO_WATCH_THRESHOLD === 0.7, 'watch threshold is 70%');
 
   const media =
     contentItems.length > 0

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ArrowLeft } from 'lucide-react';
 import type { AssignmentSubmission, ContentItem, QuizAttempt, StudentProgress } from '@/lib/lms/types';
 import DriveVideoPlayer from './DriveVideoPlayer';
+import { resolveVideoDurationSeconds } from '@/lib/lms/video-watch';
 import ReadingViewer from './ReadingViewer';
 import ScoredQuiz from './ScoredQuiz';
 import PerformanceTaskForm from './PerformanceTaskForm';
@@ -55,7 +56,11 @@ function ContentBody({
         <DriveVideoPlayer
           driveUrl={item.drive_url}
           contentItemId={item.id}
-          estimatedMinutes={item.estimated_duration_minutes ?? 10}
+          durationSeconds={resolveVideoDurationSeconds({
+            durationSeconds: item.duration_seconds,
+            estimatedMinutes: item.estimated_duration_minutes,
+          })}
+          initialWatchSeconds={progress?.watch_seconds ?? 0}
           onComplete={onProgressUpdate}
           isCompleted={isCompleted}
         />

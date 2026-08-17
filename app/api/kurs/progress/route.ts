@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { requireLmsAccess } from '@/lib/lms/auth';
 import { getAllContentItems, getUserLmsData } from '@/lib/lms/data';
 import { calculateCourseStats } from '@/lib/lms/progress';
+import { getRequiredWatchSeconds, resolveVideoDurationSeconds } from '@/lib/lms/video-watch';
 import { createClient } from '@/lib/supabase/server';
 
 export async function GET() {
@@ -40,6 +41,8 @@ export async function POST(request: Request) {
 
   const body = await request.json();
   const { contentItemId, status, watchSeconds } = body;
+  const nextStatus = status ?? 'completed';
+  const nextWatchSeconds = Math.max(0, Math.floor(watchSeconds ?? 0));
 
   if (!contentItemId) {
     return NextResponse.json({ error: 'contentItemId gerekli' }, { status: 400 });
@@ -47,14 +50,40 @@ export async function POST(request: Request) {
 
   const supabase = await createClient();
 
+  const { data: contentItem, error: contentError } = await supabase
+    .from('content_items')
+    .select('type, estimated_duration_minutes, duration_seconds')
+    .eq('id', contentItemId)
+    .maybeSingle();
+
+  if (contentError || !contentItem) {
+    return NextResponse.json({ error: 'İçerik bulunamadı' }, { status: 404 });
+  }
+
+  if (contentItem.type === 'video' && nextStatus === 'completed') {
+    const durationSeconds = resolveVideoDurationSeconds({
+      durationSeconds: contentItem.duration_seconds,
+      estimatedMinutes: contentItem.estimated_duration_minutes,
+    });
+    const requiredSeconds = getRequiredWatchSeconds(durationSeconds);
+    if (nextWatchSeconds < requiredSeconds) {
+      return NextResponse.json(
+        {
+          error: `Videoyu tamamlamak için en az ${requiredSeconds} saniye izlemeniz gerekir.`,
+        },
+        { status: 400 }
+      );
+    }
+  }
+
   const updateData: Record<string, unknown> = {
     user_id: user.id,
     content_item_id: contentItemId,
-    status: status ?? 'completed',
-    watch_seconds: watchSeconds ?? 0,
+    status: nextStatus,
+    watch_seconds: nextWatchSeconds,
   };
 
-  if (status === 'completed') {
+  if (nextStatus === 'completed') {
     updateData.completed_at = new Date().toISOString();
   }
 

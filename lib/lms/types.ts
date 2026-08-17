@@ -56,6 +56,7 @@ export interface ContentItem {
   drive_url: string | null;
   quiz_id: string | null;
   estimated_duration_minutes: number | null;
+  duration_seconds: number | null;
   unit_label: string | null;
   unit_order: number | null;
   quiz?: Quiz | null;
@@ -144,6 +145,7 @@ export interface SeedContentItem {
   title: string;
   driveUrl?: string;
   estimatedDurationMinutes?: number;
+  durationSeconds?: number;
   quizFile?: string;
   unitLabel?: string;
   unitOrder?: number;

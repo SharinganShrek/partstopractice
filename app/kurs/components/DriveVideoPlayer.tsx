@@ -3,10 +3,19 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
 import { toDrivePreviewUrl } from '@/lib/lms/drive';
+import {
+  formatVideoTimestamp,
+  getRequiredWatchSeconds,
+  getVideoDurationSeconds,
+  getWatchProgressPercent,
+  VIDEO_WATCH_THRESHOLD,
+} from '@/lib/lms/video-watch';
+
 interface DriveVideoPlayerProps {
   driveUrl: string;
   contentItemId: string;
-  estimatedMinutes: number;
+  durationSeconds: number;
+  initialWatchSeconds?: number;
   onComplete: () => void;
   isCompleted: boolean;
 }
@@ -14,24 +23,29 @@ interface DriveVideoPlayerProps {
 export default function DriveVideoPlayer({
   driveUrl,
   contentItemId,
-  estimatedMinutes,
+  durationSeconds,
+  initialWatchSeconds = 0,
   onComplete,
   isCompleted,
 }: DriveVideoPlayerProps) {
-  const [watchSeconds, setWatchSeconds] = useState(0);
+  const [watchSeconds, setWatchSeconds] = useState(initialWatchSeconds);
   const [canComplete, setCanComplete] = useState(isCompleted);
   const [completing, setCompleting] = useState(false);
   const [isFullscreen, setIsFullscreen] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const previewUrl = toDrivePreviewUrl(driveUrl);
-  const requiredSeconds = Math.max(60, Math.floor(estimatedMinutes * 60 * 0.85));
+  const sessionStartRef = useRef(Date.now());
+  const baseSecondsRef = useRef(initialWatchSeconds);
 
-  const tick = useCallback(() => {
-    if (document.visibilityState === 'visible') {
-      setWatchSeconds((prev) => prev + 1);
-    }
-  }, []);
+  const previewUrl = toDrivePreviewUrl(driveUrl);
+  const totalSeconds = getVideoDurationSeconds(durationSeconds);
+  const requiredSeconds = getRequiredWatchSeconds(durationSeconds);
+
+  useEffect(() => {
+    baseSecondsRef.current = initialWatchSeconds;
+    sessionStartRef.current = Date.now();
+    setWatchSeconds(initialWatchSeconds);
+    setCanComplete(isCompleted || initialWatchSeconds >= requiredSeconds);
+  }, [contentItemId, initialWatchSeconds, isCompleted, requiredSeconds]);
 
   useEffect(() => {
     if (isCompleted) {
@@ -39,17 +53,46 @@ export default function DriveVideoPlayer({
       return;
     }
 
-    intervalRef.current = setInterval(tick, 1000);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [isCompleted, tick]);
+    const intervalId = setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      const sessionElapsed = Math.floor((Date.now() - sessionStartRef.current) / 1000);
+      setWatchSeconds(baseSecondsRef.current + sessionElapsed);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [isCompleted, contentItemId]);
 
   useEffect(() => {
     if (!isCompleted && watchSeconds >= requiredSeconds) {
       setCanComplete(true);
     }
   }, [watchSeconds, requiredSeconds, isCompleted]);
+
+  useEffect(() => {
+    if (isCompleted) return;
+
+    const saveIntervalId = setInterval(() => {
+      if (document.visibilityState !== 'visible') return;
+      const sessionElapsed = Math.floor((Date.now() - sessionStartRef.current) / 1000);
+      const currentWatchSeconds = baseSecondsRef.current + sessionElapsed;
+      if (currentWatchSeconds <= baseSecondsRef.current) return;
+
+      baseSecondsRef.current = currentWatchSeconds;
+      sessionStartRef.current = Date.now();
+
+      void fetch('/api/kurs/progress', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contentItemId,
+          status: 'in_progress',
+          watchSeconds: currentWatchSeconds,
+        }),
+      });
+    }, 30000);
+
+    return () => clearInterval(saveIntervalId);
+  }, [isCompleted, contentItemId]);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -72,7 +115,8 @@ export default function DriveVideoPlayer({
     }
   }
 
-  async function handleMarkComplete() {    setCompleting(true);
+  const handleMarkComplete = useCallback(async () => {
+    setCompleting(true);
     await fetch('/api/kurs/progress', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -84,9 +128,10 @@ export default function DriveVideoPlayer({
     });
     setCompleting(false);
     onComplete();
-  }
+  }, [contentItemId, onComplete, watchSeconds]);
 
-  const watchPercent = Math.min(100, Math.round((watchSeconds / requiredSeconds) * 100));
+  const watchPercent = getWatchProgressPercent(watchSeconds, durationSeconds);
+  const thresholdLabel = formatVideoTimestamp(requiredSeconds);
 
   return (
     <div className="space-y-4">
@@ -120,15 +165,18 @@ export default function DriveVideoPlayer({
           )}
         </button>
       </div>
+
       {!isCompleted && (
         <div className="card p-4 space-y-3">
-          <div className="flex justify-between text-sm">
+          <div className="flex justify-between text-sm gap-3">
             <span className="text-text-muted">İzleme süresi</span>
-            <span className="font-medium">
-              {Math.floor(watchSeconds / 60)}:{String(watchSeconds % 60).padStart(2, '0')} /{' '}
-              {Math.floor(requiredSeconds / 60)} dk
+            <span className="font-medium tabular-nums text-right">
+              {formatVideoTimestamp(watchSeconds)} / {formatVideoTimestamp(totalSeconds)}
             </span>
           </div>
+          <p className="text-xs text-text-muted">
+            Tamamlamak için en az {thresholdLabel} izleyin (%{Math.round(VIDEO_WATCH_THRESHOLD * 100)}).
+          </p>
           <div className="h-2 bg-primary/10 rounded-full overflow-hidden">
             <div
               className="h-full bg-primary transition-all duration-300 rounded-full"
@@ -144,8 +192,8 @@ export default function DriveVideoPlayer({
             {completing
               ? 'Kaydediliyor...'
               : canComplete
-              ? 'Tamamlandı Olarak İşaretle'
-              : 'Videoyu izlemeye devam edin...'}
+                ? 'Tamamlandı Olarak İşaretle'
+                : 'Videoyu izlemeye devam edin...'}
           </button>
         </div>
       )}

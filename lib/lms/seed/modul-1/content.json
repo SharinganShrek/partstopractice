@@ -8,7 +8,8 @@
       "unitLabel": "Ünite 1.1: Uzamsal Düşünme ve Tasarım Araçları",
       "unitOrder": 1,
       "driveUrl": "https://drive.google.com/file/d/1iOKobKgVTxMRFzjK4mLMfqPpsiopv640/view",
-      "estimatedDurationMinutes": 15
+      "estimatedDurationMinutes": 15,
+      "durationSeconds": 404
     },
     {
       "order": 2,
@@ -25,7 +26,8 @@
       "unitLabel": "Ünite 1.2: Mühendislik Tasarım Döngüsü",
       "unitOrder": 2,
       "driveUrl": "https://drive.google.com/file/d/1RudlDmrX3ISw-d4z-flPli8vzQ2JWPUe/view",
-      "estimatedDurationMinutes": 12
+      "estimatedDurationMinutes": 12,
+      "durationSeconds": 323
     },
     {
       "order": 4,
