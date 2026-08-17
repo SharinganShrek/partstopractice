@@ -59,6 +59,7 @@ function ContentBody({
           durationSeconds={resolveVideoDurationSeconds({
             durationSeconds: item.duration_seconds,
             estimatedMinutes: item.estimated_duration_minutes,
+            driveUrl: item.drive_url,
           })}
           initialWatchSeconds={progress?.watch_seconds ?? 0}
           onComplete={onProgressUpdate}

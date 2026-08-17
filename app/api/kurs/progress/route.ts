@@ -52,7 +52,7 @@ export async function POST(request: Request) {
 
   const { data: contentItem, error: contentError } = await supabase
     .from('content_items')
-    .select('type, estimated_duration_minutes, duration_seconds')
+    .select('type, estimated_duration_minutes, duration_seconds, drive_url')
     .eq('id', contentItemId)
     .maybeSingle();
 
@@ -64,6 +64,7 @@ export async function POST(request: Request) {
     const durationSeconds = resolveVideoDurationSeconds({
       durationSeconds: contentItem.duration_seconds,
       estimatedMinutes: contentItem.estimated_duration_minutes,
+      driveUrl: contentItem.drive_url,
     });
     const requiredSeconds = getRequiredWatchSeconds(durationSeconds);
     if (nextWatchSeconds < requiredSeconds) {

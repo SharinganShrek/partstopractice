@@ -23,6 +23,34 @@ function formatDuration(seconds: number): string {
   return `${minutes}:${String(secs).padStart(2, '0')}`;
 }
 
+function writeDurationMap(
+  updates: Array<{ fileId: string; durationSeconds: number }>
+) {
+  const mapPath = path.join(process.cwd(), 'lib/lms/video-duration-map.ts');
+  const entries = updates
+    .map((u) => `  '${u.fileId}': ${u.durationSeconds},`)
+    .join('\n');
+
+  const contents = `import { extractDriveFileId } from './drive';
+
+/** Drive file id → exact duration in seconds (synced from seed via scripts/sync-video-durations.ts). */
+export const VIDEO_DURATION_BY_FILE_ID: Record<string, number> = {
+${entries}
+};
+
+export function getDurationFromDriveUrl(
+  driveUrl: string | null | undefined
+): number | null {
+  if (!driveUrl) return null;
+  const fileId = extractDriveFileId(driveUrl);
+  if (!fileId) return null;
+  return VIDEO_DURATION_BY_FILE_ID[fileId] ?? null;
+}
+`;
+
+  fs.writeFileSync(mapPath, contents, 'utf-8');
+}
+
 async function main() {
   const seedDir = path.join(process.cwd(), 'lib/lms/seed');
   const moduleSlugs = fs
@@ -71,6 +99,10 @@ async function main() {
     if (changed) {
       fs.writeFileSync(contentPath, `${JSON.stringify(content, null, 2)}\n`, 'utf-8');
     }
+  }
+
+  if (updates.length > 0) {
+    writeDurationMap(updates);
   }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

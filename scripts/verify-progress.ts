@@ -94,8 +94,8 @@ function runUnitTests(contentItems: ContentItem[]) {
     'threshold reached → 100% progress bar'
   );
   assert(
-    resolveVideoDurationSeconds({ durationSeconds: 407, estimatedMinutes: 15 }) === 407,
-    'duration_seconds preferred over estimated minutes'
+    resolveVideoDurationSeconds({ driveUrl: 'https://drive.google.com/file/d/1iOKobKgVTxMRFzjK4mLMfqPpsiopv640/view' }) === 404,
+    'drive url map fallback → 404 sec'
   );
   assert(VIDEO_WATCH_THRESHOLD === 0.7, 'watch threshold is 70%');
 
