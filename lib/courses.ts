@@ -102,7 +102,7 @@ export function getCoursesByAllLanguages(): Record<SupportedLanguage, Course[]> 
   return coursesByLang;
 }
 
-/** Legacy default export kept for backward compatibility — returns Turkish. */
+/** Legacy default export kept for backward compatibility :  returns Turkish. */
 export const courses = coursesTr;
 
 export function getCourseById(

@@ -6,8 +6,8 @@ import { VIDEO_TYPES } from '@/lib/video-requests';
 import { useLanguage } from './LanguageContext';
 
 const inputClass =
-  'w-full px-4 py-2.5 rounded-lg border border-[#e9ecef] bg-white text-[#212529] focus:outline-none focus:ring-2 focus:ring-[#800020]/30 focus:border-[#800020]';
-const labelClass = 'block text-sm font-medium text-[#495057] mb-1.5';
+  'w-full px-4 py-2.5 rounded-lg border border-border bg-white text-text-body focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary';
+const labelClass = 'block text-sm font-medium text-text-muted mb-1.5';
 
 export default function VideoRequestForm() {
   const { t } = useLanguage();
@@ -62,15 +62,11 @@ export default function VideoRequestForm() {
 
   if (status === 'success') {
     return (
-      <div className="bg-white rounded-lg shadow-md border border-[#e9ecef] p-8 text-center">
-        <div className="text-4xl mb-4">✓</div>
-        <h2 className="text-xl font-bold text-[#212529] mb-2">{t('submit.success')}</h2>
-        <p className="text-[#495057] mb-6">{t('submit.successMessage')}</p>
-        <button
-          type="button"
-          onClick={() => setStatus('idle')}
-          className="px-6 py-2.5 rounded-full bg-[#800020] text-white font-medium hover:bg-[#a01e2b] transition-colors"
-        >
+      <div className="card p-8 text-center shadow-md">
+        <div className="text-4xl mb-4 text-primary">✓</div>
+        <h2 className="font-display text-xl font-bold text-text-body mb-2">{t('submit.success')}</h2>
+        <p className="text-text-muted mb-6">{t('submit.successMessage')}</p>
+        <button type="button" onClick={() => setStatus('idle')} className="btn-primary">
           {t('submit.sendAnother')}
         </button>
       </div>
@@ -78,10 +74,7 @@ export default function VideoRequestForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-white rounded-lg shadow-md border border-[#e9ecef] p-6 md:p-8 space-y-5"
-    >
+    <form onSubmit={handleSubmit} className="card p-6 md:p-8 space-y-5 shadow-md">
       <div>
         <label htmlFor="video-type" className={labelClass}>
           {t('submit.videoType')} *
@@ -150,7 +143,7 @@ export default function VideoRequestForm() {
           className={inputClass}
           placeholder="https://drive.google.com/file/d/..."
         />
-        <p className="text-xs text-[#495057] mt-1.5">{t('submit.driveLinkHint')}</p>
+        <p className="text-xs text-text-muted mt-1.5">{t('submit.driveLinkHint')}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -186,11 +179,7 @@ export default function VideoRequestForm() {
         </p>
       )}
 
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="w-full sm:w-auto px-8 py-3 rounded-full bg-[#800020] text-white font-medium hover:bg-[#a01e2b] transition-colors disabled:opacity-60"
-      >
+      <button type="submit" disabled={status === 'loading'} className="btn-primary disabled:opacity-60">
         {status === 'loading' ? t('submit.sending') : t('submit.send')}
       </button>
     </form>

@@ -1,0 +1,18 @@
+{
+  "moduleSlug": "modul-2",
+  "items": [
+    {
+      "order": 1,
+      "type": "video",
+      "title": "Devre Mantığı ve Elektronik Komponentler",
+      "driveUrl": "https://drive.google.com/file/d/1-p-ULfXnWEi6U8-3KFhY4z-nzrh6xbk1/view",
+      "estimatedDurationMinutes": 14
+    },
+    {
+      "order": 2,
+      "type": "module_assessment",
+      "title": "Modül Sınavı 2 (10 Soru)",
+      "quizFile": "quizzes/modul-sinavi-2.json"
+    }
+  ]
+}

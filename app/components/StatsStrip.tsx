@@ -7,7 +7,7 @@ export default function StatsStrip() {
   const { t } = useLanguage();
   const totalVideos = getTotalVideoCountAcrossLanguages();
 
-  const stats = [
+  const primaryStats = [
     {
       value: t('stats.languages.value'),
       label: t('stats.languages.label'),
@@ -18,43 +18,38 @@ export default function StatsStrip() {
       label: t('stats.reached.label'),
       sub: t('stats.reached.sub'),
     },
-    {
-      value: String(totalVideos),
-      label: t('stats.lessons.label'),
-      sub: t('stats.lessons.sub'),
-    },
   ];
 
   return (
-    <section
-      className="bg-[#fafaf5] border-b border-[#e9ecef] py-12 md:py-14"
-      aria-labelledby="stats-heading"
-    >
+    <section className="bg-surface-cream border-y border-border py-16 md:py-24" aria-labelledby="stats-heading">
       <h2 id="stats-heading" className="sr-only">
         {t('stats.languages.label')}
       </h2>
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {stats.map((item) => (
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+          {primaryStats.map((item) => (
             <div
               key={item.label}
-              className="relative bg-white rounded-xl border border-[#e9ecef] shadow-sm px-6 py-8 text-center overflow-hidden"
+              className="rounded-2xl bg-primary text-white p-6 md:p-8 lg:p-10 shadow-md"
             >
-              <div
-                className="absolute top-0 left-0 right-0 h-1 bg-[#800020]"
-                aria-hidden
-              />
-              <p className="text-4xl md:text-5xl font-bold text-[#212529] tabular-nums tracking-tight mb-2">
+              <p className="font-display font-extrabold text-4xl md:text-5xl lg:text-6xl tabular-nums tracking-tight mb-2">
                 {item.value}
               </p>
-              <p className="text-sm font-semibold text-[#800020] uppercase tracking-wide mb-2">
+              <p className="text-sm font-semibold uppercase tracking-wider text-white/90 mb-2">
                 {item.label}
               </p>
-              <p className="text-sm text-[#495057] leading-relaxed max-w-xs mx-auto">
-                {item.sub}
-              </p>
+              <p className="text-sm text-white/75 leading-relaxed">{item.sub}</p>
             </div>
           ))}
+        </div>
+        <div className="card shadow-md p-5 md:p-6">
+          <p className="font-display font-extrabold text-2xl md:text-3xl text-accent-blue tabular-nums mb-1">
+            {totalVideos}
+          </p>
+          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-2">
+            {t('stats.lessons.label')}
+          </p>
+          <p className="text-sm text-text-muted leading-relaxed">{t('stats.lessons.sub')}</p>
         </div>
       </div>
     </section>

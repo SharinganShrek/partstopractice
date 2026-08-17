@@ -1,0 +1,56 @@
+{
+  "title": "Ödev 1.1: Konu Sonu Değerlendirmesi (5 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "Tinkercad'de bir şekli yukarı doğru uzatıp boyunu (yüksekliğini) ayarlamak için hangi ekseni kullanırız?",
+      "options": [
+        { "key": "A", "text": "X Ekseni" },
+        { "key": "B", "text": "Y Ekseni" },
+        { "key": "C", "text": "Z Ekseni" },
+        { "key": "D", "text": "Hiçbiri" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Bir kutunun ortasında boşluk veya delik açmak istiyorsak, eklediğimiz ikinci şekli nasıl ayarlamalıyız?",
+      "options": [
+        { "key": "A", "text": "Katı" },
+        { "key": "B", "text": "Delik (Hole)" },
+        { "key": "C", "text": "Renkli" },
+        { "key": "D", "text": "Gizli" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "İki şekli tam ortalayarak yan yana veya üst üste aynı hizaya getiren araç hangisidir?",
+      "options": [
+        { "key": "A", "text": "Sil" },
+        { "key": "B", "text": "Hizala (Align)" },
+        { "key": "C", "text": "Döndür" },
+        { "key": "D", "text": "Kopyala" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Delik şekil ile katı şekli birleştirip kesme işlemini tamamlamak için hangi butona tıklarız?",
+      "options": [
+        { "key": "A", "text": "Grupla (Group)" },
+        { "key": "B", "text": "Grubu Çöz" },
+        { "key": "C", "text": "Kilitle" },
+        { "key": "D", "text": "Hizala" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Tinkercad ekranında etrafa bakmak ve tasarımı döndürmek için farenin hangi tuşuna basılı tutarız?",
+      "options": [
+        { "key": "A", "text": "Sol Tuş" },
+        { "key": "B", "text": "Sağ Tuş" },
+        { "key": "C", "text": "Orta Tekerlek Tıklaması" },
+        { "key": "D", "text": "Çift Tık" }
+      ],
+      "correctAnswer": "B"
+    }
+  ]
+}

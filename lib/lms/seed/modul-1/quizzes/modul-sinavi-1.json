@@ -1,0 +1,226 @@
+{
+  "title": "Modül Sınavı 1 (10 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "Mühendislik ve tasarım sürecinin ilk adımı aşağıdakilerden hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hemen Tinkercad'de model çizmeye başlamak"
+        },
+        {
+          "key": "B",
+          "text": "Problemi, ihtiyaçları ve sınırları tanımlamak"
+        },
+        {
+          "key": "C",
+          "text": "Ürünün rengine karar vermek"
+        },
+        {
+          "key": "D",
+          "text": "Tasarlanan modeli hemen satmaya çalışmak"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Tinkercad 3D çalışma alanında bir nesnenin yataydaki uzunluğunu (genişliğini) temsil eden eksen hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Z Ekseni"
+        },
+        {
+          "key": "B",
+          "text": "Y Ekseni"
+        },
+        {
+          "key": "C",
+          "text": "X Ekseni"
+        },
+        {
+          "key": "D",
+          "text": "A Ekseni"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Aklımıza gelen tüm çözüm fikirlerini düşündüğümüz ve \"Hiçbir fikir kötü değildir\" ilkesini uyguladığımız aşama hangisidir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Hayal Et / Fikir Üret"
+        },
+        {
+          "key": "B",
+          "text": "Test Etme"
+        },
+        {
+          "key": "C",
+          "text": "Modeli Silme"
+        },
+        {
+          "key": "D",
+          "text": "Rapor Yazma"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Tinkercad'de katı bir kutunun merkezinde silindir şeklinde bir boşluk veya delik açmak için ikinci şekil nasıl ayarlanmalıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Gizli"
+        },
+        {
+          "key": "B",
+          "text": "Delik (Hole)"
+        },
+        {
+          "key": "C",
+          "text": "Şeffaf Katı"
+        },
+        {
+          "key": "D",
+          "text": "Kilitli"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Tinkercad'de tasarladığımız ve fikrimizi test etmemizi sağlayan ilk taslak modele ne ad verilir?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Prototip"
+        },
+        {
+          "key": "B",
+          "text": "Son Ürün"
+        },
+        {
+          "key": "C",
+          "text": "Hurda"
+        },
+        {
+          "key": "D",
+          "text": "Taslak Kağıdı"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "İki veya daha fazla nesneyi tam ortalayarak aynı çizgiye getirmek için hangi Tinkercad aracı kullanılır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Grupla (Group)"
+        },
+        {
+          "key": "B",
+          "text": "Hizala (Align)"
+        },
+        {
+          "key": "C",
+          "text": "Ayna (Mirror)"
+        },
+        {
+          "key": "D",
+          "text": "Çoğalt (Duplicate)"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Delik olarak ayarladığımız bir şekil ile katı bir şekli birleştirip kesme işlemini tamamlamak için hangi işlem yapılmalıdır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "İki nesneyi seçip Grupla (Group) butonuna tıklamak"
+        },
+        {
+          "key": "B",
+          "text": "Şekillerin rengini değiştirmek"
+        },
+        {
+          "key": "C",
+          "text": "Grubu Çöz butonuna basmak"
+        },
+        {
+          "key": "D",
+          "text": "Ekranı sağ tık ile döndürmek"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Tasarladığımız prototipi test ettiğimizde bir hata veya eksiklik bulursak ne yapmalıyız?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Projeyi tamamen iptal etmek"
+        },
+        {
+          "key": "B",
+          "text": "Hatayı görmezden gelip aynen bırakmak"
+        },
+        {
+          "key": "C",
+          "text": "Tasarımı gözden geçirip iyileştirmek ve geliştirmek"
+        },
+        {
+          "key": "D",
+          "text": "Hesabı kapatmak"
+        }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Tinkercad ekranında modelimizin etrafında 360 derece dönmek ve farklı açılardan bakmak için farenin hangi tuşu kullanılır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sol tuşa basılı tutup sürüklemek"
+        },
+        {
+          "key": "B",
+          "text": "Sağ tuşa basılı tutup sürüklemek"
+        },
+        {
+          "key": "C",
+          "text": "Çift tıklamak"
+        },
+        {
+          "key": "D",
+          "text": "Klavyedeki Boşluk (Space) tuşuna basmak"
+        }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Mühendislik ve Tasarım Süreci neden bir \"döngü\" olarak adlandırılır?",
+      "options": [
+        {
+          "key": "A",
+          "text": "Sadece yuvarlak şekiller tasarlandığı için"
+        },
+        {
+          "key": "B",
+          "text": "Test ve iyileştirme adımlarıyla tasarımın sürekli daha iyiye doğru geliştirilebilmesi için"
+        },
+        {
+          "key": "C",
+          "text": "Tinkercad'de tekerlek çizmek zorunlu olduğu için"
+        },
+        {
+          "key": "D",
+          "text": "Çok hızlı tamamlandığı için"
+        }
+      ],
+      "correctAnswer": "B"
+    }
+  ]
+}

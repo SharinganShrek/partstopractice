@@ -1,0 +1,56 @@
+{
+  "title": "Ödev 3.1: Konu Sonu Değerlendirmesi (5 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "Bir mikrodenetleyiciye \"mikro\" denmesinin temel sebebi nedir?",
+      "options": [
+        { "key": "A", "text": "Sadece çok küçük parçaları çalıştırabilmesi" },
+        { "key": "B", "text": "İşlemci, hafıza ve giriş-çıkış birimlerini tek bir küçük çipte toplaması" },
+        { "key": "C", "text": "Ekranının çok küçük olması" },
+        { "key": "D", "text": "Sadece pil ile çalışabilmesi" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Arduino tıpkı bir insan beyni gibi çalışır. Arduino'nun çalışma sırası hangisidir?",
+      "options": [
+        { "key": "A", "text": "Karar verme, algılama, tepki verme" },
+        { "key": "B", "text": "Algılama, tepki verme, karar verme" },
+        { "key": "C", "text": "Algılama, karar verme, tepki verme" },
+        { "key": "D", "text": "Tepki verme, karar verme, algılama" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Arduino devresinde elektriğin kapalı bir döngü oluşturabilmesi için akımın çıktığı ve geri döndüğü pinler sırasıyla hangileridir?",
+      "options": [
+        { "key": "A", "text": "A0 ve A5" },
+        { "key": "B", "text": "13 ve 0" },
+        { "key": "C", "text": "GND ve 5V" },
+        { "key": "D", "text": "5V ve GND" }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "LED'i fazla elektrikten koruyup bozulmasını engellemek için kullanılan koruyucu parça hangisidir?",
+      "options": [
+        { "key": "A", "text": "Direnç (Resistor)" },
+        { "key": "B", "text": "Buton" },
+        { "key": "C", "text": "Potansiyometre" },
+        { "key": "D", "text": "Pil" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "LED'in yavaşça yanıp sönüyormuş gibi görünmesinin sebebi nedir?",
+      "options": [
+        { "key": "A", "text": "LED'in güçsüz olması" },
+        { "key": "B", "text": "Devrenin arızalı olması" },
+        { "key": "C", "text": "LED'in çok hızlı farklı parlaklıklarda yanıp sönmesi" },
+        { "key": "D", "text": "Kodun yanlış yazılmış olması" }
+      ],
+      "correctAnswer": "C"
+    }
+  ]
+}

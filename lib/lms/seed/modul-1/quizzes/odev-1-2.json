@@ -1,0 +1,56 @@
+{
+  "title": "Ödev 1.2: Konu Sonu Değerlendirmesi (5 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "Mühendislik tasarım sürecinin ilk adımı nedir?",
+      "options": [
+        { "key": "A", "text": "Hemen maket yapmak" },
+        { "key": "B", "text": "Sor: İhtiyaçları ve sınırları tanımlamak" },
+        { "key": "C", "text": "Rengini seçmek" },
+        { "key": "D", "text": "Ürünü satmak" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Aklımıza gelen tüm çözüm fikirlerini düşündüğümüz ve \"Hiçbir fikir kötü değildir\" dediğimiz aşama hangisidir?",
+      "options": [
+        { "key": "A", "text": "Test Etme" },
+        { "key": "B", "text": "Hayal Et / Fikir Üret" },
+        { "key": "C", "text": "Satın Alma" },
+        { "key": "D", "text": "Bitiş" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Tinkercad veya başka bir araçla yaptığımız ilk deneme modeline ne ad verilir?",
+      "options": [
+        { "key": "A", "text": "Çöp" },
+        { "key": "B", "text": "Prototip" },
+        { "key": "C", "text": "Son Ürün" },
+        { "key": "D", "text": "Resim" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Hazırladığımız prototipin çalışıp çalışmadığını, ölçülerinin doğru olup olmadığını anlamak için ne yaparız?",
+      "options": [
+        { "key": "A", "text": "Hemen çöpe atarız" },
+        { "key": "B", "text": "Görmezden geliriz" },
+        { "key": "C", "text": "Test ederiz" },
+        { "key": "D", "text": "Hiçbir şey yapmayız" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Test ettikten sonra tasarımımızda bir hata bulursak ne yapmalıyız?",
+      "options": [
+        { "key": "A", "text": "Tasarlamaktan vazgeçmeliyiz" },
+        { "key": "B", "text": "Ağlamalıyız" },
+        { "key": "C", "text": "Hataları düzeltip tasarımı geliştirmeliyiz" },
+        { "key": "D", "text": "Başkasına suç atmalıyız" }
+      ],
+      "correctAnswer": "C"
+    }
+  ]
+}

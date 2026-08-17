@@ -1,0 +1,106 @@
+{
+  "title": "Modül Sınavı 2 (10 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "Tinkercad Circuits üzerinde devre tasarlarken Arduino Uno'nun temel amacı nedir?",
+      "options": [
+        { "key": "A", "text": "Devredeki tüm dirençleri otomatik olarak hesaplamak" },
+        { "key": "B", "text": "Devredeki elektronik bileşenleri kontrol etmek ve programlamak" },
+        { "key": "C", "text": "Breadboard'un fiziksel bağlantılarını değiştirmek" },
+        { "key": "D", "text": "Devredeki gerilimi sabit bir değerde tutmak" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Videoda LED ile birlikte kullanılan direncin devredeki temel amacı nedir?",
+      "options": [
+        { "key": "A", "text": "LED'in üzerinden geçen akımı sınırlamak" },
+        { "key": "B", "text": "LED'in rengini değiştirmek" },
+        { "key": "C", "text": "Arduino'nun çalışma hızını artırmak" },
+        { "key": "D", "text": "Butonun mekanik hareketini algılamak" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Breadboard'un devre kurulumundaki temel avantajı aşağıdakilerden hangisidir?",
+      "options": [
+        { "key": "A", "text": "Devreyi lehimleme gerektirmeden kolayca kurup değiştirebilmek" },
+        { "key": "B", "text": "Arduino'nun yerine geçerek kod çalıştırabilmek" },
+        { "key": "C", "text": "Devredeki tüm bileşenlere otomatik olarak güç sağlamak" },
+        { "key": "D", "text": "Elektronik bileşenlerin değerlerini kendiliğinden ölçmek" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Videodaki devrede butonun kullanılmasının temel amacı nedir?",
+      "options": [
+        { "key": "A", "text": "Devrenin besleme gerilimini yükseltmek" },
+        { "key": "B", "text": "Kullanıcıdan bir giriş almak" },
+        { "key": "C", "text": "LED'in parlaklığını fiziksel olarak artırmak" },
+        { "key": "D", "text": "Arduino'nun USB bağlantısını sağlamak" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Tinkercad'deki \"Simülasyonu Başlat\" özelliği ne işe yarar?",
+      "options": [
+        { "key": "A", "text": "Tasarlanan devrenin gerçek donanım kullanılmadan çalışmasının test edilmesini sağlar" },
+        { "key": "B", "text": "Arduino'ya fiziksel olarak kod yükler" },
+        { "key": "C", "text": "Devredeki hataları otomatik olarak düzeltir" },
+        { "key": "D", "text": "Breadboard'u yeni bir devreye dönüştürür" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Tinkercad'de devreye Arduino Uno eklemek için hangi bileşen seçilir?",
+      "options": [
+        { "key": "A", "text": "Micro:bit" },
+        { "key": "B", "text": "Arduino Uno R3" },
+        { "key": "C", "text": "Raspberry Pi" },
+        { "key": "D", "text": "ESP32" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Videoda kullanılan devre elemanlarından hangisi elektrik enerjisini ışığa dönüştürür?",
+      "options": [
+        { "key": "A", "text": "Direnç" },
+        { "key": "B", "text": "Breadboard" },
+        { "key": "C", "text": "LED" },
+        { "key": "D", "text": "Pil" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Videoda devreye güç sağlamak için gösterilen bileşen hangisidir?",
+      "options": [
+        { "key": "A", "text": "9V pil" },
+        { "key": "B", "text": "Servo motor" },
+        { "key": "C", "text": "Potansiyometre" },
+        { "key": "D", "text": "Buzzer" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Arduino ile breadboard arasındaki bağlantılarda kullanılan kabloların temel görevi nedir?",
+      "options": [
+        { "key": "A", "text": "Devre elemanlarını birbirine elektriksel olarak bağlamak" },
+        { "key": "B", "text": "Arduino'nun hafızasını artırmak" },
+        { "key": "C", "text": "LED'in rengini değiştirmek" },
+        { "key": "D", "text": "Breadboard'un boyutunu değiştirmek" }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Videoda Tinkercad üzerinde devre oluşturulurken aşağıdakilerden hangisi doğrudan devre elemanı olarak eklenmiştir?",
+      "options": [
+        { "key": "A", "text": "Arduino Uno" },
+        { "key": "B", "text": "Bilgisayar faresi" },
+        { "key": "C", "text": "Klavye" },
+        { "key": "D", "text": "Monitör" }
+      ],
+      "correctAnswer": "A"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "orderIndex": 1,
+    "title": "Modül 1: Mühendislik ve 3D Tasarım Temelleri (Tinkercad 3D)",
+    "description": "Uzamsal düşünme, temel geometrik şekiller, milimetrik ölçülendirme ve mühendislik tasarım döngüsü.",
+    "slug": "modul-1"
+  },
+  {
+    "orderIndex": 2,
+    "title": "Modül 2: Temel Elektronik Okuryazarlığı (Tinkercad Circuits)",
+    "description": "Devre mantığı, elektronik komponentler, breadboard kullanımı ve iş güvenliği.",
+    "slug": "modul-2"
+  },
+  {
+    "orderIndex": 3,
+    "title": "Modül 3: Donanım ve Arduino'ya Giriş",
+    "description": "Mikrodenetleyici mantığı, Arduino Uno pin yapısı, dijital ve analog sinyaller.",
+    "slug": "modul-3"
+  },
+  {
+    "orderIndex": 4,
+    "title": "Modül 4: Yazılım ve Algoritma Geliştirme (C++)",
+    "description": "Kod anatomisi, setup/loop fonksiyonları, donanım komutları ve karar yapıları.",
+    "slug": "modul-4"
+  },
+  {
+    "orderIndex": 5,
+    "title": "Modül 5: Sensörler ve Çıktı Elemanları",
+    "description": "Aktüatörler, sensörler ve sistem entegrasyonu uygulamaları.",
+    "slug": "modul-5"
+  },
+  {
+    "orderIndex": 6,
+    "title": "Modül 6: Problem Çözme, Hata Ayıklama ve Capstone Projesi",
+    "description": "Donanımsal ve yazılımsal hata ayıklama, final sınavı ve bitirme projesi.",
+    "slug": "modul-6"
+  }
+]

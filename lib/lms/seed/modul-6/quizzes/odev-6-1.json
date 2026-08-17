@@ -1,0 +1,116 @@
+{
+  "title": "Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "[PLACEHOLDER] Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru): Soru 1",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru): Soru 2",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru): Soru 3",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru): Soru 4",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Ödev 6.1: Konu Sonu Değerlendirmesi (5 Soru): Soru 5",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    }
+  ]
+}

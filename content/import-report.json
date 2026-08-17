@@ -1,0 +1,115 @@
+{
+  "scannedAt": "2026-08-17T10:47:38.399Z",
+  "importDirExists": true,
+  "modules": {
+    "modul-1": {
+      "folderName": "Modül 1",
+      "files": [
+        {
+          "relativePath": "Modül 1/modul1 unite 1.2 sorular.docx",
+          "guessedType": "quiz_docx",
+          "suggestedSlot": "quiz_modul_sinavi_1",
+          "confidence": "high"
+        },
+        {
+          "relativePath": "Modül 1/modul1 unite1 değerlendirme testi.docx",
+          "guessedType": "quiz_docx",
+          "suggestedSlot": "quiz_modul_sinavi_1",
+          "confidence": "high"
+        },
+        {
+          "relativePath": "Modül 1/Modül1 1.ders",
+          "guessedType": "other",
+          "suggestedSlot": null,
+          "confidence": "none"
+        }
+      ],
+      "unmatched": [
+        "Modül 1/Modül1 1.ders"
+      ]
+    },
+    "modul-2": {
+      "folderName": "Modül 2",
+      "files": [
+        {
+          "relativePath": "Modül 2/modul2 unite.docx",
+          "guessedType": "reading",
+          "suggestedSlot": "reading_u22",
+          "confidence": "medium"
+        },
+        {
+          "relativePath": "Modül 2/Modül2 1.ders",
+          "guessedType": "other",
+          "suggestedSlot": null,
+          "confidence": "none"
+        }
+      ],
+      "unmatched": [
+        "Modül 2/Modül2 1.ders"
+      ]
+    },
+    "modul-3": {
+      "folderName": null,
+      "files": [],
+      "unmatched": []
+    },
+    "modul-4": {
+      "folderName": "Modül 4",
+      "files": [
+        {
+          "relativePath": "Modül 4/3.mp4",
+          "guessedType": "video",
+          "suggestedSlot": "video_u43",
+          "confidence": "high"
+        }
+      ],
+      "unmatched": []
+    },
+    "modul-5": {
+      "folderName": "Modül 5",
+      "files": [
+        {
+          "relativePath": "Modül 5/5.1. Çıktı Üretme (Aktüatörler)mp4.mp4",
+          "guessedType": "video",
+          "suggestedSlot": "video_u51",
+          "confidence": "high"
+        }
+      ],
+      "unmatched": []
+    }
+  },
+  "warnings": [
+    "modul-1: \"video_u11\" için yerel dosya bulunamadı (Uzamsal Düşünme ve Tasarım Araçları)",
+    "modul-1: \"reading_u11\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 1.1)",
+    "modul-1: \"video_u12\" için yerel dosya bulunamadı (Mühendislik Tasarım Döngüsü)",
+    "modul-1: \"reading_u12\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 1.2)",
+    "modul-2: \"video_u21\" için yerel dosya bulunamadı (Devre Mantığı ve Elektronik Komponentler)",
+    "modul-2: \"video_u22\" için yerel dosya bulunamadı (Breadboard Kullanımı ve İş Güvenliği)",
+    "modul-3: \"video_u31\" için yerel dosya bulunamadı (Mikrodenetleyici Nedir?)",
+    "modul-3: \"reading_u31\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 3.1)",
+    "modul-3: \"video_u32\" için yerel dosya bulunamadı (Sinyal Tipleri)",
+    "modul-3: \"reading_u32\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 3.2)",
+    "modul-4: \"reading_u41\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 4.1)",
+    "modul-4: \"video_u42\" için yerel dosya bulunamadı (Donanım Komutları, Karar Yapıları ve Değişkenler)",
+    "modul-4: \"reading_u42\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 4.2)",
+    "modul-5: \"reading_u51\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 5.1)",
+    "modul-5: \"video_u52\" için yerel dosya bulunamadı (Dış Dünyayı Algılama (Sensörler) ve Sistem Entegrasyonu)",
+    "modul-5: \"reading_u52\" için yerel dosya bulunamadı (Okuma Materyali :  Ünite 5.2)"
+  ],
+  "mergeWarnings": [
+    "modul-1:reading_u11 :  Drive URL eksik",
+    "modul-1:reading_u12 :  Drive URL eksik",
+    "modul-2:reading_u21 :  Drive URL eksik",
+    "modul-2:video_u22 :  Drive URL eksik",
+    "modul-2:reading_u22 :  Drive URL eksik",
+    "modul-3:reading_u31 :  Drive URL eksik",
+    "modul-3:reading_u32 :  Drive URL eksik",
+    "modul-4:reading_u41 :  Drive URL eksik",
+    "modul-4:reading_u42 :  Drive URL eksik",
+    "modul-5:reading_u51 :  Drive URL eksik",
+    "modul-5:video_u52 :  Drive URL eksik",
+    "modul-5:reading_u52 :  Drive URL eksik"
+  ],
+  "mergedAt": "2026-08-17T11:02:16.848Z",
+  "updatedDriveUrls": 8
+}

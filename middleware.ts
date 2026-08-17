@@ -52,6 +52,58 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url);
   }
 
+  const isKursPublic =
+    pathname === '/kurs/giris' ||
+    pathname.startsWith('/auth/callback') ||
+    pathname.startsWith('/auth/confirm') ||
+    pathname.startsWith('/kurs/sertifika/dogrula');
+
+  if (pathname.startsWith('/kurs') && !isKursPublic) {
+    if (!user) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/kurs/giris';
+      url.searchParams.set('next', pathname);
+      return NextResponse.redirect(url);
+    }
+
+    const isModerator = user.app_metadata?.role === 'moderator';
+    if (!isModerator) {
+      const { data: enrollment } = await supabase
+        .from('course_enrollments')
+        .select('id')
+        .eq('user_id', user.id)
+        .maybeSingle();
+
+      if (!enrollment) {
+        const url = request.nextUrl.clone();
+        url.pathname = '/kurs/giris';
+        url.searchParams.set('error', 'not_enrolled');
+        return NextResponse.redirect(url);
+      }
+    }
+  }
+
+  if (pathname === '/kurs/giris' && user) {
+    const isModerator = user.app_metadata?.role === 'moderator';
+    if (isModerator) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/kurs';
+      return NextResponse.redirect(url);
+    }
+
+    const { data: enrollment } = await supabase
+      .from('course_enrollments')
+      .select('id')
+      .eq('user_id', user.id)
+      .maybeSingle();
+
+    if (enrollment) {
+      const url = request.nextUrl.clone();
+      url.pathname = '/kurs';
+      return NextResponse.redirect(url);
+    }
+  }
+
   return supabaseResponse;
 }
 

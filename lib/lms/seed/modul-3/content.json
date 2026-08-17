@@ -1,0 +1,39 @@
+{
+  "moduleSlug": "modul-3",
+  "items": [
+    {
+      "order": 1,
+      "type": "video",
+      "title": "Mikrodenetleyici Nedir?",
+      "unitLabel": "Ünite 3.1: Mikrodenetleyici Nedir?",
+      "unitOrder": 1,
+      "driveUrl": "https://drive.google.com/file/d/1A9p6MPAehhr4T2T5mGqwsnyTp4EEqiyJ/view",
+      "estimatedDurationMinutes": 15
+    },
+    {
+      "order": 2,
+      "type": "topic_quiz",
+      "title": "Ödev 3.1: Konu Sonu Değerlendirmesi (5 Soru)",
+      "unitLabel": "Ünite 3.1: Mikrodenetleyici Nedir?",
+      "unitOrder": 1,
+      "quizFile": "quizzes/odev-3-1.json"
+    },
+    {
+      "order": 3,
+      "type": "video",
+      "title": "Sinyal Tipleri",
+      "unitLabel": "Ünite 3.2: Sinyal Tipleri",
+      "unitOrder": 2,
+      "driveUrl": "https://drive.google.com/file/d/19yd_X47HsR8bafKpEH_aCEX6JiYV6ZMG/view",
+      "estimatedDurationMinutes": 12
+    },
+    {
+      "order": 4,
+      "type": "topic_quiz",
+      "title": "Ödev 3.2: Konu Sonu Değerlendirmesi (5 Soru)",
+      "unitLabel": "Ünite 3.2: Sinyal Tipleri",
+      "unitOrder": 2,
+      "quizFile": "quizzes/odev-3-2.json"
+    }
+  ]
+}

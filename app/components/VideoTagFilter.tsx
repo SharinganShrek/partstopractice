@@ -15,22 +15,22 @@ export default function VideoTagFilter({ value, onChange, className = '' }: Vide
   const { t } = useLanguage();
   return (
     <div className={`flex flex-wrap items-center gap-2 ${className}`}>
-      <label htmlFor="video-tag-filter" className="text-sm font-medium text-[#495057]">
-        {/* If there's a specific translation for tag filter, we would use it. We'll reuse filterLabel for now. */}
-        {t('videos.filterLabel') || 'Filter:'}
+      <label htmlFor="video-tag-filter" className="text-sm font-medium text-text-muted">
+        {t('videos.tagFilterLabel')}
       </label>
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2" id="video-tag-filter">
         {AVAILABLE_TAGS.map((tag) => (
           <button
             key={tag}
+            type="button"
             onClick={() => onChange(tag)}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
               value === tag
-                ? 'bg-[#800020] text-white shadow'
-                : 'bg-white text-[#495057] border border-[#e9ecef] hover:bg-[#f8f9fa]'
+                ? 'bg-primary text-white shadow-sm'
+                : 'bg-white text-text-muted border border-border hover:text-primary hover:border-primary/30'
             }`}
           >
-            {tag === 'all' ? (t('videos.filterAll') || 'All') : tag.toUpperCase()}
+            {tag === 'all' ? t('videos.filterAll') : tag.toUpperCase()}
           </button>
         ))}
       </div>

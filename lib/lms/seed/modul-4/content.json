@@ -1,0 +1,33 @@
+{
+  "moduleSlug": "modul-4",
+  "items": [
+    {
+      "order": 1,
+      "type": "video",
+      "title": "Kodun Anatomisi ve Söz Dizimi Kuralları",
+      "driveUrl": "https://drive.google.com/file/d/1RppZBAeZiv9cy38IE6Glp3IdqPnoa59k/view",
+      "estimatedDurationMinutes": 16
+    },
+    {
+      "order": 2,
+      "type": "video",
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (1. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/1-bKSB19QcJL6THuPoc9mDwvoymD-tiXi/view",
+      "estimatedDurationMinutes": 18
+    },
+    {
+      "order": 3,
+      "type": "video",
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (2. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/18mVxrB_DCwaoM5z1EaoOSEhjStjyYoja/view",
+      "estimatedDurationMinutes": 16
+    },
+    {
+      "order": 4,
+      "type": "video",
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (3. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/1IQDQSe7AfPs2uTNGh-I-NgJJ86f_BBh5/view",
+      "estimatedDurationMinutes": 16
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "moduleSlug": "modul-1",
+  "items": [
+    {
+      "order": 1,
+      "type": "video",
+      "title": "Uzamsal Düşünme ve Tasarım Araçları",
+      "unitLabel": "Ünite 1.1: Uzamsal Düşünme ve Tasarım Araçları",
+      "unitOrder": 1,
+      "driveUrl": "https://drive.google.com/file/d/1iOKobKgVTxMRFzjK4mLMfqPpsiopv640/view",
+      "estimatedDurationMinutes": 15
+    },
+    {
+      "order": 2,
+      "type": "topic_quiz",
+      "title": "Ödev 1.1: Konu Sonu Değerlendirmesi (5 Soru)",
+      "unitLabel": "Ünite 1.1: Uzamsal Düşünme ve Tasarım Araçları",
+      "unitOrder": 1,
+      "quizFile": "quizzes/odev-1-1.json"
+    },
+    {
+      "order": 3,
+      "type": "video",
+      "title": "Mühendislik Tasarım Döngüsü",
+      "unitLabel": "Ünite 1.2: Mühendislik Tasarım Döngüsü",
+      "unitOrder": 2,
+      "driveUrl": "https://drive.google.com/file/d/1RudlDmrX3ISw-d4z-flPli8vzQ2JWPUe/view",
+      "estimatedDurationMinutes": 12
+    },
+    {
+      "order": 4,
+      "type": "topic_quiz",
+      "title": "Ödev 1.2: Konu Sonu Değerlendirmesi (5 Soru)",
+      "unitLabel": "Ünite 1.2: Mühendislik Tasarım Döngüsü",
+      "unitOrder": 2,
+      "quizFile": "quizzes/odev-1-2.json"
+    },
+    {
+      "order": 5,
+      "type": "module_assessment",
+      "title": "Modül Sınavı 1 (10 Soru)",
+      "quizFile": "quizzes/modul-sinavi-1.json"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "title": "Modül Sınavı 4 (10 Soru)",
+  "passingScore": 70,
+  "questions": [
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 1",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 2",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 3",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 4",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 5",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 6",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 7",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 8",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 9",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    },
+    {
+      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 10",
+      "options": [
+        {
+          "key": "A",
+          "text": "Seçenek A [PLACEHOLDER]"
+        },
+        {
+          "key": "B",
+          "text": "Seçenek B [PLACEHOLDER]"
+        },
+        {
+          "key": "C",
+          "text": "Seçenek C [PLACEHOLDER]"
+        },
+        {
+          "key": "D",
+          "text": "Seçenek D [PLACEHOLDER]"
+        }
+      ],
+      "correctAnswer": "A"
+    }
+  ]
+}

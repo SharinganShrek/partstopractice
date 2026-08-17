@@ -19,7 +19,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'FRC ve FIRST için tanıtım içerikleri—birçok dilde video dersler ve interaktif quizler.',
+      'FRC ve FIRST için tanıtım içerikleri, birçok dilde video dersler ve interaktif quizler.',
 
     // Stats
     'stats.languages.value': '10+',
@@ -42,6 +42,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Diğer Videolar',
     'videos.filterLabel': 'Video dili',
     'videos.filterAll': 'Tüm diller',
+    'videos.tagFilterLabel': 'Program türü',
     'videos.listHeadingAll': 'Tüm dillerdeki videolar',
 
     // Course detail
@@ -112,7 +113,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Introductory FRC and FIRST coursework—video lessons and interactive quizzes to support learning.',
+      'Introductory FRC and FIRST coursework, video lessons and interactive quizzes to support learning.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Languages',
@@ -133,6 +134,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Other Videos',
     'videos.filterLabel': 'Video language',
     'videos.filterAll': 'All languages',
+    'videos.tagFilterLabel': 'Program type',
     'videos.listHeadingAll': 'Videos (all languages)',
 
     'course.video': 'Video',
@@ -195,7 +197,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
-    'hero.description': 'FRC 和 FIRST 入门课程——视频课程和互动测验帮助您学习。',
+    'hero.description': 'FRC 和 FIRST 入门课程, , 视频课程和互动测验帮助您学习。',
 
     'stats.languages.value': '10+',
     'stats.languages.label': '种语言',
@@ -215,6 +217,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': '其他视频',
     'videos.filterLabel': '视频语言',
     'videos.filterAll': '所有语言',
+    'videos.tagFilterLabel': '项目类型',
     'videos.listHeadingAll': '视频（所有语言）',
 
     'course.video': '视频',
@@ -271,7 +274,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
-    'hero.description': 'קורסי מבוא ל-FRC ו-FIRST—שיעורי וידאו וחידונים אינטראקטיביים לתמיכה בלמידה.',
+    'hero.description': 'קורסי מבוא ל-FRC ו-FIRST, שיעורי וידאו וחידונים אינטראקטיביים לתמיכה בלמידה.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'שפות',
@@ -291,6 +294,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'סרטונים אחרים',
     'videos.filterLabel': 'שפת הסרטונים',
     'videos.filterAll': 'כל השפות',
+    'videos.tagFilterLabel': 'סוג תוכנית',
     'videos.listHeadingAll': 'סרטונים (כל השפות)',
 
     'course.video': 'וידאו',
@@ -348,7 +352,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Einführende FRC- und FIRST-Kurse—Videolektionen und interaktive Quizze zur Unterstützung des Lernens.',
+      'Einführende FRC- und FIRST-Kurse, Videolektionen und interaktive Quizze zur Unterstützung des Lernens.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Sprachen',
@@ -369,6 +373,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Andere Videos',
     'videos.filterLabel': 'Videosprache',
     'videos.filterAll': 'Alle Sprachen',
+    'videos.tagFilterLabel': 'Programmtyp',
     'videos.listHeadingAll': 'Videos (alle Sprachen)',
 
     'course.video': 'Video',
@@ -400,7 +405,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'submit.title': 'Video einreichen',
     'submit.description':
-      'Teilen Sie Ihr FIRST/FRC-Lernvideo mit uns. Füllen Sie das Formular aus — unsere Moderatoren prüfen Ihre Anfrage.',
+      'Teilen Sie Ihr FIRST/FRC-Lernvideo mit uns. Füllen Sie das Formular aus :  unsere Moderatoren prüfen Ihre Anfrage.',
     'submit.videoType': 'Videotyp',
     'submit.titleLabel': 'Titel',
     'submit.titlePlaceholder': 'Videotitel eingeben',
@@ -428,7 +433,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Wprowadzające kursy FRC i FIRST—lekcje wideo i interaktywne quizy wspierające naukę.',
+      'Wprowadzające kursy FRC i FIRST, lekcje wideo i interaktywne quizy wspierające naukę.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Języków',
@@ -449,6 +454,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Pozostałe filmy',
     'videos.filterLabel': 'Język wideo',
     'videos.filterAll': 'Wszystkie języki',
+    'videos.tagFilterLabel': 'Typ programu',
     'videos.listHeadingAll': 'Filmy (wszystkie języki)',
 
     'course.video': 'Wideo',
@@ -480,7 +486,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'submit.title': 'Wyślij wideo',
     'submit.description':
-      'Podziel się z nami swoim materiałem FIRST/FRC. Wypełnij formularz — moderatorzy sprawdzą zgłoszenie.',
+      'Podziel się z nami swoim materiałem FIRST/FRC. Wypełnij formularz :  moderatorzy sprawdzą zgłoszenie.',
     'submit.videoType': 'Typ wideo',
     'submit.titleLabel': 'Tytuł',
     'submit.titlePlaceholder': 'Wpisz tytuł wideo',
@@ -508,7 +514,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'دورات تمهيدية في FRC وFIRST—دروس فيديو واختبارات تفاعلية لدعم التعلم.',
+      'دورات تمهيدية في FRC وFIRST, دروس فيديو واختبارات تفاعلية لدعم التعلم.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'لغات',
@@ -528,6 +534,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'فيديوهات أخرى',
     'videos.filterLabel': 'لغة الفيديو',
     'videos.filterAll': 'كل اللغات',
+    'videos.tagFilterLabel': 'نوع البرنامج',
     'videos.listHeadingAll': 'مقاطع الفيديو (كل اللغات)',
 
     'course.video': 'فيديو',
@@ -585,7 +592,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'FRC और FIRST परिचयात्मक पाठ्यक्रम—वीडियो पाठ और इंटरैक्टिव क्विज़ सीखने में सहायता के लिए।',
+      'FRC और FIRST परिचयात्मक पाठ्यक्रम, वीडियो पाठ और इंटरैक्टिव क्विज़ सीखने में सहायता के लिए।',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'भाषाएँ',
@@ -605,6 +612,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'अन्य वीडियो',
     'videos.filterLabel': 'वीडियो भाषा',
     'videos.filterAll': 'सभी भाषाएँ',
+    'videos.tagFilterLabel': 'कार्यक्रम प्रकार',
     'videos.listHeadingAll': 'वीडियो (सभी भाषाएँ)',
 
     'course.video': 'वीडियो',
@@ -662,7 +670,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Cursos introductorios de FRC y FIRST—lecciones en video y cuestionarios interactivos para apoyar el aprendizaje.',
+      'Cursos introductorios de FRC y FIRST, lecciones en video y cuestionarios interactivos para apoyar el aprendizaje.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Idiomas',
@@ -683,6 +691,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Otros videos',
     'videos.filterLabel': 'Idioma del video',
     'videos.filterAll': 'Todos los idiomas',
+    'videos.tagFilterLabel': 'Tipo de programa',
     'videos.listHeadingAll': 'Videos (todos los idiomas)',
 
     'course.video': 'Video',
@@ -742,7 +751,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Corsi introduttivi FRC e FIRST—lezioni video e quiz interattivi per supportare l\'apprendimento.',
+      'Corsi introduttivi FRC e FIRST, lezioni video e quiz interattivi per supportare l\'apprendimento.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Lingue',
@@ -763,6 +772,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Altri video',
     'videos.filterLabel': 'Lingua dei video',
     'videos.filterAll': 'Tutte le lingue',
+    'videos.tagFilterLabel': 'Tipo di programma',
     'videos.listHeadingAll': 'Video (tutte le lingue)',
 
     'course.video': 'Video',
@@ -822,7 +832,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Kozi za utangulizi za FRC na FIRST—masomo ya video na majaribio ya maingiliano kusaidia kujifunza.',
+      'Kozi za utangulizi za FRC na FIRST, masomo ya video na majaribio ya maingiliano kusaidia kujifunza.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Lugha',
@@ -843,6 +853,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Video zingine',
     'videos.filterLabel': 'Lugha ya video',
     'videos.filterAll': 'Lugha zote',
+    'videos.tagFilterLabel': 'Aina ya programu',
     'videos.listHeadingAll': 'Video (lugha zote)',
 
     'course.video': 'Video',
@@ -901,7 +912,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Вводные курсы FRC и FIRST—видеоуроки и интерактивные тесты для поддержки обучения.',
+      'Вводные курсы FRC и FIRST, видеоуроки и интерактивные тесты для поддержки обучения.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Языков',
@@ -922,6 +933,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Другие видео',
     'videos.filterLabel': 'Язык видео',
     'videos.filterAll': 'Все языки',
+    'videos.tagFilterLabel': 'Тип программы',
     'videos.listHeadingAll': 'Видео (на всех языках)',
 
     'course.video': 'Видео',
@@ -953,7 +965,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'submit.title': 'Отправить видео',
     'submit.description':
-      'Поделитесь своим обучающим видео FIRST/FRC. Заполните форму — модераторы проверят заявку.',
+      'Поделитесь своим обучающим видео FIRST/FRC. Заполните форму :  модераторы проверят заявку.',
     'submit.videoType': 'Тип видео',
     'submit.titleLabel': 'Название',
     'submit.titlePlaceholder': 'Введите название видео',
@@ -981,7 +993,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'hero.subtitle': 'IMC#4191 × Khan Academy Türkiye',
     'hero.title': 'FIRST Parts to Practice',
     'hero.description':
-      'Cours d\'introduction FRC et FIRST—leçons vidéo et quiz interactifs pour soutenir l\'apprentissage.',
+      'Cours d\'introduction FRC et FIRST, leçons vidéo et quiz interactifs pour soutenir l\'apprentissage.',
 
     'stats.languages.value': '10+',
     'stats.languages.label': 'Langues',
@@ -1002,6 +1014,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
     'videos.otherVideosLabel': 'Autres vidéos',
     'videos.filterLabel': 'Langue des vidéos',
     'videos.filterAll': 'Toutes les langues',
+    'videos.tagFilterLabel': 'Type de programme',
     'videos.listHeadingAll': 'Vidéos (toutes les langues)',
 
     'course.video': 'Vidéo',
@@ -1033,7 +1046,7 @@ const translations: Record<SupportedLanguage, Record<string, string>> = {
 
     'submit.title': 'Envoyer une vidéo',
     'submit.description':
-      'Partagez votre vidéo éducative FIRST/FRC. Remplissez le formulaire — nos modérateurs l\'examineront.',
+      'Partagez votre vidéo éducative FIRST/FRC. Remplissez le formulaire :  nos modérateurs l\'examineront.',
     'submit.videoType': 'Type de vidéo',
     'submit.titleLabel': 'Titre',
     'submit.titlePlaceholder': 'Entrez le titre de la vidéo',

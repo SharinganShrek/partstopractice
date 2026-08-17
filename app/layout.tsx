@@ -1,20 +1,28 @@
-'use client';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import { LanguageProvider } from './components/LanguageContext';
+import type { Metadata } from 'next';
+import { Inter, Oswald } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { Providers } from './providers';
+import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin', 'latin-ext'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const oswald = Oswald({
+  variable: '--font-oswald',
+  subsets: ['latin', 'latin-ext'],
 });
+
+export const metadata: Metadata = {
+  title: 'FIRST Parts to Practice',
+  description:
+    'IMC#4191 and Khan Academy Türkiye: introductory FRC and FIRST lessons, videos and interactive quizzes.',
+  icons: {
+    icon: [{ url: '/favicon.png', type: 'image/png' }],
+    apple: [{ url: '/favicon.png', type: 'image/png' }],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -23,21 +31,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <title>FIRST Parts to Practice</title>
-        <meta
-          name="description"
-          content="IMC#4191 and Khan Academy Türkiye: introductory FRC and FIRST lessons—videos and interactive quizzes."
-        />
-      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${inter.variable} ${oswald.variable} antialiased min-h-screen flex flex-col`}
       >
-        <LanguageProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </LanguageProvider>
+        <Providers>{children}</Providers>
         <Analytics />
       </body>
     </html>

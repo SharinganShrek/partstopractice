@@ -1,0 +1,53 @@
+{
+  "_instructions": "Modül modül Drive video linklerini buraya yapıştırın, sonra: npm run apply:videos && npm run seed:lms -- --reset",
+  "modul-1": {
+    "video_u11": {
+      "title": "Uzamsal Düşünme ve Tasarım Araçları (Ünite 1.1)",
+      "driveUrl": "https://drive.google.com/file/d/1iOKobKgVTxMRFzjK4mLMfqPpsiopv640/view?usp=sharing"
+    },
+    "video_u12": {
+      "title": "Mühendislik Tasarım Döngüsü (Ünite 1.2)",
+      "driveUrl": "https://drive.google.com/file/d/1RudlDmrX3ISw-d4z-flPli8vzQ2JWPUe/view?usp=sharing"
+    }
+  },
+  "modul-2": {
+    "video_u21": {
+      "title": "Devre Mantığı ve Elektronik Komponentler",
+      "driveUrl": "https://drive.google.com/file/d/1-p-ULfXnWEi6U8-3KFhY4z-nzrh6xbk1/view?usp=sharing"
+    }
+  },
+  "modul-3": {
+    "video_u31": {
+      "title": "Mikrodenetleyici Nedir? (Ünite 3.1)",
+      "driveUrl": "https://drive.google.com/file/d/1A9p6MPAehhr4T2T5mGqwsnyTp4EEqiyJ/view?usp=drive_link"
+    },
+    "video_u32": {
+      "title": "Sinyal Tipleri (Ünite 3.2)",
+      "driveUrl": "https://drive.google.com/file/d/19yd_X47HsR8bafKpEH_aCEX6JiYV6ZMG/view?usp=drive_link"
+    }
+  },
+  "modul-4": {
+    "video_u41": {
+      "title": "Kodun Anatomisi ve Söz Dizimi Kuralları",
+      "driveUrl": "https://drive.google.com/file/d/1RppZBAeZiv9cy38IE6Glp3IdqPnoa59k/view?usp=sharing"
+    },
+    "video_u42": {
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (1. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/1-bKSB19QcJL6THuPoc9mDwvoymD-tiXi/view?usp=drive_link"
+    },
+    "video_u43": {
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (2. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/18mVxrB_DCwaoM5z1EaoOSEhjStjyYoja/view?usp=drive_link"
+    },
+    "video_u44": {
+      "title": "Donanım Komutları, Karar Yapıları ve Değişkenler (3. Bölüm)",
+      "driveUrl": "https://drive.google.com/file/d/1IQDQSe7AfPs2uTNGh-I-NgJJ86f_BBh5/view?usp=sharing"
+    }
+  },
+  "modul-5": {
+    "video_u51": {
+      "title": "Çıktı Üretme (Aktüatörler)",
+      "driveUrl": "https://drive.google.com/file/d/11oaOsS1HaLsMJl-LMZZPwv8KCme3KP2K/view?usp=sharing"
+    }
+  }
+}
