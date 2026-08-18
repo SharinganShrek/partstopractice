@@ -13,7 +13,7 @@
       "correctAnswer": "B"
     },
     {
-      "question": "Videoda LED ile birlikte kullanılan direncin devredeki temel amacı nedir?",
+      "question": "Devrede LED ile birlikte kullanılan direncin temel amacı nedir?",
       "options": [
         { "key": "A", "text": "LED'in üzerinden geçen akımı sınırlamak" },
         { "key": "B", "text": "LED'in rengini değiştirmek" },
@@ -33,27 +33,27 @@
       "correctAnswer": "A"
     },
     {
-      "question": "Videodaki devrede butonun kullanılmasının temel amacı nedir?",
+      "question": "Devrede buton kullanılmasının temel amacı nedir?",
       "options": [
         { "key": "A", "text": "Devrenin besleme gerilimini yükseltmek" },
-        { "key": "B", "text": "Kullanıcıdan bir giriş almak" },
+        { "key": "B", "text": "Kullanıcıdan bir dijital giriş almak" },
         { "key": "C", "text": "LED'in parlaklığını fiziksel olarak artırmak" },
         { "key": "D", "text": "Arduino'nun USB bağlantısını sağlamak" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Tinkercad'deki \"Simülasyonu Başlat\" özelliği ne işe yarar?",
+      "question": "Tinkercad'deki \"Simülasyonu Başlat\" özelliğinin görevi nedir?",
       "options": [
-        { "key": "A", "text": "Tasarlanan devrenin gerçek donanım kullanılmadan çalışmasının test edilmesini sağlar" },
-        { "key": "B", "text": "Arduino'ya fiziksel olarak kod yükler" },
-        { "key": "C", "text": "Devredeki hataları otomatik olarak düzeltir" },
-        { "key": "D", "text": "Breadboard'u yeni bir devreye dönüştürür" }
+        { "key": "A", "text": "Tasarlanan devrenin gerçek donanım kullanılmadan çalışmasını test etmek" },
+        { "key": "B", "text": "Arduino'ya fiziksel olarak kod yüklemek" },
+        { "key": "C", "text": "Devredeki hataları otomatik olarak düzeltmek" },
+        { "key": "D", "text": "Breadboard'u yeni bir devreye dönüştürmek" }
       ],
       "correctAnswer": "A"
     },
     {
-      "question": "Tinkercad'de devreye Arduino Uno eklemek için hangi bileşen seçilir?",
+      "question": "Tinkercad'de devreye bir mikrodenetleyici kart eklemek için hangi bileşen seçilir?",
       "options": [
         { "key": "A", "text": "Micro:bit" },
         { "key": "B", "text": "Arduino Uno R3" },
@@ -63,7 +63,7 @@
       "correctAnswer": "B"
     },
     {
-      "question": "Videoda kullanılan devre elemanlarından hangisi elektrik enerjisini ışığa dönüştürür?",
+      "question": "Elektrik enerjisini ışık enerjisine dönüştüren devre elemanı hangisidir?",
       "options": [
         { "key": "A", "text": "Direnç" },
         { "key": "B", "text": "Breadboard" },
@@ -73,17 +73,17 @@
       "correctAnswer": "C"
     },
     {
-      "question": "Videoda devreye güç sağlamak için gösterilen bileşen hangisidir?",
+      "question": "Harici devre kurulumlarında bağımsız güç kaynağı olarak kullanılan bileşen hangisidir?",
       "options": [
-        { "key": "A", "text": "9V pil" },
-        { "key": "B", "text": "Servo motor" },
+        { "key": "A", "text": "9V Pil" },
+        { "key": "B", "text": "Servo Motor" },
         { "key": "C", "text": "Potansiyometre" },
         { "key": "D", "text": "Buzzer" }
       ],
       "correctAnswer": "A"
     },
     {
-      "question": "Arduino ile breadboard arasındaki bağlantılarda kullanılan kabloların temel görevi nedir?",
+      "question": "Arduino ile breadboard arasındaki bağlantıları sağlayan jampır (jumper) kabloların temel görevi nedir?",
       "options": [
         { "key": "A", "text": "Devre elemanlarını birbirine elektriksel olarak bağlamak" },
         { "key": "B", "text": "Arduino'nun hafızasını artırmak" },
@@ -93,10 +93,10 @@
       "correctAnswer": "A"
     },
     {
-      "question": "Videoda Tinkercad üzerinde devre oluşturulurken aşağıdakilerden hangisi doğrudan devre elemanı olarak eklenmiştir?",
+      "question": "Tinkercad simülasyon alanında doğrudan ana işlemci birimi olarak kullanılan bileşen hangisidir?",
       "options": [
         { "key": "A", "text": "Arduino Uno" },
-        { "key": "B", "text": "Bilgisayar faresi" },
+        { "key": "B", "text": "Bilgisayar Faresi" },
         { "key": "C", "text": "Klavye" },
         { "key": "D", "text": "Monitör" }
       ],

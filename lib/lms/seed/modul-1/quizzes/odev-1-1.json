@@ -8,17 +8,17 @@
         { "key": "A", "text": "X Ekseni" },
         { "key": "B", "text": "Y Ekseni" },
         { "key": "C", "text": "Z Ekseni" },
-        { "key": "D", "text": "Hiçbiri" }
+        { "key": "D", "text": "W Ekseni" }
       ],
       "correctAnswer": "C"
     },
     {
-      "question": "Bir kutunun ortasında boşluk veya delik açmak istiyorsak, eklediğimiz ikinci şekli nasıl ayarlamalıyız?",
+      "question": "Bir kutunun ortasında boşluk veya delik açmak istiyorsak, eklediğimiz ikinci şeklin türünü nasıl ayarlamalıyız?",
       "options": [
         { "key": "A", "text": "Katı" },
         { "key": "B", "text": "Delik (Hole)" },
-        { "key": "C", "text": "Renkli" },
-        { "key": "D", "text": "Gizli" }
+        { "key": "C", "text": "Doku (Texture)" },
+        { "key": "D", "text": "Katman (Layer)" }
       ],
       "correctAnswer": "B"
     },
@@ -43,7 +43,7 @@
       "correctAnswer": "A"
     },
     {
-      "question": "Tinkercad ekranında etrafa bakmak ve tasarımı döndürmek için farenin hangi tuşuna basılı tutarız?",
+      "question": "Tinkercad ekranında çalışma düzlemini döndürmek ve tasarıma farklı açılardan bakmak için farenin hangi tuşu kullanılır?",
       "options": [
         { "key": "A", "text": "Sol Tuş" },
         { "key": "B", "text": "Sağ Tuş" },

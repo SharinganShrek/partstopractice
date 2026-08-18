@@ -74,7 +74,9 @@ export default function CertificateBanner({ stats, certificate }: CertificateBan
             Sertifika Durumu
           </h3>
           <p className="text-text-muted text-sm mb-3">
-            Videoların en az %70&apos;i + tüm quizler + capstone onayı gerekir.
+            {stats.hasCapstone
+              ? "Videoların en az %70'i + tüm quizler + capstone onayı gerekir."
+              : "Videoların en az %70'i + tüm quizler geçilmelidir."}
           </p>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
@@ -98,12 +100,14 @@ export default function CertificateBanner({ stats, certificate }: CertificateBan
                 {stats.allQuizzesPassed ? 'Evet' : 'Hayır'}
               </span>
             </div>
-            <div className="flex justify-between">
-              <span>Capstone onayı</span>
-              <span className={stats.capstoneApproved ? 'text-green-600 font-semibold' : 'text-text-muted'}>
-                {stats.capstoneApproved ? 'Onaylandı' : 'Bekleniyor'}
-              </span>
-            </div>
+            {stats.hasCapstone && (
+              <div className="flex justify-between">
+                <span>Capstone onayı</span>
+                <span className={stats.capstoneApproved ? 'text-green-600 font-semibold' : 'text-text-muted'}>
+                  {stats.capstoneApproved ? 'Onaylandı' : 'Bekleniyor'}
+                </span>
+              </div>
+            )}
           </div>
         </div>
       </div>

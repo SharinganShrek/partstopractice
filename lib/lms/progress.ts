@@ -95,7 +95,9 @@ export function calculateCourseStats(
   const capstoneSubmission = capstoneItem
     ? assignments.find((a) => a.content_item_id === capstoneItem.id)
     : null;
-  const capstoneApproved = capstoneSubmission?.status === 'approved';
+  const hasCapstone = Boolean(capstoneItem);
+  const capstoneApproved =
+    !capstoneItem || capstoneSubmission?.status === 'approved';
 
   const mediaCompletionMet = mediaCompletionPercent >= MEDIA_COMPLETION_THRESHOLD;
 
@@ -113,6 +115,7 @@ export function calculateCourseStats(
     certificateEligible,
     certificateIssued: certificate != null,
     capstoneApproved,
+    hasCapstone,
     allQuizzesPassed,
     mediaCompletionMet,
   };

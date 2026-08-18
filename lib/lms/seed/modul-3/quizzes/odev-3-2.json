@@ -3,52 +3,52 @@
   "passingScore": 70,
   "questions": [
     {
-      "question": "Sadece 1 veya 0 değerleri alabilen sinyal türü hangisidir?",
+      "question": "Sadece ikili (1 veya 0 / HIGH veya LOW) durum değerleri alabilen sinyal türü hangisidir?",
       "options": [
         { "key": "A", "text": "Analog Sinyal" },
         { "key": "B", "text": "Dijital Sinyal" },
         { "key": "C", "text": "Kademeli Sinyal" },
-        { "key": "D", "text": "Akışkan Sinyal" }
+        { "key": "D", "text": "Sürekli Sinyal" }
       ],
       "correctAnswer": "B"
     },
     {
       "question": "Aşağıdakilerden hangisi bir dijital sinyal örneğidir?",
       "options": [
-        { "key": "A", "text": "Odanın sıcaklığı" },
-        { "key": "B", "text": "Evdeki ışık anahtarı" },
-        { "key": "C", "text": "Gitarın ses düğmesi" },
-        { "key": "D", "text": "Rüzgarın hızı" }
+        { "key": "A", "text": "Odanın anlık sıcaklık değeri" },
+        { "key": "B", "text": "Açma/kapama anahtarının konumu" },
+        { "key": "C", "text": "Ses seviyesi potansiyometresi" },
+        { "key": "D", "text": "Rüzgarın anlık hızı" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Arduino'da breadboard ne için kullanılır?",
+      "question": "Arduino projelerinde breadboard kullanılmasının temel amacı nedir?",
       "options": [
-        { "key": "A", "text": "Devre elemanlarıyla daha düzenli ve pratik çalışabilmek için" },
-        { "key": "B", "text": "Parçaları saklamak için" },
-        { "key": "C", "text": "Kod yazmak için" },
-        { "key": "D", "text": "Ekmek kesmek için" }
+        { "key": "A", "text": "Devre elemanları arasında lehim gerektirmeyen esnek bağlantılar kurmak" },
+        { "key": "B", "text": "Bileşenleri kalıcı olarak sabitlemek" },
+        { "key": "C", "text": "Kod derleme işlemlerini hızlandırmak" },
+        { "key": "D", "text": "Güç kaynağını şarj etmek" }
       ],
       "correctAnswer": "A"
     },
     {
-      "question": "Arduino'nun analog pinleri (A0-A5), gelen sürekli sinyali hangi aralıkta bir sayıya çevirir?",
+      "question": "Arduino'nun analog-dijital dönüştürücü (ADC) pinleri (A0-A5), gelen analog voltajı hangi sayısal aralığa dönüştürür?",
       "options": [
-        { "key": "A", "text": "0-1" },
-        { "key": "B", "text": "0-100" },
-        { "key": "C", "text": "0-255" },
-        { "key": "D", "text": "0-1023" }
+        { "key": "A", "text": "0 - 1" },
+        { "key": "B", "text": "0 - 100" },
+        { "key": "C", "text": "0 - 255" },
+        { "key": "D", "text": "0 - 1023" }
       ],
       "correctAnswer": "D"
     },
     {
-      "question": "LED'in yavaşça yanıp sönüyormuş gibi görünmesinin sebebi nedir?",
+      "question": "PWM (Puls Genişlik Modülasyonu) sinyali ile bir LED kontrol edildiğinde gözlenen değişim nasıl gerçekleşir?",
       "options": [
-        { "key": "A", "text": "LED'in güçsüz olması" },
-        { "key": "B", "text": "Devrenin arızalı olması" },
-        { "key": "C", "text": "LED'in çok hızlı farklı parlaklıklarda yanıp sönmesi" },
-        { "key": "D", "text": "Kodun yanlış yazılmış olması" }
+        { "key": "A", "text": "LED tamamen işlevsiz hale gelir" },
+        { "key": "B", "text": "Devre gerilimi otomatik kesilir" },
+        { "key": "C", "text": "Hızlı anahtarlama sayesinde LED parlaklığı kademeli olarak değişir" },
+        { "key": "D", "text": "Kod döngüsü durdurulur" }
       ],
       "correctAnswer": "C"
     }

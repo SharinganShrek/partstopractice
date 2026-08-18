@@ -162,8 +162,8 @@ function runUnitTests(contentItems: ContentItem[]) {
     assert(stats.mediaCompletionMet === true, 'mediaCompletionMet true at 100%');
     assert(stats.allQuizzesPassed === true, 'all quizzes at 80% → allQuizzesPassed');
     assert(
-      stats.certificateEligible === false,
-      'certificateEligible false without capstone approval'
+      stats.certificateEligible === true,
+      'certificateEligible true when media and quizzes complete and no capstone required'
     );
   }
 

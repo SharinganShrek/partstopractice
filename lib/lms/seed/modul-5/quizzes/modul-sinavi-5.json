@@ -3,224 +3,104 @@
   "passingScore": 70,
   "questions": [
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 1",
+      "question": "Bir devrede \"aktüatör\" (çıktı elemanı) ne işe yarar?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Ortamdaki fiziksel verileri elektrik sinyaline dönüştürür" },
+        { "key": "B", "text": "Elektrik enerjisini hareket, ışık veya ses gibi fiziksel bir etkiye dönüştürür" },
+        { "key": "C", "text": "Devredeki akımı depolar" },
+        { "key": "D", "text": "Mikrodenetleyiciyi bilgisayara bağlar" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Aşağıdakilerden hangisi bir aktüatör (çıktı) değil, bir giriş (sensör) elemanıdır?",
+      "options": [
+        { "key": "A", "text": "LED" },
+        { "key": "B", "text": "Mikro Servo Motor" },
+        { "key": "C", "text": "Basmalı Buton" },
+        { "key": "D", "text": "Titreşim Motoru" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Tinkercad'de devre tasarlarken bileşenlerin breadboard üzerinden bağlanmasının temel gerekçesi nedir?",
+      "options": [
+        { "key": "A", "text": "Devre elemanlarını düzenli, modüler ve güvenli bir şekilde irtibatlandırmak" },
+        { "key": "B", "text": "Mikrodenetleyiciyi harici güç kaynağından ayırmak" },
+        { "key": "C", "text": "Devrenin ses üretmesini sağlamak" },
+        { "key": "D", "text": "Yazılım kodlarını otomatik oluşturmak" }
       ],
       "correctAnswer": "A"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 2",
+      "question": "LED devre elemanı sistemde hangi fiziksel çıktıyı üretir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Ses" },
+        { "key": "B", "text": "Işık" },
+        { "key": "C", "text": "Titreşim" },
+        { "key": "D", "text": "Mekanik Dönme" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 3",
+      "question": "Piezo (buzzer) bileşeni bir devrede hangi görevi üstlenir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Sıcaklık ölçümü yapar" },
+        { "key": "B", "text": "Ses sinyali üretir" },
+        { "key": "C", "text": "Işık yoğunluğunu algılar" },
+        { "key": "D", "text": "Anahtarlama yapar" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 4",
+      "question": "Mikro Servo Motor'un diğer motor türlerinden ayıran temel karakteristik özellik nedir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Sadece ışık üretmesi" },
+        { "key": "B", "text": "Belirli bir açısal konumda hassas kontrol imkanı sunması" },
+        { "key": "C", "text": "Çalışmak için elektriğe ihtiyaç duymaması" },
+        { "key": "D", "text": "Yalnızca ses frekansı yayması" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 5",
+      "question": "Titreşim motoru (vibration motor) endüstriyel ve tüketici elektroniğinde en çok hangi amaçla kullanılır?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Sistem soğutması sağlamak için" },
+        { "key": "B", "text": "Mobil cihazlarda dokunsal Geri Bildirim (Haptic Feedback) sağlamak için" },
+        { "key": "C", "text": "Görüntü aktarımı yapmak için" },
+        { "key": "D", "text": "Devre direncini dengelemek için" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 6",
+      "question": "Bir Arduino devresinde LED'in zarar görmesini önlemek için seri olarak hangi bileşen bağlanır?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Potansiyometre" },
+        { "key": "B", "text": "Direnç" },
+        { "key": "C", "text": "Toprak Nem Sensörü" },
+        { "key": "D", "text": "Ultrasonik Mesafe Sensörü" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 7",
+      "question": "Aşağıdaki bileşenlerden hangisi bir çıktıyı (aktüatör) temsil eder?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Fotorezistör (LDR)" },
+        { "key": "B", "text": "Potansiyometre" },
+        { "key": "C", "text": "DC Motor" },
+        { "key": "D", "text": "Sürgülü Anahtar" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "C"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 8",
+      "question": "Akıllı bir aydınlatma sisteminde, ortam karardığında otomatik olarak devreye giren lamba uygulamasında \"aktüatör\" görevini hangi bileşen üstlenir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Işık sensörü (LDR)" },
+        { "key": "B", "text": "Lamba (Işık kaynağı)" },
+        { "key": "C", "text": "Arduino kartı" },
+        { "key": "D", "text": "Bağlantı kabloları" }
       ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 9",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 5 (10 Soru): Soru 10",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     }
   ]
 }

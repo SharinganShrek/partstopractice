@@ -32,6 +32,13 @@
       "driveUrl": "https://drive.google.com/file/d/1IQDQSe7AfPs2uTNGh-I-NgJJ86f_BBh5/view",
       "estimatedDurationMinutes": 16,
       "durationSeconds": 920
+    },
+    {
+      "order": 5,
+      "type": "module_assessment",
+      "title": "Modül Sınavı 4 (10 Soru)",
+      "unitLabel": "Ünite 4: Arduino Programlama ve Kod Yapısı",
+      "quizFile": "quizzes/modul-sinavi-4.json"
     }
   ]
 }

@@ -3,222 +3,102 @@
   "passingScore": 70,
   "questions": [
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 1",
+      "question": "Bir Arduino pinini çıkış (OUTPUT) olarak tanımlamak için setup() bloğunda hangi komut kullanılır?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "digitalWrite(PIN, HIGH);" },
+        { "key": "B", "text": "pinMode(PIN, OUTPUT);" },
+        { "key": "C", "text": "analogRead(PIN);" },
+        { "key": "D", "text": "Serial.begin(9600);" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "digitalWrite(KIRMIZI_LED, HIGH); kod satırının görevi nedir?",
+      "options": [
+        { "key": "A", "text": "Kırmızı LED'e bağlı pindeki gerilimi keser (söndürür)" },
+        { "key": "B", "text": "Kırmızı LED'e bağlı pine 5V gerilim verir (yakar)" },
+        { "key": "C", "text": "Potansiyometre değerini okur" },
+        { "key": "D", "text": "Seri haberleşmeyi başlatır" }
+      ],
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Potansiyometre gibi analog sensörlerden veri okumak için hangi fonksiyon kullanılır?",
+      "options": [
+        { "key": "A", "text": "digitalRead()" },
+        { "key": "B", "text": "analogWrite()" },
+        { "key": "C", "text": "analogRead()" },
+        { "key": "D", "text": "pinMode()" }
+      ],
+      "correctAnswer": "C"
+    },
+    {
+      "question": "analogRead() fonksiyonu ölçülen voltaja karşılık hangi aralıkta tamsayı değeri döndürür?",
+      "options": [
+        { "key": "A", "text": "0 - 1" },
+        { "key": "B", "text": "0 - 100" },
+        { "key": "C", "text": "0 - 255" },
+        { "key": "D", "text": "0 - 1023" }
+      ],
+      "correctAnswer": "D"
+    },
+    {
+      "question": "Seri Monitör ekranında veri akışını başlatabilmek için setup() fonksiyonunda hangi komut çalıştırılmalıdır?",
+      "options": [
+        { "key": "A", "text": "Serial.begin(9600);" },
+        { "key": "B", "text": "Serial.println();" },
+        { "key": "C", "text": "delay(9600);" },
+        { "key": "D", "text": "pinMode(SERIAL, OUTPUT);" }
       ],
       "correctAnswer": "A"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 2",
+      "question": "Bir potansiyometre pinini veri girişi (INPUT) olarak ayarlayan kod satırı hangisidir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "pinMode(POTANSIYOMETRE, OUTPUT);" },
+        { "key": "B", "text": "pinMode(POTANSIYOMETRE, INPUT);" },
+        { "key": "C", "text": "digitalWrite(POTANSIYOMETRE, HIGH);" },
+        { "key": "D", "text": "analogWrite(POTANSIYOMETRE, INPUT);" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 3",
+      "question": "delay(1000); komutunun program akışındaki görevi nedir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Kodu 1000 kez döngüye sokar" },
+        { "key": "B", "text": "Programın çalışmasını 1000 milisaniye (1 saniye) duraklatır" },
+        { "key": "C", "text": "Pini kapatır" },
+        { "key": "D", "text": "Belleği temizler" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 4",
+      "question": "potansiyometreDegeri <= 340 koşulu sağlandığında belirli bir LED'in yanması hedefleniyorsa, bu yapı hangi kontrol bloğu ile ifade edilir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "for döngüsü" },
+        { "key": "B", "text": "while döngüsü" },
+        { "key": "C", "text": "if / else if koşullu ifadesi" },
+        { "key": "D", "text": "switch-case yapısı" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "C"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 5",
+      "question": "Kod bloklarında if ve else if koşul yapılarının kullanılma amacı nedir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Programın işlemci hızını yavaşlatmak" },
+        { "key": "B", "text": "Değişken değerlerine bağlı olarak farklı mantıksal durumları çalıştırmak" },
+        { "key": "C", "text": "Tüm çıkışları aynı anda aktif etmek" },
+        { "key": "D", "text": "Seri haberleşmeyi sonlandırmak" }
       ],
-      "correctAnswer": "A"
+      "correctAnswer": "B"
     },
     {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 6",
+      "question": "Serial.println(potansiyometreDegeri); komutunun görevi nedir?",
       "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 7",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 8",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 9",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
-      ],
-      "correctAnswer": "A"
-    },
-    {
-      "question": "[PLACEHOLDER] Modül Sınavı 4 (10 Soru): Soru 10",
-      "options": [
-        {
-          "key": "A",
-          "text": "Seçenek A [PLACEHOLDER]"
-        },
-        {
-          "key": "B",
-          "text": "Seçenek B [PLACEHOLDER]"
-        },
-        {
-          "key": "C",
-          "text": "Seçenek C [PLACEHOLDER]"
-        },
-        {
-          "key": "D",
-          "text": "Seçenek D [PLACEHOLDER]"
-        }
+        { "key": "A", "text": "Okunan değişken değerini Seri Monitör ekranına alt satıra geçerek yazdırmak" },
+        { "key": "B", "text": "LED'i yakıp söndürmek" },
+        { "key": "C", "text": "Potansiyometreyi sıfırlamak" },
+        { "key": "D", "text": "Mikrodenetleyiciyi yeniden başlatmak" }
       ],
       "correctAnswer": "A"
     }

@@ -5,25 +5,25 @@
     {
       "question": "Bir mikrodenetleyiciye \"mikro\" denmesinin temel sebebi nedir?",
       "options": [
-        { "key": "A", "text": "Sadece çok küçük parçaları çalıştırabilmesi" },
-        { "key": "B", "text": "İşlemci, hafıza ve giriş-çıkış birimlerini tek bir küçük çipte toplaması" },
-        { "key": "C", "text": "Ekranının çok küçük olması" },
-        { "key": "D", "text": "Sadece pil ile çalışabilmesi" }
+        { "key": "A", "text": "Sadece küçük boyutlu parçaları çalıştırabilmesi" },
+        { "key": "B", "text": "İşlemci, hafıza ve giriş-çıkış birimlerini tek bir tümleşik çipte toplaması" },
+        { "key": "C", "text": "Ekranının küçük boyutlu olması" },
+        { "key": "D", "text": "Sadece düşük voltajlı pillerle çalışabilmesi" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Arduino tıpkı bir insan beyni gibi çalışır. Arduino'nun çalışma sırası hangisidir?",
+      "question": "Arduino'nun veri işleme ve mantıksal çalışma sırası nasıldır?",
       "options": [
-        { "key": "A", "text": "Karar verme, algılama, tepki verme" },
-        { "key": "B", "text": "Algılama, tepki verme, karar verme" },
-        { "key": "C", "text": "Algılama, karar verme, tepki verme" },
-        { "key": "D", "text": "Tepki verme, karar verme, algılama" }
+        { "key": "A", "text": "Karar verme → Algılama → Tepki verme" },
+        { "key": "B", "text": "Algılama → Tepki verme → Karar verme" },
+        { "key": "C", "text": "Algılama → Karar verme → Tepki verme" },
+        { "key": "D", "text": "Tepki verme → Karar verme → Algılama" }
       ],
       "correctAnswer": "C"
     },
     {
-      "question": "Arduino devresinde elektriğin kapalı bir döngü oluşturabilmesi için akımın çıktığı ve geri döndüğü pinler sırasıyla hangileridir?",
+      "question": "Arduino devresinde kapalı bir elektrik devresi oluşturmak için akımın çıktığı ve devreyi tamamladığı pinler sırasıyla hangileridir?",
       "options": [
         { "key": "A", "text": "A0 ve A5" },
         { "key": "B", "text": "13 ve 0" },
@@ -33,7 +33,7 @@
       "correctAnswer": "D"
     },
     {
-      "question": "LED'i fazla elektrikten koruyup bozulmasını engellemek için kullanılan koruyucu parça hangisidir?",
+      "question": "LED'i yüksek akımdan koruyarak bozulmasını engelleyen devre elemanı hangisidir?",
       "options": [
         { "key": "A", "text": "Direnç (Resistor)" },
         { "key": "B", "text": "Buton" },
@@ -43,12 +43,12 @@
       "correctAnswer": "A"
     },
     {
-      "question": "LED'in yavaşça yanıp sönüyormuş gibi görünmesinin sebebi nedir?",
+      "question": "Bir LED'in parlaklığının kısılıp açılıyor gibi görünmesinin temel sebebi nedir?",
       "options": [
-        { "key": "A", "text": "LED'in güçsüz olması" },
-        { "key": "B", "text": "Devrenin arızalı olması" },
-        { "key": "C", "text": "LED'in çok hızlı farklı parlaklıklarda yanıp sönmesi" },
-        { "key": "D", "text": "Kodun yanlış yazılmış olması" }
+        { "key": "A", "text": "LED'in yetersiz akım çekmesi" },
+        { "key": "B", "text": "Devrede temassızlık olması" },
+        { "key": "C", "text": "LED'in yüksek frekansta farklı sinyal oranlarıyla anahtarlanması" },
+        { "key": "D", "text": "Kodun hatalı derlenmesi" }
       ],
       "correctAnswer": "C"
     }

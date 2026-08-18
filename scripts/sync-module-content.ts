@@ -68,15 +68,47 @@ async function main() {
     process.env.SUPABASE_SERVICE_ROLE_KEY!
   );
 
-  const { data: mod, error: modError } = await supabase
+  let { data: mod, error: modError } = await supabase
     .from('modules')
     .select('id')
     .eq('slug', slug)
     .single();
 
   if (modError || !mod) {
-    console.error('Module not found:', slug);
-    process.exit(1);
+    const modulesPath = path.join(seedDir, 'modules.json');
+    const modules = JSON.parse(fs.readFileSync(modulesPath, 'utf8')) as Array<{
+      orderIndex: number;
+      title: string;
+      description: string;
+      slug: string;
+    }>;
+    const seedMod = modules.find((m) => m.slug === slug);
+    if (!seedMod) {
+      console.error('Module not found:', slug);
+      process.exit(1);
+    }
+
+    const { data: upserted, error: upsertError } = await supabase
+      .from('modules')
+      .upsert(
+        {
+          order_index: seedMod.orderIndex,
+          title: seedMod.title,
+          description: seedMod.description,
+          slug: seedMod.slug,
+        },
+        { onConflict: 'slug' }
+      )
+      .select('id')
+      .single();
+
+    if (upsertError || !upserted) {
+      console.error('Module upsert failed:', upsertError?.message);
+      process.exit(1);
+    }
+
+    mod = upserted;
+    console.log(`Created module: ${seedMod.title}`);
   }
 
   const { data: existing } = await supabase

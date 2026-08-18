@@ -3,52 +3,52 @@
   "passingScore": 70,
   "questions": [
     {
-      "question": "Mühendislik tasarım sürecinin ilk adımı nedir?",
+      "question": "Mühendislik tasarım sürecinin ilk adımı aşağıdakilerden hangisidir?",
       "options": [
-        { "key": "A", "text": "Hemen maket yapmak" },
+        { "key": "A", "text": "Fiziksel modelleme yapmak" },
         { "key": "B", "text": "Sor: İhtiyaçları ve sınırları tanımlamak" },
-        { "key": "C", "text": "Rengini seçmek" },
-        { "key": "D", "text": "Ürünü satmak" }
+        { "key": "C", "text": "Görsel detayları belirlemek" },
+        { "key": "D", "text": "Seri üretime geçmek" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Aklımıza gelen tüm çözüm fikirlerini düşündüğümüz ve \"Hiçbir fikir kötü değildir\" dediğimiz aşama hangisidir?",
+      "question": "Problemin çözümü için özgün fikirlerin üretildiği ve tüm alternatiflerin değerlendirildiği aşama hangisidir?",
       "options": [
         { "key": "A", "text": "Test Etme" },
         { "key": "B", "text": "Hayal Et / Fikir Üret" },
-        { "key": "C", "text": "Satın Alma" },
-        { "key": "D", "text": "Bitiş" }
+        { "key": "C", "text": "Seri Üretim" },
+        { "key": "D", "text": "Dokümantasyon" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Tinkercad veya başka bir araçla yaptığımız ilk deneme modeline ne ad verilir?",
+      "question": "Tinkercad veya benzeri araçlarla oluşturulan ilk deneme modeline ne ad verilir?",
       "options": [
-        { "key": "A", "text": "Çöp" },
+        { "key": "A", "text": "Taslak" },
         { "key": "B", "text": "Prototip" },
         { "key": "C", "text": "Son Ürün" },
-        { "key": "D", "text": "Resim" }
+        { "key": "D", "text": "Şablon" }
       ],
       "correctAnswer": "B"
     },
     {
-      "question": "Hazırladığımız prototipin çalışıp çalışmadığını, ölçülerinin doğru olup olmadığını anlamak için ne yaparız?",
+      "question": "Hazırlanan prototipin işlevselliğini ve ölçü doğruluğunu doğrulamak için hangi işlem uygulanır?",
       "options": [
-        { "key": "A", "text": "Hemen çöpe atarız" },
-        { "key": "B", "text": "Görmezden geliriz" },
-        { "key": "C", "text": "Test ederiz" },
-        { "key": "D", "text": "Hiçbir şey yapmayız" }
+        { "key": "A", "text": "Doğrudan satışa sunulur" },
+        { "key": "B", "text": "Değerlendirmeden onaylanır" },
+        { "key": "C", "text": "Test edilir" },
+        { "key": "D", "text": "Süreç sonlandırılır" }
       ],
       "correctAnswer": "C"
     },
     {
-      "question": "Test ettikten sonra tasarımımızda bir hata bulursak ne yapmalıyız?",
+      "question": "Test aşamasında bir tasarım hatası tespit edildiğinde izlenmesi gereken doğru yaklaşım nedir?",
       "options": [
-        { "key": "A", "text": "Tasarlamaktan vazgeçmeliyiz" },
-        { "key": "B", "text": "Ağlamalıyız" },
-        { "key": "C", "text": "Hataları düzeltip tasarımı geliştirmeliyiz" },
-        { "key": "D", "text": "Başkasına suç atmalıyız" }
+        { "key": "A", "text": "Proje tamamen iptal edilmelidir" },
+        { "key": "B", "text": "Tasarım mevcut haliyle üretime aktarılmalıdır" },
+        { "key": "C", "text": "Hatalar analiz edilip tasarım revize edilmelidir" },
+        { "key": "D", "text": "Test sonuçları göz ardı edilmelidir" }
       ],
       "correctAnswer": "C"
     }

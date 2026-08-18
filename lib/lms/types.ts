@@ -129,6 +129,7 @@ export interface CourseStats {
   certificateEligible: boolean;
   certificateIssued: boolean;
   capstoneApproved: boolean;
+  hasCapstone: boolean;
   allQuizzesPassed: boolean;
   mediaCompletionMet: boolean;
 }
