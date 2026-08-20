@@ -115,7 +115,9 @@ export default function LmsAdminPanel() {
       <TabsList className="mb-4">
         <TabsTrigger value="projects">Capstone</TabsTrigger>
         <TabsTrigger value="students">Öğrenciler</TabsTrigger>
-        <TabsTrigger value="enrollments">Kayıt Listesi</TabsTrigger>
+        <TabsTrigger value="enrollments">
+          Kayıt Listesi{enrollments.length > 0 && ` (${enrollments.length})`}
+        </TabsTrigger>
       </TabsList>
 
       <TabsContent value="projects" className="space-y-4">
@@ -281,6 +283,10 @@ export default function LmsAdminPanel() {
       </TabsContent>
 
       <TabsContent value="enrollments" className="space-y-4">
+        <p className="text-sm text-[#495057]">
+          Toplam <span className="font-semibold text-[#212529]">{enrollments.length}</span> kayıtlı
+          öğrenci
+        </p>
         <form onSubmit={addEnrollment} className="flex flex-col sm:flex-row gap-2">
           <input
             type="email"

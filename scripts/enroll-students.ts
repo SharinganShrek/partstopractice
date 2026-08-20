@@ -3,7 +3,8 @@ import { config } from 'dotenv';
 
 config({ path: '.env.local' });
 
-const emailsRaw = `
+/** Unique student emails from registration list (parent/guardian contact). */
+const studentEmails = `
 b3linaysw@gmail.com
 eceserrausta@gmail.com
 algurceren@gmail.com
@@ -53,7 +54,6 @@ berilkkoc@gmail.com
 zehrakartayuysal@gmail.com
 zuhalsatir4@gmail.com
 ezgiikizler99@gmail.com
-zuhalsatir@gmail.com
 zuleyha2002@hotmail.com
 ozlembarut@msn.com
 kayaisa.526@gmail.com
@@ -64,45 +64,32 @@ merve.zng.93@gmail.com
 ozdemirebru233@gmail.com
 ilknuruzunlar@gmail.com
 dilberhardal@gmail.com
-tanriverdiayberk7606@gmail.com
 `.trim();
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-if (!supabaseUrl || !serviceRoleKey) {
-  console.error('Missing Supabase env vars');
-  process.exit(1);
-}
-
-const supabase = createClient(supabaseUrl, serviceRoleKey);
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
 
 async function main() {
-  const emails = [...new Set(emailsRaw.split(/\s+/).map((e) => e.trim().toLowerCase()).filter(Boolean))];
-  console.log(`Enrolling ${emails.length} unique emails...\n`);
+  const emails = [...new Set(studentEmails.split(/\s+/).map((e) => e.trim().toLowerCase()).filter(Boolean))];
+  const { data: existing } = await supabase.from('course_enrollments').select('email');
+  const enrolled = new Set((existing ?? []).map((r) => r.email.toLowerCase()));
+
+  const missing = emails.filter((e) => !enrolled.has(e));
+  console.log(`List: ${emails.length} unique | DB: ${enrolled.size} | Missing: ${missing.length}`);
+  if (missing.length) console.log(missing.join('\n'));
 
   let added = 0;
-  let skipped = 0;
-  const errors: string[] = [];
-
-  for (const email of emails) {
+  for (const email of missing) {
     const { error } = await supabase.from('course_enrollments').insert({ email });
-    if (error) {
-      if (error.message.includes('duplicate') || error.code === '23505') {
-        skipped++;
-        console.log(`  ~ already enrolled: ${email}`);
-      } else {
-        errors.push(`${email}: ${error.message}`);
-        console.log(`  ✗ ${email}: ${error.message}`);
-      }
-    } else {
+    if (error) console.error(`FAIL ${email}:`, error.message);
+    else {
       added++;
-      console.log(`  ✓ ${email}`);
+      console.log(`+ ${email}`);
     }
   }
-
-  console.log(`\nDone: ${added} added, ${skipped} already existed, ${errors.length} errors`);
-  if (errors.length) process.exit(1);
+  console.log(`\nAdded ${added} new enrollments. Total in DB: ${enrolled.size + added}`);
 }
 
 main().catch(console.error);
