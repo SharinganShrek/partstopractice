@@ -1,6 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
-import type { EmailOtpType } from '@supabase/supabase-js';
+import { normalizeEmailOtpType } from '@/lib/lms/magic-link';
 
 export async function GET(request: NextRequest) {
   const { searchParams, origin } = new URL(request.url);
@@ -46,9 +46,10 @@ export async function GET(request: NextRequest) {
     console.error('exchangeCodeForSession failed:', error.message);
   }
 
-  if (token_hash && type) {
+  const otpType = normalizeEmailOtpType(type);
+  if (token_hash && otpType) {
     const { error } = await supabase.auth.verifyOtp({
-      type: type as EmailOtpType,
+      type: otpType,
       token_hash,
     });
     if (!error) {

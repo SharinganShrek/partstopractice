@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import type { EmailOtpType } from '@supabase/supabase-js';
 import { createClient } from '@/lib/supabase/client';
+import { normalizeEmailOtpType } from '@/lib/lms/magic-link';
 
 export default function AuthConfirmClient() {
   const router = useRouter();
@@ -17,14 +17,26 @@ export default function AuthConfirmClient() {
       const safeNext = next.startsWith('/') ? next : '/kurs';
       const code = searchParams.get('code');
       const token_hash = searchParams.get('token_hash');
-      const type = searchParams.get('type') as EmailOtpType | null;
+      const otpType = normalizeEmailOtpType(searchParams.get('type'));
 
       try {
+        const {
+          data: { session: existingSession },
+        } = await supabase.auth.getSession();
+        if (existingSession) {
+          await fetch('/api/kurs/auth/link-enrollment', { method: 'POST' });
+          router.replace(safeNext);
+          return;
+        }
+
         if (code) {
           const { error: codeError } = await supabase.auth.exchangeCodeForSession(code);
           if (codeError) throw codeError;
-        } else if (token_hash && type) {
-          const { error: otpError } = await supabase.auth.verifyOtp({ type, token_hash });
+        } else if (token_hash && otpType) {
+          const { error: otpError } = await supabase.auth.verifyOtp({
+            type: otpType,
+            token_hash,
+          });
           if (otpError) throw otpError;
         } else if (window.location.hash) {
           const params = new URLSearchParams(window.location.hash.replace(/^#/, ''));
