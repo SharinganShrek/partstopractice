@@ -95,6 +95,7 @@ export interface AssignmentSubmission {
   image_path: string | null;
   file_path: string | null;
   file_name: string | null;
+  arduino_link: string | null;
   status: AssignmentStatus;
   grade: number | null;
   feedback: string | null;
