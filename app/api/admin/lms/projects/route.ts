@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { requireModerator } from '@/lib/lms/auth';
+import { getCapstoneFileSignedUrl, readCapstoneFileText } from '@/lib/lms/capstone-storage';
 import { createClient } from '@/lib/supabase/server';
 
 export async function GET() {
@@ -35,7 +36,9 @@ export async function GET() {
         .select('full_name, email')
         .eq('id', submission.user_id)
         .maybeSingle();
-      return { ...submission, profiles: profile };
+      const fileUrl = await getCapstoneFileSignedUrl(supabase, submission.file_path);
+      const fileContent = await readCapstoneFileText(supabase, submission.file_path);
+      return { ...submission, profiles: profile, fileUrl, fileContent };
     })
   );
 

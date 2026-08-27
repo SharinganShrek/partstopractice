@@ -7,8 +7,12 @@ import { Badge } from '@/components/ui/badge';
 interface ProjectRow {
   id: string;
   user_id: string;
-  primary_link: string;
+  primary_link: string | null;
   secondary_link: string | null;
+  file_path: string | null;
+  file_name: string | null;
+  fileUrl: string | null;
+  fileContent: string | null;
   status: string;
   grade: number | null;
   feedback: string | null;
@@ -133,31 +137,51 @@ export default function LmsAdminPanel() {
                 </div>
                 <Badge variant="muted">{p.status}</Badge>
               </div>
-              <div className="space-y-1 text-sm mb-4">
-                <p>
-                  <span className="font-medium">Simülasyon:</span>{' '}
-                  <a
-                    href={p.primary_link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#800020] hover:underline break-all"
-                  >
-                    {p.primary_link}
-                  </a>
-                </p>
-                {p.secondary_link && (
-                  <p>
-                    <span className="font-medium">Teknik Rapor:</span>{' '}
+              <div className="mb-4">
+                {p.fileContent ? (
+                  <div>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
+                      <p className="text-sm font-semibold">
+                        {p.file_name ?? 'proje.ino'}
+                      </p>
+                      {p.fileUrl && (
+                        <a
+                          href={p.fileUrl}
+                          download={p.file_name ?? 'proje.ino'}
+                          className="text-sm text-[#800020] hover:underline font-medium"
+                        >
+                          Dosyayı indir
+                        </a>
+                      )}
+                    </div>
+                    <pre className="p-4 rounded-xl bg-[#1e1e2e] text-[#cdd6f4] font-mono text-xs leading-relaxed overflow-x-auto max-h-80 whitespace-pre-wrap">
+                      {p.fileContent}
+                    </pre>
+                  </div>
+                ) : p.fileUrl ? (
+                  <div className="text-sm">
+                    <span className="font-medium">Dosya:</span>{' '}
                     <a
-                      href={p.secondary_link}
+                      href={p.fileUrl}
+                      download={p.file_name ?? 'proje.ino'}
+                      className="text-[#800020] hover:underline"
+                    >
+                      {p.file_name ?? 'proje.ino'}
+                    </a>
+                  </div>
+                ) : p.primary_link ? (
+                  <div className="text-sm">
+                    <span className="font-medium">Bağlantı (eski format):</span>{' '}
+                    <a
+                      href={p.primary_link}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#800020] hover:underline break-all"
                     >
-                      {p.secondary_link}
+                      {p.primary_link}
                     </a>
-                  </p>
-                )}
+                  </div>
+                ) : null}
               </div>
               {p.status === 'submitted' || p.status === 'under_review' ? (
                 <div className="mt-4 space-y-3 border-t pt-4">

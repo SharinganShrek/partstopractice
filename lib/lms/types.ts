@@ -89,8 +89,12 @@ export interface AssignmentSubmission {
   id: string;
   user_id: string;
   content_item_id: string;
-  primary_link: string;
+  primary_link: string | null;
   secondary_link: string | null;
+  code_text: string | null;
+  image_path: string | null;
+  file_path: string | null;
+  file_name: string | null;
   status: AssignmentStatus;
   grade: number | null;
   feedback: string | null;
