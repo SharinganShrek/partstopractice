@@ -49,6 +49,10 @@ export default function ContentItemRow({
 }: ContentItemRowProps) {
   const Icon = TYPE_ICONS[item.type];
   const isCompleted = status === 'completed';
+  const typeLabel =
+    item.type === 'video' && item.counts_toward_progress === false
+      ? 'Yardımcı Video'
+      : TYPE_LABELS[item.type];
 
   if (variant === 'card') {
     return (
@@ -62,7 +66,7 @@ export default function ContentItemRow({
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-sm font-medium text-text-body leading-snug">{item.title}</p>
-          <p className="text-xs text-text-muted mt-0.5">{TYPE_LABELS[item.type]}</p>
+          <p className="text-xs text-text-muted mt-0.5">{typeLabel}</p>
         </div>
         <div className="flex items-center gap-2 shrink-0">
           {score != null && (
@@ -91,7 +95,7 @@ export default function ContentItemRow({
       <Icon className="h-4 w-4 text-primary shrink-0" />
       <div className="flex-1 min-w-0">
         <p className="text-sm font-medium text-text-body truncate">{item.title}</p>
-        <p className="text-xs text-text-muted">{TYPE_LABELS[item.type]}</p>
+        <p className="text-xs text-text-muted">{typeLabel}</p>
       </div>
       {score != null && (
         <Badge variant={score >= 70 ? 'success' : 'warning'}>%{score}</Badge>

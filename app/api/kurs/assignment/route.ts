@@ -98,7 +98,7 @@ async function handleCapstoneSubmission(
 
   if (!arduinoLink || !isValidHttpUrl(arduinoLink)) {
     return NextResponse.json(
-      { error: 'Geçerli bir Arduino kod bağlantısı girin.' },
+      { error: 'Geçerli bir Donanım + Kod bağlantısı girin.' },
       { status: 400 }
     );
   }

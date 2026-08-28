@@ -64,6 +64,7 @@ function ContentBody({
           initialWatchSeconds={progress?.watch_seconds ?? 0}
           onComplete={onProgressUpdate}
           isCompleted={isCompleted}
+          supplementary={item.counts_toward_progress === false}
         />
       )}
 

@@ -37,10 +37,10 @@ const LINK_FIELDS = [
   {
     key: 'arduinoLink' as const,
     dbKey: 'arduino_link' as const,
-    label: 'Arduino Kod',
+    label: 'Donanım + Kod',
     icon: Cpu,
     placeholder: 'https://drive.google.com/file/d/... veya kod paylaşım linki',
-    hint: 'Arduino kodunuzun paylaşım bağlantısı (Drive, GitHub vb.)',
+    hint: 'Donanım ve kod paylaşım bağlantınız (Drive, GitHub vb.)',
   },
 ];
 
@@ -112,7 +112,7 @@ export default function CapstoneSubmissionForm({
         </h2>
         <p className="text-text-muted text-sm leading-relaxed">
           Aşağıdaki <strong>3 bağlantıyı</strong> doldurun: Tinkercad projesi, Google Drive
-          teknik raporu ve Arduino kod paylaşım linki. Tesliminiz eğitmen tarafından incelenip
+          teknik raporu ve Donanım + Kod paylaşım linki. Tesliminiz eğitmen tarafından incelenip
           onaylanacaktır.
         </p>
       </div>

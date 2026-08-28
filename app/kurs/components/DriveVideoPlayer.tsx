@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
-import { toDrivePreviewUrl } from '@/lib/lms/drive';
+import { toDrivePreviewUrl, extractDriveFileId } from '@/lib/lms/drive';
 import {
   formatVideoTimestamp,
   getRequiredWatchSeconds,
@@ -18,6 +18,7 @@ interface DriveVideoPlayerProps {
   initialWatchSeconds?: number;
   onComplete: () => void;
   isCompleted: boolean;
+  supplementary?: boolean;
 }
 
 export default function DriveVideoPlayer({
@@ -27,6 +28,7 @@ export default function DriveVideoPlayer({
   initialWatchSeconds = 0,
   onComplete,
   isCompleted,
+  supplementary = false,
 }: DriveVideoPlayerProps) {
   const [watchSeconds, setWatchSeconds] = useState(initialWatchSeconds);
   const [canComplete, setCanComplete] = useState(isCompleted);
@@ -37,19 +39,21 @@ export default function DriveVideoPlayer({
   const baseSecondsRef = useRef(initialWatchSeconds);
 
   const previewUrl = toDrivePreviewUrl(driveUrl);
+  const isDriveVideo = extractDriveFileId(driveUrl) !== null;
   const totalSeconds = getVideoDurationSeconds(durationSeconds);
   const requiredSeconds = getRequiredWatchSeconds(durationSeconds);
 
   useEffect(() => {
+    if (supplementary) return;
     baseSecondsRef.current = initialWatchSeconds;
     sessionStartRef.current = Date.now();
     setWatchSeconds(initialWatchSeconds);
     setCanComplete(isCompleted || initialWatchSeconds >= requiredSeconds);
-  }, [contentItemId, initialWatchSeconds, isCompleted, requiredSeconds]);
+  }, [contentItemId, initialWatchSeconds, isCompleted, requiredSeconds, supplementary]);
 
   useEffect(() => {
-    if (isCompleted) {
-      setCanComplete(true);
+    if (supplementary || isCompleted) {
+      if (isCompleted) setCanComplete(true);
       return;
     }
 
@@ -60,16 +64,17 @@ export default function DriveVideoPlayer({
     }, 1000);
 
     return () => clearInterval(intervalId);
-  }, [isCompleted, contentItemId]);
+  }, [isCompleted, contentItemId, supplementary]);
 
   useEffect(() => {
-    if (!isCompleted && watchSeconds >= requiredSeconds) {
+    if (supplementary || isCompleted) return;
+    if (watchSeconds >= requiredSeconds) {
       setCanComplete(true);
     }
-  }, [watchSeconds, requiredSeconds, isCompleted]);
+  }, [watchSeconds, requiredSeconds, isCompleted, supplementary]);
 
   useEffect(() => {
-    if (isCompleted) return;
+    if (supplementary || isCompleted) return;
 
     const saveIntervalId = setInterval(() => {
       if (document.visibilityState !== 'visible') return;
@@ -92,7 +97,7 @@ export default function DriveVideoPlayer({
     }, 30000);
 
     return () => clearInterval(saveIntervalId);
-  }, [isCompleted, contentItemId]);
+  }, [isCompleted, contentItemId, supplementary]);
 
   useEffect(() => {
     function onFullscreenChange() {
@@ -135,17 +140,33 @@ export default function DriveVideoPlayer({
 
   return (
     <div className="space-y-4">
+      {supplementary && (
+        <p className="text-sm text-text-muted rounded-lg border border-border bg-surface-cream px-4 py-3">
+          Bu video bilgilendirme amaçlıdır; kurs tamamlama hesabına dahil değildir.
+        </p>
+      )}
+
       <div
         ref={containerRef}
         className="relative aspect-video bg-black rounded-lg overflow-hidden [&:fullscreen]:aspect-auto [&:fullscreen]:w-screen [&:fullscreen]:h-screen [&:fullscreen]:rounded-none [&:fullscreen]:flex [&:fullscreen]:items-center [&:fullscreen]:justify-center"
       >
-        <iframe
-          src={previewUrl}
-          className="w-full h-full [&:fullscreen]:min-h-full"
-          allow="autoplay; encrypted-media; fullscreen"
-          allowFullScreen
-          title="Ders videosu"
-        />
+        {isDriveVideo ? (
+          <iframe
+            src={previewUrl}
+            className="w-full h-full [&:fullscreen]:min-h-full"
+            allow="autoplay; encrypted-media; fullscreen"
+            allowFullScreen
+            title={supplementary ? 'Yardımcı video' : 'Ders videosu'}
+          />
+        ) : (
+          <video
+            src={driveUrl}
+            className="w-full h-full object-contain [&:fullscreen]:min-h-full"
+            controls
+            playsInline
+            title={supplementary ? 'Yardımcı video' : 'Ders videosu'}
+          />
+        )}
         <button
           type="button"
           onClick={toggleFullscreen}
@@ -166,7 +187,7 @@ export default function DriveVideoPlayer({
         </button>
       </div>
 
-      {!isCompleted && (
+      {!supplementary && !isCompleted && (
         <div className="card p-4 space-y-3">
           <div className="flex justify-between text-sm gap-3">
             <span className="text-text-muted">İzleme süresi</span>
@@ -198,7 +219,7 @@ export default function DriveVideoPlayer({
         </div>
       )}
 
-      {isCompleted && (
+      {!supplementary && isCompleted && (
         <div className="px-4 py-3 rounded-lg bg-green-50 border border-green-200 text-green-700 text-sm font-medium">
           Bu video tamamlandı.
         </div>

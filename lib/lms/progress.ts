@@ -29,12 +29,17 @@ export function getBestQuizScores(
   return best;
 }
 
+function countsTowardProgress(item: ContentItem): boolean {
+  return item.counts_toward_progress !== false;
+}
+
 export function calculateMediaCompletion(
   contentItems: ContentItem[],
   progress: StudentProgress[]
 ): number {
   const mediaItems = contentItems.filter(
-    (item) => item.type === 'video' || item.type === 'reading'
+    (item) =>
+      (item.type === 'video' || item.type === 'reading') && countsTowardProgress(item)
   );
   if (mediaItems.length === 0) return 100;
 
@@ -54,9 +59,7 @@ export function calculateCourseStats(
   certificate: Certificate | null
 ): CourseStats {
   const progressMap = mapProgressByContentId(progress);
-  const trackableItems = contentItems.filter((item) => item.type !== 'capstone');
-  const totalItems = trackableItems.length + contentItems.filter((i) => i.type === 'capstone').length;
-  const allTrackable = contentItems;
+  const allTrackable = contentItems.filter(countsTowardProgress);
 
   const completedItems = allTrackable.filter(
     (item) => progressMap.get(item.id)?.status === 'completed'

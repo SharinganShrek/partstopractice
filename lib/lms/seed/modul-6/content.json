@@ -3,6 +3,14 @@
   "items": [
     {
       "order": 1,
+      "type": "video",
+      "title": "Tinkercad Linki Nasıl Alınır",
+      "driveUrl": "https://qovyuoqgshuxeeqnafwy.supabase.co/storage/v1/object/public/course-videos/modul-6/tinkercad-linki-nasil-alinir.mp4",
+      "durationSeconds": 37,
+      "countsTowardProgress": false
+    },
+    {
+      "order": 2,
       "type": "capstone",
       "title": "Bitirme Projesi: IMC Asenkron Mini-Hackathon"
     }

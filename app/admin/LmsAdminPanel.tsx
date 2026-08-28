@@ -163,7 +163,7 @@ export default function LmsAdminPanel() {
                 )}
                 {p.arduino_link && (
                   <p>
-                    <span className="font-medium">Arduino Kod:</span>{' '}
+                    <span className="font-medium">Donanım + Kod:</span>{' '}
                     <a
                       href={p.arduino_link}
                       target="_blank"

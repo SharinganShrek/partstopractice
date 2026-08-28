@@ -23,9 +23,12 @@ function getModuleProgress(
   module: ModuleWithContent,
   progressMap: Map<string, StudentProgress>
 ) {
-  const total = module.content_items.length;
+  const trackable = module.content_items.filter(
+    (item) => item.counts_toward_progress !== false
+  );
+  const total = trackable.length;
   if (total === 0) return 0;
-  const completed = module.content_items.filter(
+  const completed = trackable.filter(
     (item) => progressMap.get(item.id)?.status === 'completed'
   ).length;
   return Math.round((completed / total) * 100);

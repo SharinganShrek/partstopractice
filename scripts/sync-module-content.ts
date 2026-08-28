@@ -162,6 +162,7 @@ async function main() {
       duration_seconds: item.durationSeconds ?? null,
       unit_label: item.unitLabel ?? null,
       unit_order: item.unitOrder ?? null,
+      counts_toward_progress: item.countsTowardProgress !== false,
     });
 
     if (insertError) {

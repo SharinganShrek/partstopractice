@@ -59,6 +59,7 @@ export interface ContentItem {
   duration_seconds: number | null;
   unit_label: string | null;
   unit_order: number | null;
+  counts_toward_progress: boolean;
   quiz?: Quiz | null;
 }
 
@@ -155,6 +156,7 @@ export interface SeedContentItem {
   quizFile?: string;
   unitLabel?: string;
   unitOrder?: number;
+  countsTowardProgress?: boolean;
 }
 
 export interface SeedModuleContent {
