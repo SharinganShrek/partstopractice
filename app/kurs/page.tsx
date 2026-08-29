@@ -24,7 +24,8 @@ export default async function KursPage() {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
   return (

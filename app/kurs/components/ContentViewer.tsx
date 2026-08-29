@@ -9,6 +9,7 @@ import ReadingViewer from './ReadingViewer';
 import ScoredQuiz from './ScoredQuiz';
 import PerformanceTaskForm from './PerformanceTaskForm';
 import CapstoneSubmissionForm from './CapstoneSubmissionForm';
+import FinalFeedbackForm from './FinalFeedbackForm';
 
 interface ContentViewerProps {
   item: ContentItem;
@@ -105,6 +106,10 @@ function ContentBody({
       {item.type === 'capstone' && (
         <CapstoneSubmissionForm contentItemId={item.id} onSubmitted={onProgressUpdate} />
       )}
+
+      {item.type === 'final_feedback' && (
+        <FinalFeedbackForm contentItemId={item.id} onSubmitted={onProgressUpdate} />
+      )}
     </>
   );
 }
@@ -123,7 +128,8 @@ export default function ContentViewer({
     item.type === 'topic_quiz' ||
       item.type === 'module_assessment' ||
       item.type === 'performance_task' ||
-      item.type === 'capstone'
+      item.type === 'capstone' ||
+      item.type === 'final_feedback'
   );
 
   useEffect(() => {
@@ -133,7 +139,8 @@ export default function ContentViewer({
       item.type === 'topic_quiz' ||
         item.type === 'module_assessment' ||
         item.type === 'performance_task' ||
-        item.type === 'capstone'
+        item.type === 'capstone' ||
+        item.type === 'final_feedback'
     );
 
     async function load() {
@@ -148,7 +155,7 @@ export default function ContentViewer({
           setAssignment(data.submission);
         }
         setLoading(false);
-      } else if (item.type === 'capstone') {
+      } else if (item.type === 'capstone' || item.type === 'final_feedback') {
         setLoading(false);
       }
     }

@@ -192,6 +192,7 @@ async function buildStats(supabase: Awaited<ReturnType<typeof createClient>>, us
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 }

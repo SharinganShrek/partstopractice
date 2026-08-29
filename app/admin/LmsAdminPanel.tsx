@@ -17,6 +17,16 @@ interface ProjectRow {
   profiles?: { full_name: string; email: string };
 }
 
+interface FeedbackRow {
+  id: string;
+  user_id: string;
+  full_name: string;
+  team_message: string;
+  improvement_feedback: string;
+  submitted_at: string;
+  profiles?: { full_name: string; email: string };
+}
+
 interface StudentRow {
   userId: string;
   email: string;
@@ -40,6 +50,7 @@ interface EnrollmentRow {
 
 export default function LmsAdminPanel() {
   const [projects, setProjects] = useState<ProjectRow[]>([]);
+  const [courseFeedbacks, setCourseFeedbacks] = useState<FeedbackRow[]>([]);
   const [students, setStudents] = useState<StudentRow[]>([]);
   const [enrollments, setEnrollments] = useState<EnrollmentRow[]>([]);
   const [newEmail, setNewEmail] = useState('');
@@ -49,8 +60,9 @@ export default function LmsAdminPanel() {
 
   const fetchAll = useCallback(async () => {
     setLoading(true);
-    const [projRes, studRes, enrollRes] = await Promise.all([
+    const [projRes, feedbackRes, studRes, enrollRes] = await Promise.all([
       fetch('/api/admin/lms/projects'),
+      fetch('/api/admin/lms/feedback'),
       fetch('/api/admin/lms/students'),
       fetch('/api/admin/lms/enrollments'),
     ]);
@@ -58,6 +70,10 @@ export default function LmsAdminPanel() {
     if (projRes.ok) {
       const data = await projRes.json();
       setProjects(data.data ?? []);
+    }
+    if (feedbackRes.ok) {
+      const data = await feedbackRes.json();
+      setCourseFeedbacks(data.data ?? []);
     }
     if (studRes.ok) {
       const data = await studRes.json();
@@ -115,6 +131,9 @@ export default function LmsAdminPanel() {
     <Tabs defaultValue="projects">
       <TabsList className="mb-4">
         <TabsTrigger value="projects">Capstone</TabsTrigger>
+        <TabsTrigger value="feedback">
+          Geri Bildirimler{courseFeedbacks.length > 0 && ` (${courseFeedbacks.length})`}
+        </TabsTrigger>
         <TabsTrigger value="students">Öğrenciler</TabsTrigger>
         <TabsTrigger value="enrollments">
           Kayıt Listesi{enrollments.length > 0 && ` (${enrollments.length})`}
@@ -215,6 +234,36 @@ export default function LmsAdminPanel() {
                   </p>
                 )
               )}
+            </div>
+          ))
+        )}
+      </TabsContent>
+
+      <TabsContent value="feedback" className="space-y-4">
+        {courseFeedbacks.length === 0 ? (
+          <p className="text-[#495057]">Henüz geri bildirim yok.</p>
+        ) : (
+          courseFeedbacks.map((f) => (
+            <div key={f.id} className="bg-white rounded-lg border border-[#e9ecef] p-5 space-y-3">
+              <div>
+                <p className="font-bold">{f.full_name}</p>
+                <p className="text-sm text-[#495057]">{f.profiles?.email}</p>
+                <p className="text-xs text-[#495057] mt-1">
+                  {new Date(f.submitted_at).toLocaleString('tr-TR')}
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold text-[#495057] uppercase tracking-wide">
+                  IMC ekibine mesaj
+                </p>
+                <p className="text-sm mt-1 whitespace-pre-wrap">{f.team_message}</p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold text-[#495057] uppercase tracking-wide">
+                  İyileştirme önerisi
+                </p>
+                <p className="text-sm mt-1 whitespace-pre-wrap">{f.improvement_feedback}</p>
+              </div>
             </div>
           ))
         )}

@@ -41,13 +41,16 @@ export async function POST() {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
-  if (!stats.certificateEligible) {
+  if (!stats.certificateReady) {
     return NextResponse.json(
       {
-        error: 'Sertifika için gereksinimler henüz tamamlanmadı.',
+        error: stats.certificateEligible
+          ? 'Sertifika için Son bir görev formunu tamamlamanız gerekir.'
+          : 'Sertifika için gereksinimler henüz tamamlanmadı.',
         stats,
       },
       { status: 400 }
@@ -147,8 +150,12 @@ export async function GET() {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
-  return NextResponse.json({ certificate, stats });
+  return NextResponse.json({
+    certificate,
+    stats,
+  });
 }

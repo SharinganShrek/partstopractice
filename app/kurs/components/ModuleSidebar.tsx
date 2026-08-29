@@ -7,6 +7,7 @@ import {
   FileQuestion,
   PlayCircle,
   Trophy,
+  MessageSquare,
 } from 'lucide-react';
 import {
   Accordion,
@@ -35,6 +36,7 @@ const TYPE_ICONS = {
   module_assessment: ClipboardCheck,
   performance_task: ClipboardCheck,
   capstone: Trophy,
+  final_feedback: MessageSquare,
 };
 
 function getModuleProgress(module: ModuleWithContent, progressMap: Map<string, StudentProgress>) {

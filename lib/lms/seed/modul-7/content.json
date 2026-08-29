@@ -1,0 +1,11 @@
+{
+  "moduleSlug": "modul-7",
+  "items": [
+    {
+      "order": 1,
+      "type": "final_feedback",
+      "title": "Son bir görev",
+      "countsTowardProgress": false
+    }
+  ]
+}

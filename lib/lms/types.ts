@@ -4,7 +4,8 @@ export type ContentItemType =
   | 'topic_quiz'
   | 'module_assessment'
   | 'performance_task'
-  | 'capstone';
+  | 'capstone'
+  | 'final_feedback';
 
 export type ProgressStatus = 'not_started' | 'in_progress' | 'completed';
 export type AssignmentStatus = 'submitted' | 'under_review' | 'approved' | 'revision';
@@ -116,6 +117,16 @@ export interface ProjectSubmission {
   reviewed_at: string | null;
 }
 
+export interface CourseFeedbackSubmission {
+  id: string;
+  user_id: string;
+  content_item_id: string;
+  full_name: string;
+  team_message: string;
+  improvement_feedback: string;
+  submitted_at: string;
+}
+
 export interface Certificate {
   id: string;
   user_id: string;
@@ -133,6 +144,8 @@ export interface CourseStats {
   totalItems: number;
   completedItems: number;
   certificateEligible: boolean;
+  certificateReady: boolean;
+  feedbackSubmitted: boolean;
   certificateIssued: boolean;
   capstoneApproved: boolean;
   hasCapstone: boolean;

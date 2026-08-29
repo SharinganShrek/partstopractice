@@ -8,6 +8,7 @@ import {
   Circle,
   BookOpen,
   Link2,
+  MessageSquare,
   Trophy,
   ChevronRight,
 } from 'lucide-react';
@@ -29,6 +30,7 @@ const TYPE_ICONS = {
   module_assessment: ClipboardCheck,
   performance_task: Link2,
   capstone: Trophy,
+  final_feedback: MessageSquare,
 };
 
 const TYPE_LABELS = {
@@ -38,6 +40,7 @@ const TYPE_LABELS = {
   module_assessment: 'Modül Sınavı',
   performance_task: 'Uygulama Ödevi',
   capstone: 'Bitirme Projesi',
+  final_feedback: 'Geri Bildirim',
 };
 
 export default function ContentItemRow({

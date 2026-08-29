@@ -1,6 +1,7 @@
 import type {
   Certificate,
   ContentItem,
+  CourseFeedbackSubmission,
   CourseStats,
   QuizAttempt,
   StudentProgress,
@@ -56,7 +57,8 @@ export function calculateCourseStats(
   progress: StudentProgress[],
   attempts: QuizAttempt[],
   assignments: AssignmentSubmission[],
-  certificate: Certificate | null
+  certificate: Certificate | null,
+  feedbackSubmissions: CourseFeedbackSubmission[] = []
 ): CourseStats {
   const progressMap = mapProgressByContentId(progress);
   const allTrackable = contentItems.filter(countsTowardProgress);
@@ -109,6 +111,9 @@ export function calculateCourseStats(
     allQuizzesPassed &&
     capstoneApproved;
 
+  const feedbackSubmitted = feedbackSubmissions.length > 0;
+  const certificateReady = certificateEligible && feedbackSubmitted;
+
   return {
     completionPercent,
     averageScore,
@@ -116,6 +121,8 @@ export function calculateCourseStats(
     totalItems: allTrackable.length,
     completedItems,
     certificateEligible,
+    certificateReady,
+    feedbackSubmitted,
     certificateIssued: certificate != null,
     capstoneApproved,
     hasCapstone,

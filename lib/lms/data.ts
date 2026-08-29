@@ -3,6 +3,7 @@ import type {
   AssignmentSubmission,
   Certificate,
   ContentItem,
+  CourseFeedbackSubmission,
   Module,
   ModuleWithContent,
   QuizAttempt,
@@ -74,12 +75,14 @@ export async function getContentItemWithQuiz(contentItemId: string) {
 export async function getUserLmsData(userId: string) {
   const supabase = await createClient();
 
-  const [progressRes, attemptsRes, assignmentsRes, certRes, profileRes] = await Promise.all([
+  const [progressRes, attemptsRes, assignmentsRes, certRes, profileRes, feedbackRes] =
+    await Promise.all([
     supabase.from('student_progress').select('*').eq('user_id', userId),
     supabase.from('quiz_attempts').select('*').eq('user_id', userId),
     supabase.from('assignment_submissions').select('*').eq('user_id', userId),
     supabase.from('certificates').select('*').eq('user_id', userId).maybeSingle(),
     supabase.from('profiles').select('*').eq('id', userId).maybeSingle(),
+    supabase.from('course_feedback_submissions').select('*').eq('user_id', userId),
   ]);
 
   return {
@@ -88,6 +91,7 @@ export async function getUserLmsData(userId: string) {
     assignments: (assignmentsRes.data ?? []) as AssignmentSubmission[],
     certificate: (certRes.data ?? null) as Certificate | null,
     profile: profileRes.data,
+    feedbackSubmissions: (feedbackRes.data ?? []) as CourseFeedbackSubmission[],
   };
 }
 

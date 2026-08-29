@@ -101,7 +101,11 @@ function runUnitTests(contentItems: ContentItem[]) {
 
   const media =
     contentItems.length > 0
-      ? contentItems.filter((i) => i.type === 'video' || i.type === 'reading')
+      ? contentItems.filter(
+          (i) =>
+            (i.type === 'video' || i.type === 'reading') &&
+            i.counts_toward_progress !== false
+        )
       : Array.from({ length: 24 }, (_, i) => ({
           id: `media-${i}`,
           type: i % 2 === 0 ? ('video' as const) : ('reading' as const),
@@ -150,11 +154,34 @@ function runUnitTests(contentItems: ContentItem[]) {
       created_at: new Date().toISOString(),
     }));
 
+    const capstoneItem = contentItems.find((i) => i.type === 'capstone');
+    const assignments = capstoneItem
+      ? [
+          {
+            id: 'cap-approved',
+            user_id: 'test',
+            content_item_id: capstoneItem.id,
+            primary_link: 'https://example.com',
+            secondary_link: null,
+            code_text: null,
+            image_path: null,
+            file_path: null,
+            file_name: null,
+            arduino_link: null,
+            status: 'approved' as const,
+            grade: null,
+            feedback: null,
+            submitted_at: new Date().toISOString(),
+            reviewed_at: new Date().toISOString(),
+          },
+        ]
+      : [];
+
     const stats = calculateCourseStats(
       contentItems,
       mockProgress(media.map((m) => m.id)),
       attempts,
-      [],
+      assignments,
       null
     );
 
@@ -163,8 +190,31 @@ function runUnitTests(contentItems: ContentItem[]) {
     assert(stats.allQuizzesPassed === true, 'all quizzes at 80% → allQuizzesPassed');
     assert(
       stats.certificateEligible === true,
-      'certificateEligible true when media and quizzes complete and no capstone required'
+      'certificateEligible true when media, quizzes, and capstone (if any) are complete'
     );
+    assert(stats.feedbackSubmitted === false, 'no feedback → feedbackSubmitted false');
+    assert(stats.certificateReady === false, 'no feedback → certificateReady false');
+
+    const statsWithFeedback = calculateCourseStats(
+      contentItems,
+      mockProgress(media.map((m) => m.id)),
+      attempts,
+      assignments,
+      null,
+      [
+        {
+          id: 'fb-1',
+          user_id: 'test',
+          content_item_id: 'feedback-item',
+          full_name: 'Test User',
+          team_message: 'Teşekkürler',
+          improvement_feedback: 'Daha fazla örnek',
+          submitted_at: new Date().toISOString(),
+        },
+      ]
+    );
+    assert(statsWithFeedback.feedbackSubmitted === true, 'feedback present → feedbackSubmitted true');
+    assert(statsWithFeedback.certificateReady === true, 'eligible + feedback → certificateReady true');
   }
 
   console.log('\nAll progress calculation checks passed.');

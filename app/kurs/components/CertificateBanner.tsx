@@ -14,11 +14,11 @@ export default function CertificateBanner({ stats, certificate }: CertificateBan
   const [message, setMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (stats.certificateEligible && !certificate && !issuing) {
+    if (stats.certificateReady && !certificate && !issuing) {
       handleIssue();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [stats.certificateEligible, certificate]);
+  }, [stats.certificateReady, certificate]);
 
   async function handleIssue() {
     setIssuing(true);
@@ -75,8 +75,8 @@ export default function CertificateBanner({ stats, certificate }: CertificateBan
           </h3>
           <p className="text-text-muted text-sm mb-3">
             {stats.hasCapstone
-              ? "Videoların en az %70'i + tüm quizler + capstone onayı gerekir."
-              : "Videoların en az %70'i + tüm quizler geçilmelidir."}
+              ? "Videoların en az %70'i + tüm quizler + capstone onayı + Son bir görev formu gerekir."
+              : "Videoların en az %70'i + tüm quizler + Son bir görev formu gerekir."}
           </p>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
@@ -107,6 +107,19 @@ export default function CertificateBanner({ stats, certificate }: CertificateBan
                   {stats.capstoneApproved ? 'Onaylandı' : 'Bekleniyor'}
                 </span>
               </div>
+            )}
+            {stats.certificateEligible && (
+              <div className="flex justify-between">
+                <span>Son bir görev</span>
+                <span className={stats.feedbackSubmitted ? 'text-green-600 font-semibold' : 'text-amber-600 font-semibold'}>
+                  {stats.feedbackSubmitted ? 'Tamamlandı' : 'Bekleniyor'}
+                </span>
+              </div>
+            )}
+            {stats.certificateEligible && !stats.feedbackSubmitted && (
+              <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-lg px-3 py-2 mt-2">
+                Son bir görevi tamamlayın; ardından sertifikanız oluşturulacak.
+              </p>
             )}
           </div>
         </div>

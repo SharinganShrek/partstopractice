@@ -21,7 +21,8 @@ export async function GET() {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
   return NextResponse.json({
@@ -108,7 +109,8 @@ export async function POST(request: Request) {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
   return NextResponse.json({

@@ -27,11 +27,12 @@ export async function GET() {
       .eq('id', enrollment.user_id)
       .maybeSingle();
 
-    const [progressRes, attemptsRes, assignmentsRes, certRes] = await Promise.all([
+    const [progressRes, attemptsRes, assignmentsRes, certRes, feedbackRes] = await Promise.all([
       supabase.from('student_progress').select('*').eq('user_id', enrollment.user_id),
       supabase.from('quiz_attempts').select('*').eq('user_id', enrollment.user_id),
       supabase.from('assignment_submissions').select('*').eq('user_id', enrollment.user_id),
       supabase.from('certificates').select('*').eq('user_id', enrollment.user_id).maybeSingle(),
+      supabase.from('course_feedback_submissions').select('*').eq('user_id', enrollment.user_id),
     ]);
 
     const progress = progressRes.data ?? [];
@@ -40,7 +41,8 @@ export async function GET() {
       progress,
       attemptsRes.data ?? [],
       assignmentsRes.data ?? [],
-      certRes.data
+      certRes.data,
+      feedbackRes.data ?? []
     );
 
     const mediaCompletion = calculateMediaCompletion(contentItems, progress);

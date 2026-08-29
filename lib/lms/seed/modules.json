@@ -34,5 +34,11 @@
     "title": "Modül 6: Bitirme Projesi (Capstone)",
     "description": "Capstone projesi teslimi.",
     "slug": "modul-6"
+  },
+  {
+    "orderIndex": 7,
+    "title": "Modül 7: Son bir görev",
+    "description": "Eğitim ekibine kısa bir geri bildirim bırakın.",
+    "slug": "modul-7"
   }
 ]

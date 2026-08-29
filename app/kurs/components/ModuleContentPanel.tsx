@@ -14,7 +14,7 @@ interface ModuleContentPanelProps {
 
 const LEARN_TYPES = new Set(['video', 'reading']);
 const PRACTICE_TYPES = new Set(['topic_quiz', 'module_assessment']);
-const OTHER_TYPES = new Set(['capstone', 'performance_task']);
+const OTHER_TYPES = new Set(['capstone', 'performance_task', 'final_feedback']);
 
 export default function ModuleContentPanel({
   moduleTitle,

@@ -64,7 +64,12 @@ export default function KursDashboard({
     )
   );
 
-  const selectedModule = modules.find((m) => m.slug === selectedModuleSlug) ?? modules[0];
+  const visibleModules = stats.certificateEligible
+    ? modules
+    : modules.filter((m) => m.slug !== 'modul-7');
+
+  const selectedModule =
+    visibleModules.find((m) => m.slug === selectedModuleSlug) ?? visibleModules[0];
 
   const refreshProgress = useCallback(async () => {
     const response = await fetch('/api/kurs/progress');
@@ -93,7 +98,7 @@ export default function KursDashboard({
   function handleContentSelect(slug: string, contentId: string) {
     setSelectedModuleSlug(slug);
     setExpandedSlugs((prev) => (prev.includes(slug) ? prev : [...prev, slug]));
-    const mod = modules.find((m) => m.slug === slug);
+    const mod = visibleModules.find((m) => m.slug === slug);
     const item = mod?.content_items.find((i) => i.id === contentId);
     if (item) setActiveContent(item);
     setSidebarOpen(false);
@@ -173,7 +178,7 @@ export default function KursDashboard({
                 </button>
               </div>
               <ModuleSidebar
-                modules={modules}
+                modules={visibleModules}
                 selectedSlug={selectedModule?.slug ?? ''}
                 activeContentId={activeContent?.id ?? null}
                 progressMap={progressMap}

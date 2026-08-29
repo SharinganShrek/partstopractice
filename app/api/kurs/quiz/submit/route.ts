@@ -84,7 +84,8 @@ export async function POST(request: Request) {
     userData.progress,
     userData.attempts,
     userData.assignments,
-    userData.certificate
+    userData.certificate,
+    userData.feedbackSubmissions
   );
 
   return NextResponse.json({ attempt, score, passed, stats });
